@@ -14,7 +14,7 @@
   > Google Firebase <br>
 ## 구성원 및 연락처
 > 권태우 kwontaewoo0901@gmail.com  
-> 유하임 email@email.com  
+> 유하임 mytypeyu@gmail.com
 > 이현구 email@email.com  
 > 최유빈 email@wmail.com  
 ## 링크
