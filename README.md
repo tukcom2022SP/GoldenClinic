@@ -16,7 +16,7 @@
 ## 구성원 및 연락처
 > 권태우 kwontaewoo0901@gmail.com  
 > 유하임 mytypeyu@gmail.com  
-> 이현구 email@email.com  
+> 이현구 kugu98@naver.com 
 > 최유빈 email@wmail.com  
 
 ## 링크
