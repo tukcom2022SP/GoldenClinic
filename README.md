@@ -1,4 +1,4 @@
-# 밷라 음식 배달비 절약 앱 - Team GoldenClinic
+# 배달 음식 배달비 절약 앱 - Team GoldenClinic
 
 ## 개발 배경
  > GoldenClinic
