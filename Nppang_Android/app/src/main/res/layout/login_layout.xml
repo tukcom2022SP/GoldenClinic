@@ -1,50 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height = "match_parent"
-    android:padding="20dp"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:background="@color/peach"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="로그인"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="25dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:paddingTop="32dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:background="@color/white"
+        android:layout_gravity="center">
+
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:hint="ID"
+            android:paddingLeft="7dp"
+            android:background="@drawable/border"
+            android:layout_marginBottom="15dp"
             android:inputType="text"
-            android:hint="아이디를 입력해주세요"
-            android:layout_gravity="center"/>
+            android:minHeight="40dp" />
+
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:paddingLeft="7dp"
+            android:background="@drawable/border"
             android:inputType="textPassword"
-            android:hint="패스워드를 입력해주세요"
-            android:layout_gravity="center"/>
-    </LinearLayout>
+            android:minHeight="40dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="right">
+
+            <CheckBox
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/keepSignedIn"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="자동 로그인"
+                android:textSize="15dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:text="로그인"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:backgroundTint="@color/deeppink"/>
+
+        <!--Google Sign In 부분-->
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btn_googleSignIn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="회원가입"
-            android:layout_weight="1"/>
+            android:layout_marginTop="10dp">
+        </com.google.android.gms.common.SignInButton>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="58dp"
+            android:background="#d9d9d9"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:text="회원 가입"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:backgroundTint="@color/white"
+                android:layout_gravity="top"
+                android:layout_marginRight="20dp"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="30dp"
+                android:background="#d9d9d9"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/white"
+                android:text="회원 정보 찾기"
+                android:textColor="@color/black"
+                android:layout_gravity="top"
+                android:layout_marginLeft="20dp"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
-    <!--Google Sign In 부분-->
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/btn_googleSignIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-    </com.google.android.gms.common.SignInButton>
 </LinearLayout>
