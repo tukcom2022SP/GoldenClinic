@@ -13,6 +13,7 @@
 		393A41402890150D00F8796E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393A413E2890150D00F8796E /* Main.storyboard */; };
 		393A41422890150E00F8796E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A41412890150E00F8796E /* Assets.xcassets */; };
 		393A41452890150E00F8796E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393A41432890150E00F8796E /* LaunchScreen.storyboard */; };
+		393A414D2891108500F8796E /* signUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393A414C2891108500F8796E /* signUp.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		393A41412890150E00F8796E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		393A41442890150E00F8796E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		393A41462890150E00F8796E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		393A414C2891108500F8796E /* signUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = signUp.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +58,12 @@
 		393A41372890150D00F8796E /* Nppang_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				393A41412890150E00F8796E /* Assets.xcassets */,
 				393A41382890150D00F8796E /* AppDelegate.swift */,
 				393A413A2890150D00F8796E /* SceneDelegate.swift */,
 				393A413C2890150D00F8796E /* ViewController.swift */,
 				393A413E2890150D00F8796E /* Main.storyboard */,
-				393A41412890150E00F8796E /* Assets.xcassets */,
+				393A414C2891108500F8796E /* signUp.storyboard */,
 				393A41432890150E00F8796E /* LaunchScreen.storyboard */,
 				393A41462890150E00F8796E /* Info.plist */,
 			);
@@ -127,6 +130,7 @@
 			files = (
 				393A41452890150E00F8796E /* LaunchScreen.storyboard in Resources */,
 				393A41422890150E00F8796E /* Assets.xcassets in Resources */,
+				393A414D2891108500F8796E /* signUp.storyboard in Resources */,
 				393A41402890150D00F8796E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
