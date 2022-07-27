@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -109,7 +110,27 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(p0: View?) {
     }
 
-
+    private fun createEmail(){
+        firebaseAuth.createUserWithEmailAndPassword("","").addOnCompleteListener(this){
+            it ->
+            if(it.isSuccessful){
+                var user=firebaseAuth.currentUser
+                Toast.makeText(this,"Authentication success",Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this,"Authentication failed",Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+    private fun loginEmail(){
+        firebaseAuth.signInWithEmailAndPassword("","").addOnCompleteListener(this){
+            it->
+            if(it.isSuccessful){
+                Toast.makeText(this,"signInWithEmail success",Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this,"signInWithEmail failed.",Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
     private fun signOut() { // 로그아웃
         // Firebase sign out
         firebaseAuth.signOut()
