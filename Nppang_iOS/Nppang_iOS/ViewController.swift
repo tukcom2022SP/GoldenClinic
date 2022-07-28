@@ -25,6 +25,11 @@ class ViewController: UIViewController {
         GIDSignIn.sharedInstance().signIn()
     }
     
+    @IBAction func btnLogIn(_ sender: UIButton) {
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
+    }
+    
     @IBAction func btnSignUp(_ sender: UIButton) {
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "signUp")
         self.navigationController?.pushViewController(pushVC!, animated: true)

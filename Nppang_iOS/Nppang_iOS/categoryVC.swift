@@ -7,7 +7,7 @@
 
 import UIKit
 
-class category: UIViewController{
+class categoryVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
