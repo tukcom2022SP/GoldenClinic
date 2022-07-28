@@ -14,6 +14,8 @@
 		393A41422890150E00F8796E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A41412890150E00F8796E /* Assets.xcassets */; };
 		393A41452890150E00F8796E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393A41432890150E00F8796E /* LaunchScreen.storyboard */; };
 		393A415628912EA200F8796E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 393A415528912EA200F8796E /* GoogleService-Info.plist */; };
+		393A41602892727700F8796E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A415F2892727700F8796E /* SignUpVC.swift */; };
+		393A416228927A4700F8796E /* categoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A416128927A4700F8796E /* categoryVC.swift */; };
 		E444460ADA7E685CA511CE9D /* Pods_Nppang_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345970368E6F140CC509A918 /* Pods_Nppang_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		393A41442890150E00F8796E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		393A41462890150E00F8796E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		393A415528912EA200F8796E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		393A415F2892727700F8796E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		393A416128927A4700F8796E /* categoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryVC.swift; sourceTree = "<group>"; };
 		90B4530ECB0947FD505A002D /* Pods-Nppang_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nppang_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Nppang_iOS/Pods-Nppang_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		FE88D64F8B197F7F61973759 /* Pods-Nppang_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nppang_iOS.release.xcconfig"; path = "Target Support Files/Pods-Nppang_iOS/Pods-Nppang_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,10 +73,12 @@
 				393A41382890150D00F8796E /* AppDelegate.swift */,
 				393A413A2890150D00F8796E /* SceneDelegate.swift */,
 				393A413C2890150D00F8796E /* ViewController.swift */,
+				393A415F2892727700F8796E /* SignUpVC.swift */,
 				393A413E2890150D00F8796E /* Main.storyboard */,
 				393A41432890150E00F8796E /* LaunchScreen.storyboard */,
 				393A41462890150E00F8796E /* Info.plist */,
 				393A415528912EA200F8796E /* GoogleService-Info.plist */,
+				393A416128927A4700F8796E /* categoryVC.swift */,
 			);
 			path = Nppang_iOS;
 			sourceTree = "<group>";
@@ -228,6 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				393A416228927A4700F8796E /* categoryVC.swift in Sources */,
+				393A41602892727700F8796E /* SignUpVC.swift in Sources */,
 				393A413D2890150D00F8796E /* ViewController.swift in Sources */,
 				393A41392890150D00F8796E /* AppDelegate.swift in Sources */,
 				393A413B2890150D00F8796E /* SceneDelegate.swift in Sources */,

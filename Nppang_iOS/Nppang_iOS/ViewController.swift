@@ -25,8 +25,8 @@ class ViewController: UIViewController {
         GIDSignIn.sharedInstance().signIn()
     }
     @IBAction func btnSignUp(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "signingUp", sender: self)
-        navigationItem.hidesBackButton = true
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "signUp")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
     }
 }
 
