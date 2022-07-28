@@ -13,6 +13,8 @@
 		393A41402890150D00F8796E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393A413E2890150D00F8796E /* Main.storyboard */; };
 		393A41422890150E00F8796E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A41412890150E00F8796E /* Assets.xcassets */; };
 		393A41452890150E00F8796E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393A41432890150E00F8796E /* LaunchScreen.storyboard */; };
+		393A415628912EA200F8796E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 393A415528912EA200F8796E /* GoogleService-Info.plist */; };
+		393A415928912F9A00F8796E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 393A415828912F9A00F8796E /* FirebaseAnalytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		393A41412890150E00F8796E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		393A41442890150E00F8796E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		393A41462890150E00F8796E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		393A415528912EA200F8796E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				393A415928912F9A00F8796E /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +67,7 @@
 				393A413E2890150D00F8796E /* Main.storyboard */,
 				393A41432890150E00F8796E /* LaunchScreen.storyboard */,
 				393A41462890150E00F8796E /* Info.plist */,
+				393A415528912EA200F8796E /* GoogleService-Info.plist */,
 			);
 			path = Nppang_iOS;
 			sourceTree = "<group>";
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = Nppang_iOS;
+			packageProductDependencies = (
+				393A415828912F9A00F8796E /* FirebaseAnalytics */,
+			);
 			productName = Nppang_iOS;
 			productReference = 393A41352890150D00F8796E /* Nppang_iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 393A412C2890150D00F8796E;
+			packageReferences = (
+				393A415728912F9A00F8796E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 393A41362890150D00F8796E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				393A41452890150E00F8796E /* LaunchScreen.storyboard in Resources */,
+				393A415628912EA200F8796E /* GoogleService-Info.plist in Resources */,
 				393A41422890150E00F8796E /* Assets.xcassets in Resources */,
 				393A41402890150D00F8796E /* Main.storyboard in Resources */,
 			);
@@ -360,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		393A415728912F9A00F8796E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		393A415828912F9A00F8796E /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 393A415728912F9A00F8796E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 393A412D2890150D00F8796E /* Project object */;
 }

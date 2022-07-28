@@ -1,5 +1,6 @@
 package tukorea.npang
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -16,7 +17,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import kotlinx.android.synthetic.main.login_layout.*
 
-class LoginActivity : AppCompatActivity(), View.OnClickListener {
+class LoginActivity : Activity(), View.OnClickListener {
 
 
     //firebase Auth
