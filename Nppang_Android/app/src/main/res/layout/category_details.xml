@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="카테고리-치킨"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@color/main" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/underline"
+        android:padding="5dp">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circle_button"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/chikencircle50x50"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="20시 치킨 시키실 분 구합니다."
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="20dp"
+                android:text="19:20    BBQ 정왕점"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textSize="24dp"
+            android:textColor="@color/deeppink"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/4"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/underline"
+        android:padding="5dp">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circle_button"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/chikencircle50x50"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="20시 치킨 시키실 분 구합니다."
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="20dp"
+                android:text="19:20    BBQ 정왕점"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textSize="24dp"
+            android:textColor="@color/deeppink"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/4"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/underline"
+        android:padding="5dp">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circle_button"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/chikencircle50x50"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="20시 치킨 시키실 분 구합니다."
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="20dp"
+                android:text="19:20    BBQ 정왕점"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textSize="24dp"
+            android:textColor="@color/deeppink"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/4"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="게시글 작성 >>"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@color/deeppink"
+        android:layout_gravity="bottom"/>
+
+</LinearLayout>
