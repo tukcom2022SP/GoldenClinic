@@ -323,31 +323,31 @@
                                 <rect key="frame" x="25" y="550" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="chicken"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chikencircle"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIB-Pb-GJf">
                                 <rect key="frame" x="164" y="550" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="pizza"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pizzacircle"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6g-Vg-zTe">
                                 <rect key="frame" x="303" y="550" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="chinese"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chinacircle"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3U-gQ-SIU">
                                 <rect key="frame" x="25" y="696" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="pork"/>
+                                <buttonConfiguration key="configuration" style="plain" image="porkcircle"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELz-RH-icu">
                                 <rect key="frame" x="164" y="696" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="topokki"/>
+                                <buttonConfiguration key="configuration" style="plain" image="bokkicircle"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="치킨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Fz-uG-3e3">
                                 <rect key="frame" x="20" y="658" width="110" height="30"/>
@@ -395,7 +395,7 @@
                                 <rect key="frame" x="303" y="696" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="etc"/>
+                                <buttonConfiguration key="configuration" style="plain" image="burgercircle"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XIC-mb-y38"/>
@@ -408,8 +408,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bokkicircle" width="50" height="50"/>
+        <image name="burgercircle" width="50" height="50"/>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
+        <image name="chikencircle" width="50" height="50"/>
+        <image name="chinacircle" width="50" height="50"/>
         <image name="logInwithGoogle" width="18" height="18"/>
+        <image name="pizzacircle" width="50" height="50"/>
+        <image name="porkcircle" width="50" height="50"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <namedColor name="themeColor">
             <color red="1" green="0.41600000858306885" blue="0.41600000858306885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
