@@ -13,5 +13,8 @@ class category: UIViewController{
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.hidesBackButton = true
+    }
     
 }
