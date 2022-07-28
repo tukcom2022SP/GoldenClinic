@@ -30,7 +30,11 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_layout)
-
+        //회원가입창이동
+        sign_in.setOnClickListener {
+            var intent=Intent(this,Sign_in::class.java) //로그인 페이지 이동
+            startActivity(intent)
+        }
         //btn_googleSignIn.setOnClickListener (this) // 구글 로그인 버튼
         btn_googleSignIn.setOnClickListener {signIn()}
 
@@ -110,27 +114,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(p0: View?) {
     }
 
-    private fun createEmail(){
-        firebaseAuth.createUserWithEmailAndPassword("","").addOnCompleteListener(this){
-            it ->
-            if(it.isSuccessful){
-                var user=firebaseAuth.currentUser
-                Toast.makeText(this,"Authentication success",Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(this,"Authentication failed",Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
-    private fun loginEmail(){
-        firebaseAuth.signInWithEmailAndPassword("","").addOnCompleteListener(this){
-            it->
-            if(it.isSuccessful){
-                Toast.makeText(this,"signInWithEmail success",Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(this,"signInWithEmail failed.",Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
+
     private fun signOut() { // 로그아웃
         // Firebase sign out
         firebaseAuth.signOut()
