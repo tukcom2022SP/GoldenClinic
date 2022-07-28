@@ -262,7 +262,7 @@
         <!--CategoryVC-->
         <scene sceneID="joR-EK-8Jz">
             <objects>
-                <viewController storyboardIdentifier="category" id="uoA-ao-CWZ" customClass="categoryVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="category" id="uoA-ao-CWZ" customClass="categoryVC" customModule="Nppang_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jmu-KU-I5e">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
