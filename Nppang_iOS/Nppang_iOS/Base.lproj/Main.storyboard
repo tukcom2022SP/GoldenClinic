@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="19.626168224299064" y="83.585313174946009"/>
         </scene>
-        <!--LogIn-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="logIn" title="LogIn" id="BYZ-38-t0r" customClass="ViewController" customModule="Nppang_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logIn" id="BYZ-38-t0r" customClass="ViewController" customModule="Nppang_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,6 +66,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title=" 자동로그인">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnAutoLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="649-54-Jsj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owy-pJ-ci5">
                                         <rect key="frame" x="25" y="198" width="250" height="30"/>
@@ -139,10 +142,10 @@
             </objects>
             <point key="canvasLocation" x="919.62616822429902" y="83.585313174946009"/>
         </scene>
-        <!--SignUp-->
+        <!--Sign UpVC-->
         <scene sceneID="YWh-8H-s4t">
             <objects>
-                <viewController storyboardIdentifier="signUp" title="SignUp" id="deC-dI-5Kp" customClass="SignUpVC" customModule="Nppang_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUp" id="deC-dI-5Kp" customClass="SignUpVC" customModule="Nppang_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Y0-8s-3lD">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,10 +253,10 @@
             </objects>
             <point key="canvasLocation" x="1683.6448598130839" y="83.585313174946009"/>
         </scene>
-        <!--Category-->
+        <!--CategoryVC-->
         <scene sceneID="joR-EK-8Jz">
             <objects>
-                <viewController storyboardIdentifier="category" title="Category" id="uoA-ao-CWZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="category" id="uoA-ao-CWZ" customClass="categoryVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jmu-KU-I5e">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -24,9 +24,14 @@ class ViewController: UIViewController {
     @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
         GIDSignIn.sharedInstance().signIn()
     }
+    
     @IBAction func btnSignUp(_ sender: UIButton) {
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "signUp")
         self.navigationController?.pushViewController(pushVC!, animated: true)
+    }
+    
+    @IBAction func btnAutoLogIn(_ sender: UIButton) {
+        sender.isSelected.toggle()
     }
 }
 
