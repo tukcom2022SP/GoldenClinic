@@ -61,11 +61,13 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpQ-Je-o43">
                                         <rect key="frame" x="165" y="160" width="110" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="tintColor" name="themeColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title=" 자동로그인">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" 자동로그인" image="square" catalog="system"/>
+                                        <state key="selected" title="자동로그인" image="checkmark.square.fill" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="btnAutoLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="649-54-Jsj"/>
                                         </connections>
@@ -324,8 +326,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="logInwithGoogle" width="18" height="18"/>
+        <image name="square" catalog="system" width="128" height="114"/>
         <namedColor name="themeColor">
             <color red="1" green="0.41600000858306885" blue="0.41600000858306885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
