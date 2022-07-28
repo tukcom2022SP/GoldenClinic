@@ -47,6 +47,7 @@
                 android:layout_width="280dp"
                 android:layout_height="20dp"
                 android:text="19:20    BBQ 정왕점"
+                android:textSize="12dp"
                 android:layout_marginLeft="10dp"/>
 
         </LinearLayout>
@@ -105,6 +106,7 @@
                 android:layout_width="280dp"
                 android:layout_height="20dp"
                 android:text="19:20    BBQ 정왕점"
+                android:textSize="12dp"
                 android:layout_marginLeft="10dp"/>
 
         </LinearLayout>
@@ -163,6 +165,7 @@
                 android:layout_width="280dp"
                 android:layout_height="20dp"
                 android:text="19:20    BBQ 정왕점"
+                android:textSize="12dp"
                 android:layout_marginLeft="10dp"/>
 
         </LinearLayout>
