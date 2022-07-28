@@ -9,14 +9,29 @@ import UIKit
 import GoogleSignIn
 
 class ViewController: UIViewController {
-    @IBOutlet weak var googleSignIn: GIDSignInButton!
+    
+    @IBOutlet weak var btnGoogleLogIn: GIDSignInButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        GIDSignIn.sharedInstance()?.presentingViewController = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        GIDSignIn.sharedInstance().presentingViewController=self
     }
 
+    @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
+        GIDSignIn.sharedInstance().signIn()
+    }
     
+    @IBAction func btnSignUp(_ sender: UIButton) {
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "signUp")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
+    }
+    
+    @IBAction func btnAutoLogIn(_ sender: UIButton) {
+        sender.isSelected.toggle()
+    }
 }
 

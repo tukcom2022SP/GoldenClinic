@@ -44,8 +44,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let logInVC = storyboard.instantiateViewController(withIdentifier: "logIn")
+            let alert = UIAlertController(title:"Google 로그인 오류", message: "다시 시도하세요.", preferredStyle: UIAlertController.Style.alert)
+            let check = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alert.addAction(check)
+            logInVC.present(alert,animated: true,completion: nil)
+            return
+        }
 
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+
+        Auth.auth().signIn(with: credential) { _, _ in
+          self.showMainViewController()
+        }
     }
-
+    
+    private func showMainViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "category")
+        mainViewController.navigationItem.hidesBackButton = true
+        mainViewController.modalPresentationStyle = .fullScreen
+        UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
+    }
 }
 
