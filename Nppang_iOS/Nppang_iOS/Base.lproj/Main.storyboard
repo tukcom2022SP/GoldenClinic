@@ -58,15 +58,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpQ-Je-o43">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpQ-Je-o43">
                                         <rect key="frame" x="165" y="160" width="110" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="tintColor" name="themeColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title=" 자동로그인" image="square" catalog="system"/>
+                                        <state key="normal" title="자동로그인" image="square" catalog="system">
+                                            <color key="titleColor" name="themeColor"/>
+                                        </state>
                                         <state key="selected" title="자동로그인" image="checkmark.square.fill" catalog="system">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="themeColor"/>
                                         </state>
                                         <connections>
                                             <action selector="btnAutoLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="649-54-Jsj"/>
