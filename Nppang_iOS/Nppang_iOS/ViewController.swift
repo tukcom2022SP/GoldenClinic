@@ -7,9 +7,12 @@
 
 import UIKit
 import GoogleSignIn
+import Firebase
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var tfEmail: UITextField!
+    @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var btnGoogleLogIn: GIDSignInButton!
     
     override func viewDidLoad() {
@@ -26,8 +29,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnLogIn(_ sender: UIButton) {
-        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
-        self.navigationController?.pushViewController(pushVC!, animated: true)
+        Auth.auth().signIn(withEmail: tfEmail.text!, password: tfPassword.text!) {(user, error) in
+            if user != nil{
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
+                self.navigationController?.pushViewController(pushVC!, animated: true)            }
+            else{
+                self.tfEmail.text?.removeAll()
+                self.tfPassword.text?.removeAll()
+            }
+        }
     }
     
     @IBAction func btnSignUp(_ sender: UIButton) {

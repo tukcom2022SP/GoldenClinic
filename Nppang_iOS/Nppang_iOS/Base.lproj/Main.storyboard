@@ -142,6 +142,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnGoogleLogIn" destination="qKg-UZ-yUJ" id="iGc-jt-Jeu"/>
+                        <outlet property="tfEmail" destination="UOb-0d-gXu" id="cJF-Eo-kSQ"/>
+                        <outlet property="tfPassword" destination="OMf-Hi-fxh" id="rVY-Fc-9nN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
