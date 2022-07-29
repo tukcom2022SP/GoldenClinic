@@ -8,19 +8,19 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="회원가입"
-        android:textSize="25dp"
-        android:textColor="@color/white"
-        android:gravity="center"
+        android:layout_marginBottom="73dp"
         android:background="@color/main"
-        android:layout_marginBottom="73dp"/>
+        android:gravity="center"
+        android:text="회원가입"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp">
+        android:layout_marginRight="30dp"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,43 +28,45 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/et_sign_up_email"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:hint="아이디"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:hint="이메일" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
+                android:background="@color/deeppink"
                 android:text="중복 확인"
-                android:textColor="@color/white"
-                android:background="@color/deeppink"/>
+                android:textColor="@color/white" />
 
         </LinearLayout>
 
         <EditText
+            android:id="@+id/et_sign_up_passwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="비밀번호"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:hint="비밀번호" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="비밀번호 확인"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:hint="비밀번호 확인" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="이름"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:hint="이름" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="전화번호"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:hint="전화번호" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,13 +74,13 @@
             android:orientation="horizontal">
 
             <Button
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
-                android:text="은행 선택"
-                android:textColor="@color/black"
-                android:background="@drawable/border"
                 android:layout_marginBottom="20dp"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:background="@drawable/border"
+                android:text="은행 선택"
+                android:textColor="@color/black" />
 
             <EditText
                 android:layout_width="250dp"
@@ -90,21 +92,22 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="17dp"
             android:gravity="center"
             android:text="배송 주소는 꼭 TIP 정문으로 설정바랍니다."
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/deeppink"
-            android:textSize="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="17dp"/>
+            android:textSize="15dp" />
 
         <Button
+            android:id="@+id/btn_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/deeppink"
             android:text="회원 가입"
-            android:textSize="25dp"
             android:textColor="@color/white"
-            android:background="@color/deeppink"/>
+            android:textSize="25dp" />
 
     </LinearLayout>
 
