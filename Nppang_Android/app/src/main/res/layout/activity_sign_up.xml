@@ -2,25 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginBottom="73dp"
-        android:background="@color/main"
-        android:gravity="center"
         android:text="회원가입"
+        android:textSize="25dp"
         android:textColor="@color/white"
-        android:textSize="25dp" />
+        android:gravity="center"
+        android:background="@color/main"
+        android:layout_marginBottom="73dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:orientation="vertical">
+        android:layout_marginRight="30dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,15 +31,18 @@
                 android:id="@+id/et_sign_up_email"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
+                android:hint="아이디"
                 android:layout_marginBottom="20dp"
-                android:hint="이메일" />
+                android:textColorHint="#d9d9d9"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/black"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:background="@color/deeppink"
                 android:text="중복 확인"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:background="@color/deeppink"/>
 
         </LinearLayout>
 
@@ -47,26 +50,38 @@
             android:id="@+id/et_sign_up_passwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="비밀번호"
             android:layout_marginBottom="20dp"
-            android:hint="비밀번호" />
+            android:textColorHint="#d9d9d9"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/black"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="비밀번호 확인"
             android:layout_marginBottom="20dp"
-            android:hint="비밀번호 확인" />
+            android:textColorHint="#d9d9d9"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/black"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="이름"
             android:layout_marginBottom="20dp"
-            android:hint="이름" />
+            android:textColorHint="#d9d9d9"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/black"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="전화번호"
             android:layout_marginBottom="20dp"
-            android:hint="전화번호" />
+            android:textColorHint="#d9d9d9"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/black"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,40 +89,43 @@
             android:orientation="horizontal">
 
             <Button
-                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/border"
                 android:text="은행 선택"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:background="@drawable/border"
+                android:layout_marginBottom="20dp"
+                style="?android:attr/borderlessButtonStyle"/>
 
             <EditText
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:hint="계좌번호" />
+                android:hint="계좌번호"
+                android:textColorHint="#d9d9d9"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/black"/>
 
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="17dp"
             android:gravity="center"
             android:text="배송 주소는 꼭 TIP 정문으로 설정바랍니다."
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/deeppink"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="17dp"/>
 
         <Button
             android:id="@+id/btn_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/deeppink"
             android:text="회원 가입"
+            android:textSize="25dp"
             android:textColor="@color/white"
-            android:textSize="25dp" />
+            android:background="@color/deeppink"/>
 
     </LinearLayout>
 
