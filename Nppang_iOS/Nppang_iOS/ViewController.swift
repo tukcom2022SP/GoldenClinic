@@ -18,8 +18,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if let user = Auth.auth().currentUser {
-            if UserDefaults.standard.bool(forKey: "autoLogIn") {
+        print(UserDefaults.standard.bool(forKey: "autoLogIn"))
+        if UserDefaults.standard.bool(forKey: "autoLogIn") {
+            if let user = Auth.auth().currentUser {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
                 self.navigationController?.pushViewController(pushVC!, animated: true)
             }
@@ -58,6 +59,7 @@ class ViewController: UIViewController {
     
     @IBAction func btnAutoLogIn(_ sender: UIButton) {
         sender.isSelected.toggle()
+        print(sender.isSelected)
         UserDefaults.standard.set(sender.isSelected, forKey: "autoLogIn")
     }
     
