@@ -16,7 +16,7 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
+
         Auth = FirebaseAuth.getInstance()
         binding.btnLogout.setOnClickListener {
             Auth.signOut()
