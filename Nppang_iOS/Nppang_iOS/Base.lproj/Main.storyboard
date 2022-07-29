@@ -211,11 +211,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="계좌번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bu8-7Z-eTr">
-                                <rect key="frame" x="154" y="495" width="210" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="계좌번호(은행-계좌번호-예금주 순으로 작성)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bu8-7Z-eTr">
+                                <rect key="frame" x="64" y="495" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="배송 주소는 꼭 TIP 정문으로 설정바랍니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMI-Fl-Gbh">
                                 <rect key="frame" x="39" y="542" width="350" height="50"/>
@@ -238,14 +238,6 @@
                                     <action selector="btnSignUp:" destination="deC-dI-5Kp" eventType="touchUpInside" id="HaJ-Nb-mDI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="하나 은행" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op1-XB-K0I">
-                                <rect key="frame" x="64" y="495" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="themeColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LRY-fj-i44"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -406,14 +398,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bokkicircle" width="50" height="50"/>
-        <image name="burgercircle" width="50" height="50"/>
+        <image name="bokkicircle" width="100" height="100"/>
+        <image name="burgercircle" width="100" height="100"/>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
-        <image name="chikencircle" width="50" height="50"/>
-        <image name="chinacircle" width="50" height="50"/>
+        <image name="chikencircle" width="100" height="100"/>
+        <image name="chinacircle" width="100" height="100"/>
         <image name="logInwithGoogle" width="18" height="18"/>
-        <image name="pizzacircle" width="50" height="50"/>
-        <image name="porkcircle" width="50" height="50"/>
+        <image name="pizzacircle" width="100" height="100"/>
+        <image name="porkcircle" width="100" height="100"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <namedColor name="themeColor">
             <color red="1" green="0.41600000858306885" blue="0.41600000858306885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
