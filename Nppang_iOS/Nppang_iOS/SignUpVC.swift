@@ -17,6 +17,12 @@ class SignUpVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.hidesBackButton = true
     }
+    @IBAction func btnSelectBank(_ sender: UIButton) {
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let popupVC = storyBoard.instantiateViewController(withIdentifier: "popUpBank")
+        popupVC.modalPresentationStyle = .overFullScreen
+        present(popupVC, animated: false, completion: nil)
+    }
     
     @IBAction func btnSignUp(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
