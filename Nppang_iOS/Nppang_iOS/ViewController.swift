@@ -59,7 +59,6 @@ class ViewController: UIViewController {
     
     @IBAction func btnAutoLogIn(_ sender: UIButton) {
         sender.isSelected.toggle()
-        print(sender.isSelected)
         UserDefaults.standard.set(sender.isSelected, forKey: "autoLogIn")
     }
     
