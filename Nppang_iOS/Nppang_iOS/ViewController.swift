@@ -31,8 +31,9 @@ class ViewController: UIViewController {
     @IBAction func btnLogIn(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: tfEmail.text!, password: tfPassword.text!) {(user, error) in
             if user != nil{
-                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
-                self.navigationController?.pushViewController(pushVC!, animated: true)            }
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "categoryVC")
+                self.navigationController?.pushViewController(pushVC!, animated: true)
+            }
             else{
                 self.tfEmail.text?.removeAll()
                 self.tfPassword.text?.removeAll()
@@ -46,12 +47,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnSignUp(_ sender: UIButton) {
-        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "signUp")
-        self.navigationController?.pushViewController(pushVC!, animated: true)
+        pushViewController(vcName: "signUp")
     }
     
     @IBAction func btnAutoLogIn(_ sender: UIButton) {
         sender.isSelected.toggle()
+    }
+    
+    func pushViewController(vcName: String){
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: vcName)
+        self.navigationController?.pushViewController(pushVC!, animated: true)
     }
 }
 
