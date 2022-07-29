@@ -60,11 +60,11 @@
 
         <CheckBox
             android:id="@+id/keepSignedIn"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="20dp"
             android:layout_gravity="right"
-            android:gravity="right"
             android:text="자동 로그인"
+            android:layout_marginTop="5dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="15dp" />
 
