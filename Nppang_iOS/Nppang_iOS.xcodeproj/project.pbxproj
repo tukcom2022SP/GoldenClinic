@@ -14,10 +14,14 @@
 		393A41422890150E00F8796E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393A41412890150E00F8796E /* Assets.xcassets */; };
 		393A41452890150E00F8796E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393A41432890150E00F8796E /* LaunchScreen.storyboard */; };
 		393A415628912EA200F8796E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 393A415528912EA200F8796E /* GoogleService-Info.plist */; };
-		393A415928912F9A00F8796E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 393A415828912F9A00F8796E /* FirebaseAnalytics */; };
+		393A41602892727700F8796E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A415F2892727700F8796E /* SignUpVC.swift */; };
+		393A416228927A4700F8796E /* categoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A416128927A4700F8796E /* categoryVC.swift */; };
+		39BAC9D12893882E00AC8FD3 /* popUpBankVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BAC9D02893882E00AC8FD3 /* popUpBankVC.swift */; };
+		E444460ADA7E685CA511CE9D /* Pods_Nppang_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345970368E6F140CC509A918 /* Pods_Nppang_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		345970368E6F140CC509A918 /* Pods_Nppang_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nppang_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		393A41352890150D00F8796E /* Nppang_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nppang_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		393A41382890150D00F8796E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		393A413A2890150D00F8796E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +31,11 @@
 		393A41442890150E00F8796E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		393A41462890150E00F8796E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		393A415528912EA200F8796E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		393A415F2892727700F8796E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		393A416128927A4700F8796E /* categoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryVC.swift; sourceTree = "<group>"; };
+		39BAC9D02893882E00AC8FD3 /* popUpBankVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpBankVC.swift; sourceTree = "<group>"; };
+		90B4530ECB0947FD505A002D /* Pods-Nppang_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nppang_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Nppang_iOS/Pods-Nppang_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		FE88D64F8B197F7F61973759 /* Pods-Nppang_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nppang_iOS.release.xcconfig"; path = "Target Support Files/Pods-Nppang_iOS/Pods-Nppang_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				393A415928912F9A00F8796E /* FirebaseAnalytics in Frameworks */,
+				E444460ADA7E685CA511CE9D /* Pods_Nppang_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +55,8 @@
 			children = (
 				393A41372890150D00F8796E /* Nppang_iOS */,
 				393A41362890150D00F8796E /* Products */,
+				544A6127C8525F927A832191 /* Pods */,
+				8B9CAEC512D4C00D5157C596 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,12 +75,32 @@
 				393A41382890150D00F8796E /* AppDelegate.swift */,
 				393A413A2890150D00F8796E /* SceneDelegate.swift */,
 				393A413C2890150D00F8796E /* ViewController.swift */,
+				393A415F2892727700F8796E /* SignUpVC.swift */,
+				393A416128927A4700F8796E /* categoryVC.swift */,
 				393A413E2890150D00F8796E /* Main.storyboard */,
 				393A41432890150E00F8796E /* LaunchScreen.storyboard */,
 				393A41462890150E00F8796E /* Info.plist */,
 				393A415528912EA200F8796E /* GoogleService-Info.plist */,
+				39BAC9D02893882E00AC8FD3 /* popUpBankVC.swift */,
 			);
 			path = Nppang_iOS;
+			sourceTree = "<group>";
+		};
+		544A6127C8525F927A832191 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90B4530ECB0947FD505A002D /* Pods-Nppang_iOS.debug.xcconfig */,
+				FE88D64F8B197F7F61973759 /* Pods-Nppang_iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8B9CAEC512D4C00D5157C596 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				345970368E6F140CC509A918 /* Pods_Nppang_iOS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,18 +110,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 393A41492890150E00F8796E /* Build configuration list for PBXNativeTarget "Nppang_iOS" */;
 			buildPhases = (
+				1083CE326EFE3BB6CB3BC512 /* [CP] Check Pods Manifest.lock */,
 				393A41312890150D00F8796E /* Sources */,
 				393A41322890150D00F8796E /* Frameworks */,
 				393A41332890150D00F8796E /* Resources */,
+				24E01EE685A084C193731B00 /* [CP] Embed Pods Frameworks */,
+				44D966E66FA15BFF3E59D18D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Nppang_iOS;
-			packageProductDependencies = (
-				393A415828912F9A00F8796E /* FirebaseAnalytics */,
-			);
 			productName = Nppang_iOS;
 			productReference = 393A41352890150D00F8796E /* Nppang_iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -119,9 +150,6 @@
 				Base,
 			);
 			mainGroup = 393A412C2890150D00F8796E;
-			packageReferences = (
-				393A415728912F9A00F8796E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = 393A41362890150D00F8796E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,11 +173,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1083CE326EFE3BB6CB3BC512 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nppang_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24E01EE685A084C193731B00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nppang_iOS/Pods-Nppang_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nppang_iOS/Pods-Nppang_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nppang_iOS/Pods-Nppang_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44D966E66FA15BFF3E59D18D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nppang_iOS/Pods-Nppang_iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nppang_iOS/Pods-Nppang_iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nppang_iOS/Pods-Nppang_iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		393A41312890150D00F8796E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				393A416228927A4700F8796E /* categoryVC.swift in Sources */,
+				39BAC9D12893882E00AC8FD3 /* popUpBankVC.swift in Sources */,
+				393A41602892727700F8796E /* SignUpVC.swift in Sources */,
 				393A413D2890150D00F8796E /* ViewController.swift in Sources */,
 				393A41392890150D00F8796E /* AppDelegate.swift in Sources */,
 				393A413B2890150D00F8796E /* SceneDelegate.swift in Sources */,
@@ -294,6 +384,7 @@
 		};
 		393A414A2890150E00F8796E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90B4530ECB0947FD505A002D /* Pods-Nppang_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,6 +414,7 @@
 		};
 		393A414B2890150E00F8796E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE88D64F8B197F7F61973759 /* Pods-Nppang_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -372,25 +464,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		393A415728912F9A00F8796E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		393A415828912F9A00F8796E /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 393A415728912F9A00F8796E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 393A412D2890150D00F8796E /* Project object */;
 }
