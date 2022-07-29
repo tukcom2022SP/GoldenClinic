@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
+        android:text="이메일 찾기"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="30dp" />\
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:gravity="center"
+        android:text="회원님의 이메일은"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="KOREA@tukorea.ac.kr"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="입니다."
+        android:textSize="15dp" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="143dp"
+        android:layout_marginRight="55dp"
+        android:background="@color/deeppink"
+        android:gravity="center"
+        android:text="홈으로"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginRight="55dp"
+        android:background="@color/deeppink"
+        android:gravity="center"
+        android:text="비밀번호 찾기"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+
+</LinearLayout>
