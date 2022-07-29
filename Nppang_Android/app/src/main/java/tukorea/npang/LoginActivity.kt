@@ -5,8 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -18,23 +16,25 @@ import com.google.firebase.auth.GoogleAuthProvider
 import kotlinx.android.synthetic.main.login_layout.*
 
 class LoginActivity : Activity(), View.OnClickListener {
-
-
     //firebase Auth
     private lateinit var firebaseAuth: FirebaseAuth
+
     //google client
     private lateinit var googleSignInClient: GoogleSignInClient
 
     //private const val TAG = "GoogleActivity"
     private val RC_SIGN_IN = 99
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_layout)
 
         //btn_googleSignIn.setOnClickListener (this) // 구글 로그인 버튼
-        btn_googleSignIn.setOnClickListener {signIn()}
-
+        btn_googleSignIn.setOnClickListener { signIn() }
+        //회원가입이동창
+        sign.setOnClickListener {
+            val intent2 = Intent(this, SignUpActivity::class.java)
+            startActivity(intent2)
+        }
         //Google 로그인 옵션 구성. requestIdToken 및 Email 요청
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -51,7 +51,7 @@ class LoginActivity : Activity(), View.OnClickListener {
     public override fun onStart() {
         super.onStart()
         val account = GoogleSignIn.getLastSignedInAccount(this)
-        if(account!==null){ // 이미 로그인 되어있을시 바로 메인 액티비티로 이동
+        if (account !== null) { // 이미 로그인 되어있을시 바로 메인 액티비티로 이동
             toMainActivity(firebaseAuth.currentUser)
         }
     } //onStart End
@@ -95,7 +95,7 @@ class LoginActivity : Activity(), View.OnClickListener {
 
     // toMainActivity
     fun toMainActivity(user: FirebaseUser?) {
-        if(user !=null) { // MainActivity 로 이동
+        if (user != null) { // MainActivity 로 이동
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
@@ -111,27 +111,6 @@ class LoginActivity : Activity(), View.OnClickListener {
     override fun onClick(p0: View?) {
     }
 
-    private fun createEmail(){
-        firebaseAuth.createUserWithEmailAndPassword("","").addOnCompleteListener(this){
-            it ->
-            if(it.isSuccessful){
-                var user=firebaseAuth.currentUser
-                Toast.makeText(this,"Authentication success",Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(this,"Authentication failed",Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
-    private fun loginEmail(){
-        firebaseAuth.signInWithEmailAndPassword("","").addOnCompleteListener(this){
-            it->
-            if(it.isSuccessful){
-                Toast.makeText(this,"signInWithEmail success",Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(this,"signInWithEmail failed.",Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
     private fun signOut() { // 로그아웃
         // Firebase sign out
         firebaseAuth.signOut()
