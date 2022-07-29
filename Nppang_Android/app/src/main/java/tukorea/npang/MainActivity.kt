@@ -24,6 +24,13 @@ class MainActivity : Activity() {
             startActivity(intent)
             this.finish()
         }
+
+        binding.btnLogout.setOnClickListener {
+            Auth.signOut()
+            val intent = Intent(this, LoginActivity::class.java) //로그인 페이지 이동
+            startActivity(intent)
+            this.finish()
+        }
     }
 
 }
