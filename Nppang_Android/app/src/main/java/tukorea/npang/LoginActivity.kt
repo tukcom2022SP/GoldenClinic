@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -13,6 +14,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import kotlinx.android.synthetic.main.activity_login_layout.*
 import tukorea.npang.databinding.ActivityLoginLayoutBinding
 
 
@@ -39,6 +41,9 @@ class LoginActivity : Activity(), View.OnClickListener {
         binding.sign.setOnClickListener {
             val intent2 = Intent(this, SignUpActivity::class.java)
             startActivity(intent2)
+        }
+        binding.btnLogin.setOnClickListener {
+            loginEmail(et_email.text.toString().trim(),et_password.text.toString())
         }
         //Google 로그인 옵션 구성. requestIdToken 및 Email 요청
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -114,6 +119,14 @@ class LoginActivity : Activity(), View.OnClickListener {
     // signIn End
 
     override fun onClick(p0: View?) {
+    }
+    private fun loginEmail(email:String,password: String) {
+        firebaseAuth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
+            Toast.makeText(this, "good", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener { e ->
+            Log.d("createEmail", "createEmail:$e ")
+            Toast.makeText(this, "fail", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun signOut() { // 로그아웃
