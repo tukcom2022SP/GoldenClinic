@@ -37,13 +37,12 @@ class SignUpActivity : Activity() {
             }
     }
 
-    private fun loginEmail() {
-        firebaseAuth.signInWithEmailAndPassword("", "").addOnCompleteListener(this) { it ->
-            if (it.isSuccessful) {
-                Toast.makeText(this, "signInWithEmail success", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "signInWithEmail failed.", Toast.LENGTH_SHORT).show()
-            }
+    private fun loginEmail(email:String,password: String) {
+        firebaseAuth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
+            Toast.makeText(this, "good", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener { e ->
+            Log.d("createEmail", "createEmail:$e ")
+            Toast.makeText(this, "fail", Toast.LENGTH_SHORT).show()
         }
     }
 }

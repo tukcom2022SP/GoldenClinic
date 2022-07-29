@@ -13,7 +13,8 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
-import kotlinx.android.synthetic.main.login_layout.*
+import tukorea.npang.databinding.ActivityLoginLayoutBinding
+
 
 class LoginActivity : Activity(), View.OnClickListener {
     //firebase Auth
@@ -22,16 +23,20 @@ class LoginActivity : Activity(), View.OnClickListener {
     //google client
     private lateinit var googleSignInClient: GoogleSignInClient
 
+    //Binding
+    private lateinit var binding: ActivityLoginLayoutBinding
+
     //private const val TAG = "GoogleActivity"
     private val RC_SIGN_IN = 99
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_layout)
+        binding = ActivityLoginLayoutBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         //btn_googleSignIn.setOnClickListener (this) // 구글 로그인 버튼
-        btn_googleSignIn.setOnClickListener { signIn() }
+        binding.btnGoogleSignIn.setOnClickListener { signIn() }
         //회원가입이동창
-        sign.setOnClickListener {
+        binding.sign.setOnClickListener {
             val intent2 = Intent(this, SignUpActivity::class.java)
             startActivity(intent2)
         }

@@ -3,21 +3,22 @@ package tukorea.npang
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_main.*
+import tukorea.npang.databinding.ActivityMainBinding
 
 class MainActivity : Activity() {
     //firebase Auth
     private lateinit var Auth: FirebaseAuth
 
-    //google client
-    private lateinit var googleSignInClient: GoogleSignInClient
+    //Binding
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        
         Auth = FirebaseAuth.getInstance()
-        logout.setOnClickListener {
+        binding.btnLogout.setOnClickListener {
             Auth.signOut()
             val intent = Intent(this, LoginActivity::class.java) //로그인 페이지 이동
             startActivity(intent)
