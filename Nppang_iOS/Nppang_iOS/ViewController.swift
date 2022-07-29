@@ -36,6 +36,11 @@ class ViewController: UIViewController {
             else{
                 self.tfEmail.text?.removeAll()
                 self.tfPassword.text?.removeAll()
+                self.tfEmail.becomeFirstResponder()
+                let alert = UIAlertController(title:"로그인 오류", message: "다시 시도하세요.", preferredStyle: UIAlertController.Style.alert)
+                let check = UIAlertAction(title: "확인", style: .default, handler: nil)
+                alert.addAction(check)
+                self.present(alert,animated: true,completion: nil)
             }
         }
     }
