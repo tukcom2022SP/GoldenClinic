@@ -18,6 +18,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if let user = Auth.auth().currentUser {
+            if UserDefaults.standard.bool(forKey: "autoLogIn") {
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
+                self.navigationController?.pushViewController(pushVC!, animated: true)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,7 +37,7 @@ class ViewController: UIViewController {
     @IBAction func btnLogIn(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: tfEmail.text!, password: tfPassword.text!) {(user, error) in
             if user != nil{
-                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "categoryVC")
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
                 self.navigationController?.pushViewController(pushVC!, animated: true)
             }
             else{
@@ -52,6 +58,7 @@ class ViewController: UIViewController {
     
     @IBAction func btnAutoLogIn(_ sender: UIButton) {
         sender.isSelected.toggle()
+        UserDefaults.standard.set(sender.isSelected, forKey: "autoLogIn")
     }
     
     func pushViewController(vcName: String){
