@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class categoryVC: UIViewController{
     
@@ -17,4 +18,11 @@ class categoryVC: UIViewController{
         navigationItem.hidesBackButton = true
     }
     
+    @IBAction func btnLogOut(_ sender: UIButton) {
+        do {
+            try Auth.auth().signOut()
+            self.navigationController?.popViewController(animated: true)
+            UserDefaults.standard.set(false, forKey: "autoLogIn")
+        } catch { }
+    }
 }

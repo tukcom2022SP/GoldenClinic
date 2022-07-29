@@ -246,6 +246,11 @@
                         <color key="tintColor" red="1" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="7T5-7X-FSE"/>
+                    <connections>
+                        <outlet property="tfCheckPassword" destination="V5X-Fv-bcK" id="dfz-no-9o6"/>
+                        <outlet property="tfEmail" destination="WLO-Yh-8NW" id="3A0-pG-9Z8"/>
+                        <outlet property="tfPassword" destination="tN8-Tf-zyR" id="HRS-MZ-AQo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wu-ZZ-frs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -389,6 +394,15 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="burgercircle"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVu-nx-upu">
+                                <rect key="frame" x="196" y="861" width="37" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="끝"/>
+                                <connections>
+                                    <action selector="btnLogOut:" destination="uoA-ao-CWZ" eventType="touchUpInside" id="1ZE-sD-neK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XIC-mb-y38"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -397,6 +411,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDV-dH-VAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2444.8598130841119" y="83.585313174946009"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jxr-Wc-pFC">
+            <objects>
+                <viewController storyboardIdentifier="findInfo" id="hOQ-FX-juj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wa8-Ey-xtt">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljO-Xs-vY6">
+                                <rect key="frame" x="193" y="139" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="woe-tU-h5m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VXr-qE-Ias" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920" y="789"/>
         </scene>
     </scenes>
     <resources>
