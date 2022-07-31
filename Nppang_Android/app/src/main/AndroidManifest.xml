@@ -29,6 +29,9 @@
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
+        <activity
+            android:name=".FindMyInfoActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

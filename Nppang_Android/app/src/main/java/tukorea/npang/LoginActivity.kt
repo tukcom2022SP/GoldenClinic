@@ -42,6 +42,11 @@ class LoginActivity : Activity(), View.OnClickListener {
             val intent2 = Intent(this, SignUpActivity::class.java)
             startActivity(intent2)
         }
+        //회원정보찾기 이동창
+        binding.btnFindMyInfo.setOnClickListener {
+            val intent3 = Intent(this, FindMyInfoActivity::class.java)
+            startActivity(intent3)
+        }
         binding.btnLogin.setOnClickListener {
             loginEmail(et_email.text.toString().trim(),et_password.text.toString())
         }

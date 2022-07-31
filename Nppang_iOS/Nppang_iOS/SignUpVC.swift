@@ -6,9 +6,12 @@
 //
 
 import UIKit
-import GoogleSignIn
+import Firebase
 
 class SignUpVC: UIViewController {
+    @IBOutlet weak var tfEmail: UITextField!
+    @IBOutlet weak var tfPassword: UITextField!
+    @IBOutlet weak var tfCheckPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,17 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func btnSignUp(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        Auth.auth().createUser(withEmail: tfEmail.text!, password: tfPassword.text!) {(authResut, error) in
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let logInVC = storyboard.instantiateViewController(withIdentifier: "signUp")
+            let alert = UIAlertController(title:"회원 가입 오류", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+            let check = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alert.addAction(check)
+            logInVC.present(alert,animated: true,completion: nil)
+            guard let user = authResut?.user else {
+                return
+            }
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }
