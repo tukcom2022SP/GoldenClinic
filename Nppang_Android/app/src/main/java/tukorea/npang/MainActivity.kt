@@ -8,7 +8,7 @@ import tukorea.npang.databinding.ActivityMainBinding
 
 class MainActivity : Activity() {
     //firebase Auth
-    private lateinit var Auth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth
 
     //Binding
     private lateinit var binding: ActivityMainBinding
@@ -17,9 +17,9 @@ class MainActivity : Activity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Auth = FirebaseAuth.getInstance()
+        auth = FirebaseAuth.getInstance()
         binding.btnLogout.setOnClickListener {
-            Auth.signOut()
+            auth.signOut()
             val intent = Intent(this, LoginActivity::class.java) //로그인 페이지 이동
             startActivity(intent)
             this.finish()

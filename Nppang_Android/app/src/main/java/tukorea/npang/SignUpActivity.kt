@@ -14,6 +14,8 @@ import tukorea.npang.databinding.ActivitySignUpBinding
 class SignUpActivity : Activity() {
     //db선언
     val db = Firebase.firestore
+
+    //binding선언
     private lateinit var binding: ActivitySignUpBinding
 
     //firebase Auth
@@ -22,14 +24,16 @@ class SignUpActivity : Activity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //Auth 경로설정
         firebaseAuth = FirebaseAuth.getInstance()
 
-        //회원가입시 파이어베이스 정보 등록
+        //회원가입시 파이어베이스 정보 등록,파이어스토어 연동
         binding.btnSignUp.setOnClickListener {
             createEmail(
                 et_sign_up_email.text.toString().trim(),
                 et_sign_up_passwd.text.toString().trim()
             )
+            //
             val userBankAccount = binding.etSignUpEmail.text
             val userEmail = binding.etUserName.text
             val userName = binding.etAccount.text
