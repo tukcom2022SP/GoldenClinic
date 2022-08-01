@@ -247,7 +247,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/plzzaimage"
+                android:id="@+id/pizzaimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/circle_button"
