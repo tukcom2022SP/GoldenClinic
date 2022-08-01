@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <TextView
         android:layout_width="match_parent"
@@ -11,10 +13,72 @@
         android:text="실시간 게시물"
         android:textColor="@color/white"
         android:textSize="25dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation=""
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/underline"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20시 치킨 시키실 분 구합니다."
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="20dp"
+            android:text="19:20    BBQ 정왕점"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="5dp"
+            android:text="bbq 황금올리브를 먹고싶은데 같이 시키시고 배달비 나누실 분을 구합니다."
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:paddingBottom="5dp">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:text="메뉴 선택"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/borderpeach"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="참가하기"
+        android:textSize="20dp"
+        android:background="@color/deeppink"
+        android:textColor="@color/white"
+        android:layout_marginLeft="29dp"
+        android:layout_marginRight="29dp"
+        android:layout_marginTop="300dp"/>
 
 
 </LinearLayout>
