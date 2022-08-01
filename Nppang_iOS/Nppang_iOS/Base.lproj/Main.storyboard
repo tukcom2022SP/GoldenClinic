@@ -714,10 +714,10 @@
             </objects>
             <point key="canvasLocation" x="3986.9158878504672" y="83.585313174946009"/>
         </scene>
-        <!--View Controller-->
+        <!--Find InfoVC-->
         <scene sceneID="jxr-Wc-pFC">
             <objects>
-                <viewController storyboardIdentifier="findInfo" id="hOQ-FX-juj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="findInfo" id="hOQ-FX-juj" customClass="findInfoVC" customModule="Nppang_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wa8-Ey-xtt">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
