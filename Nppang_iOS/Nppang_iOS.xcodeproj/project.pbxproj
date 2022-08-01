@@ -78,19 +78,19 @@
 			isa = PBXGroup;
 			children = (
 				393A41412890150E00F8796E /* Assets.xcassets */,
+				393A41432890150E00F8796E /* LaunchScreen.storyboard */,
+				393A413E2890150D00F8796E /* Main.storyboard */,
 				393A41382890150D00F8796E /* AppDelegate.swift */,
 				393A413A2890150D00F8796E /* SceneDelegate.swift */,
 				393A413C2890150D00F8796E /* ViewController.swift */,
 				393A415F2892727700F8796E /* SignUpVC.swift */,
 				393A416128927A4700F8796E /* categoryVC.swift */,
 				39391C902897762500E0EDAD /* postingVC.swift */,
-				393A413E2890150D00F8796E /* Main.storyboard */,
-				393A41432890150E00F8796E /* LaunchScreen.storyboard */,
-				393A41462890150E00F8796E /* Info.plist */,
-				393A415528912EA200F8796E /* GoogleService-Info.plist */,
 				39391C8C2897650700E0EDAD /* realTimePostsVC.swift */,
 				39391C8E289766D800E0EDAD /* categoryPostsVC.swift */,
 				39391C922897B13E00E0EDAD /* findInfoVC.swift */,
+				393A41462890150E00F8796E /* Info.plist */,
+				393A415528912EA200F8796E /* GoogleService-Info.plist */,
 			);
 			path = Nppang_iOS;
 			sourceTree = "<group>";
