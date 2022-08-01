@@ -8,6 +8,7 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import tukorea.npang.databinding.ActivitySignUpBinding
 
+
 class SignUpActivity : Activity() {
     private lateinit var binding: ActivitySignUpBinding
 
