@@ -201,13 +201,14 @@
             android:orientation="vertical">
 
             <ImageButton
-
+                android:id="@+id/chickenimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/circle_button"
-                android:src="@drawable/chikencircle" />
+                android:src="@drawable/chikencircle"/>
 
             <TextView
+                android:id="@+id/chickentxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -223,12 +224,14 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/chinaimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/circle_button"
                 android:src="@drawable/chinacircle" />
 
             <TextView
+                android:id="@+id/chinatxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -244,12 +247,14 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/plzzaimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/circle_button"
                 android:src="@drawable/pizzacircle" />
 
             <TextView
+                android:id="@+id/pizzatxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -275,12 +280,14 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/porkimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/circle_button"
                 android:src="@drawable/porkcircle" />
 
             <TextView
+                android:id="@+id/porktxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -296,12 +303,14 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/bokkiimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/circle_button"
                 android:src="@drawable/bokkicircle" />
 
             <TextView
+                android:id="@+id/bokkitxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -317,12 +326,14 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/burgerimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/circle_button"
                 android:src="@drawable/burgercircle" />
 
             <TextView
+                android:id="@+id/bugertxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
