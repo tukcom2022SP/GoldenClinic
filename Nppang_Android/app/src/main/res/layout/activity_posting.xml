@@ -110,15 +110,30 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_weight="1" />
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
     <Button
         android:layout_width="match_parent"
+        android:layout_weight="1"
         android:layout_height="50dp"
         android:layout_gravity="bottom"
         android:background="@color/deeppink"
         android:gravity="center"
-        android:text="게시글 작성 >>"
+        android:text="모집하기"
         android:textColor="@color/white"
         android:textSize="25dp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="@color/deeppink"
+            android:gravity="center"
+            android:text="취소"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+    </LinearLayout>
 
 </LinearLayout>
