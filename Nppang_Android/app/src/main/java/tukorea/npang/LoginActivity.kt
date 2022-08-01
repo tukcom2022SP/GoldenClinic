@@ -14,7 +14,6 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_login_layout.*
 import tukorea.npang.databinding.ActivityLoginLayoutBinding
 
@@ -29,8 +28,7 @@ class LoginActivity : Activity(), View.OnClickListener {
     //Binding
     private lateinit var binding: ActivityLoginLayoutBinding
 
-    //private const val TAG = "GoogleActivity"
-    private val RC_SIGN_IN = 99
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginLayoutBinding.inflate(layoutInflater)
@@ -156,5 +154,8 @@ class LoginActivity : Activity(), View.OnClickListener {
         }
     }
 
-
+    //private const val TAG = "GoogleActivity"
+    companion object {
+        const val RC_SIGN_IN = 99
+    }
 }
