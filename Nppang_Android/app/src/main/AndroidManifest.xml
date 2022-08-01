@@ -30,7 +30,7 @@
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".FindMyInfoActivity"
+            android:name=".CategoryActivity"
             android:exported="false" />
     </application>
 
