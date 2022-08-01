@@ -62,6 +62,8 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(sender.isSelected, forKey: "autoLogIn")
     }
     
+    @IBAction func btnFindInfo(_ sender: UIButton) {
+    }
     func pushViewController(vcName: String){
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: vcName)
         self.navigationController?.pushViewController(pushVC!, animated: true)
