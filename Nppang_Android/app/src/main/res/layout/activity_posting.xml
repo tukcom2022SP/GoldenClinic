@@ -8,11 +8,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="카테고리-치킨"
-        android:textSize="25dp"
-        android:textColor="@color/white"
+        android:background="@color/main"
         android:gravity="center"
-        android:background="@color/main" />
+        android:text="카테고리-치킨"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,36 +24,36 @@
         <TextView
             android:layout_width="150dp"
             android:layout_height="30dp"
+            android:layout_marginTop="30dp"
             android:text="게시글 제목"
             android:textSize="20dp"
-            android:layout_marginTop="30dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@drawable/borderpeach"/>
+            android:background="@drawable/borderpeach" />
 
         <TextView
             android:layout_width="150dp"
             android:layout_height="30dp"
+            android:layout_marginTop="30dp"
             android:text="내용"
             android:textSize="20dp"
-            android:layout_marginTop="30dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:background="@drawable/borderpeach"/>
+            android:background="@drawable/borderpeach" />
 
         <TextView
             android:layout_width="150dp"
             android:layout_height="30dp"
+            android:layout_marginTop="30dp"
             android:text="카테고리"
             android:textSize="20dp"
-            android:layout_marginTop="30dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,42 +63,46 @@
             <Button
                 android:layout_width="55dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/borderpeach"/>
+                android:background="@drawable/borderpeach" />
 
             <Button
                 android:layout_width="55dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/borderpeach"/>
-            <Button
-                android:layout_width="55dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderpeach"/>
-            <Button
-                android:layout_width="55dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderpeach"/>
-            <Button
-                android:layout_width="55dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderpeach"/>
-            <Button
-                android:layout_width="55dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderpeach"/>
+                android:background="@drawable/borderpeach" />
 
-            </LinearLayout>
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/borderpeach" />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/borderpeach" />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/borderpeach" />
+
+            <Button
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/borderpeach" />
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="150dp"
             android:layout_height="30dp"
+            android:layout_marginTop="30dp"
             android:text="매장 선택"
             android:textSize="20dp"
-            android:layout_marginTop="30dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="40dp"/>
+            android:layout_height="40dp" />
 
     </LinearLayout>
 
@@ -109,11 +114,11 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="게시글 작성 >>"
-        android:textSize="25dp"
-        android:textColor="@color/white"
-        android:gravity="center"
+        android:layout_gravity="bottom"
         android:background="@color/deeppink"
-        android:layout_gravity="bottom"/>
+        android:gravity="center"
+        android:text="게시글 작성 >>"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
 
 </LinearLayout>

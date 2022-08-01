@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,32 +11,34 @@
         android:id="@+id/textView"
         android:layout_width="300dp"
         android:layout_height="62dp"
-        android:layout_marginTop="32dp"
         android:layout_gravity="center"
+        android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="로그인"
+        android:textColor="@color/black"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="25dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_gravity="center"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:paddingTop="32dp"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
         android:background="@color/white"
-        android:layout_gravity="center">
+        android:orientation="vertical"
+        android:paddingLeft="25dp"
+        android:paddingTop="32dp"
+        android:paddingRight="25dp">
 
         <EditText
+            android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginBottom="15dp"
             android:background="@drawable/border"
             android:gravity="center_vertical"
-            android:hint="ID"
+            android:hint="Email"
             android:inputType="text"
             android:minHeight="48dp"
             android:paddingLeft="7dp"
@@ -45,6 +46,7 @@
             android:textSize="12dp" />
 
         <EditText
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/border"
@@ -58,15 +60,16 @@
 
         <CheckBox
             android:id="@+id/keepSignedIn"
-            android:layout_width="100dp"
+            android:layout_width="110dp"
             android:layout_height="20dp"
             android:layout_gravity="right"
-            android:gravity="right"
             android:text="자동 로그인"
+            android:layout_marginTop="5dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="15dp" />
 
         <Button
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
@@ -82,46 +85,48 @@
             android:id="@+id/btn_googleSignIn"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp">
-        </com.google.android.gms.common.SignInButton>
+            android:layout_marginTop="10dp"></com.google.android.gms.common.SignInButton>
 
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
+            android:layout_gravity="center"
             android:layout_marginTop="58dp"
-            android:background="#d9d9d9"
-            android:layout_gravity="center"/>
+            android:background="#d9d9d9" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <Button
+                android:id="@+id/sign"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="125dp"
                 android:layout_height="40dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:onClick="onClick"
                 android:text="회원 가입"
                 android:textColor="@color/black"
-                android:textSize="15dp"
-                android:gravity="center"
-                android:layout_marginRight="20dp"
-                style="?android:attr/borderlessButtonStyle"/>
+                android:textSize="15dp" />
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="30dp"
-                android:background="#d9d9d9"
                 android:layout_marginTop="15dp"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp"
+                android:background="#d9d9d9" />
 
             <Button
+                android:id="@+id/btn_find_my_info"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="125dp"
                 android:layout_height="40dp"
-                android:gravity="center"
                 android:layout_marginLeft="20dp"
+                android:gravity="center"
                 android:text="회원 정보 찾기"
                 android:textColor="@color/black"
                 android:textSize="15dp" />
