@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import kotlinx.android.synthetic.main.activity_login_layout.*
+import kotlinx.android.synthetic.main.activity_sign_up.*
 import tukorea.npang.databinding.ActivityLoginLayoutBinding
 
 
@@ -44,8 +45,8 @@ class LoginActivity : Activity(), View.OnClickListener {
         }
         //회원정보찾기 이동창
         binding.btnFindMyInfo.setOnClickListener {
-            val intent3 = Intent(this, FindMyInfoActivity::class.java)
-            startActivity(intent3)
+           // val intent3 = Intent(this, FindMyInfoActivity::class.java)
+           // startActivity(intent3)
         }
         binding.btnLogin.setOnClickListener {
             loginEmail(et_email.text.toString().trim(),et_password.text.toString())
