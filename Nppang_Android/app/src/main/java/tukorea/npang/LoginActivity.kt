@@ -42,8 +42,15 @@ class LoginActivity : Activity(), View.OnClickListener {
             val intent2 = Intent(this, SignUpActivity::class.java)
             startActivity(intent2)
         }
+        //회원정보찾기 이동창
+        binding.btnFindMyInfo.setOnClickListener {
+            val intent3 = Intent(this, FindMyInfoActivity::class.java)
+            startActivity(intent3)
+        }
+        //로그인버튼 클릭후 카테고리 이동
         binding.btnLogin.setOnClickListener {
-            loginEmail(et_email.text.toString().trim(),et_password.text.toString())
+            loginEmail(et_email.text.toString().trim(), et_password.text.toString())
+
         }
         //Google 로그인 옵션 구성. requestIdToken 및 Email 요청
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -106,7 +113,7 @@ class LoginActivity : Activity(), View.OnClickListener {
     // toMainActivity
     fun toMainActivity(user: FirebaseUser?) {
         if (user != null) { // MainActivity 로 이동
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, CategoryActivity::class.java))
             finish()
         }
     } // toMainActivity End
@@ -120,12 +127,14 @@ class LoginActivity : Activity(), View.OnClickListener {
 
     override fun onClick(p0: View?) {
     }
-    private fun loginEmail(email:String,password: String) {
+
+    private fun loginEmail(email: String, password: String) {
         firebaseAuth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
-            Toast.makeText(this, "good", Toast.LENGTH_SHORT).show()
+            val intent4 = Intent(this, CategoryActivity::class.java)
+            startActivity(intent4)
         }.addOnFailureListener { e ->
             Log.d("createEmail", "createEmail:$e ")
-            Toast.makeText(this, "fail", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "아이디/비밀번호 오류", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -146,5 +155,6 @@ class LoginActivity : Activity(), View.OnClickListener {
 
         }
     }
+
 
 }

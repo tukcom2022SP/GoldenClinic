@@ -8,6 +8,7 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import tukorea.npang.databinding.ActivitySignUpBinding
 
+
 class SignUpActivity : Activity() {
     private lateinit var binding: ActivitySignUpBinding
 
@@ -35,14 +36,5 @@ class SignUpActivity : Activity() {
                 Log.d("createEmail", "createEmail:$e ")
                 Toast.makeText(this, "fail", Toast.LENGTH_SHORT).show()
             }
-    }
-
-    private fun loginEmail(email:String,password: String) {
-        firebaseAuth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
-            Toast.makeText(this, "good", Toast.LENGTH_SHORT).show()
-        }.addOnFailureListener { e ->
-            Log.d("createEmail", "createEmail:$e ")
-            Toast.makeText(this, "fail", Toast.LENGTH_SHORT).show()
-        }
     }
 }
