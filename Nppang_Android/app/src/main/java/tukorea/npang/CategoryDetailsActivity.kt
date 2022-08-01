@@ -1,5 +1,6 @@
 package tukorea.npang
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_category.*
@@ -12,9 +13,7 @@ class CategoryDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCategoryDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.categorytitle.setText()
 
-        chickenimage.setOnClickListener {
-            binding.categorytitle.text = "카테고리-치킨"
-        }
     }
 }
