@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39391C8D2897650700E0EDAD /* realTimePostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39391C8C2897650700E0EDAD /* realTimePostsVC.swift */; };
+		39391C8F289766D800E0EDAD /* categoryPostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39391C8E289766D800E0EDAD /* categoryPostsVC.swift */; };
+		39391C912897762500E0EDAD /* postingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39391C902897762500E0EDAD /* postingVC.swift */; };
 		393A41392890150D00F8796E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A41382890150D00F8796E /* AppDelegate.swift */; };
 		393A413B2890150D00F8796E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A413A2890150D00F8796E /* SceneDelegate.swift */; };
 		393A413D2890150D00F8796E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A413C2890150D00F8796E /* ViewController.swift */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		345970368E6F140CC509A918 /* Pods_Nppang_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nppang_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39391C8C2897650700E0EDAD /* realTimePostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = realTimePostsVC.swift; sourceTree = "<group>"; };
+		39391C8E289766D800E0EDAD /* categoryPostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryPostsVC.swift; sourceTree = "<group>"; };
+		39391C902897762500E0EDAD /* postingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postingVC.swift; sourceTree = "<group>"; };
 		393A41352890150D00F8796E /* Nppang_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nppang_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		393A41382890150D00F8796E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		393A413A2890150D00F8796E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,9 +82,12 @@
 				393A415F2892727700F8796E /* SignUpVC.swift */,
 				393A416128927A4700F8796E /* categoryVC.swift */,
 				393A413E2890150D00F8796E /* Main.storyboard */,
+				39391C902897762500E0EDAD /* postingVC.swift */,
 				393A41432890150E00F8796E /* LaunchScreen.storyboard */,
 				393A41462890150E00F8796E /* Info.plist */,
 				393A415528912EA200F8796E /* GoogleService-Info.plist */,
+				39391C8C2897650700E0EDAD /* realTimePostsVC.swift */,
+				39391C8E289766D800E0EDAD /* categoryPostsVC.swift */,
 			);
 			path = Nppang_iOS;
 			sourceTree = "<group>";
@@ -239,6 +248,9 @@
 				393A413D2890150D00F8796E /* ViewController.swift in Sources */,
 				393A41392890150D00F8796E /* AppDelegate.swift in Sources */,
 				393A413B2890150D00F8796E /* SceneDelegate.swift in Sources */,
+				39391C8D2897650700E0EDAD /* realTimePostsVC.swift in Sources */,
+				39391C8F289766D800E0EDAD /* categoryPostsVC.swift in Sources */,
+				39391C912897762500E0EDAD /* postingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

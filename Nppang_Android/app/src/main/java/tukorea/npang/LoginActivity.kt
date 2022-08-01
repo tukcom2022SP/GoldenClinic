@@ -44,8 +44,8 @@ class LoginActivity : Activity(), View.OnClickListener {
         }
         //회원정보찾기 이동창
         binding.btnFindMyInfo.setOnClickListener {
-            //val intent3 = Intent(this, FindMyInfoActivity::class.java)
-            //startActivity(intent3)
+            val intent3 = Intent(this, FindMyInfoActivity::class.java)
+            startActivity(intent3)
         }
         //로그인버튼 클릭후 카테고리 이동
         binding.btnLogin.setOnClickListener {

@@ -88,19 +88,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:text="은행 선택"
-                android:textColor="@color/black"
-                android:background="@drawable/border"
-                android:layout_marginBottom="20dp"
-                style="?android:attr/borderlessButtonStyle"/>
-
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="계좌번호"
+                android:hint="계좌번호(은행-계좌번호-예금주 순으로 작성)"
                 android:textColorHint="#d9d9d9"
                 android:backgroundTint="@color/black"
                 android:textColor="@color/black"/>
