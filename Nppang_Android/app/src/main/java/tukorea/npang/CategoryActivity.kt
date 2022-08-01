@@ -14,8 +14,36 @@ class CategoryActivity : Activity() {
         setContentView(binding.root)
 
         chickenimage.setOnClickListener {
-            val intent1 = Intent(this, CategoryDetailsActivity::class.java)
-            startActivity(intent1)
+            val intent = Intent(this, CategoryDetailsActivity::class.java)
+            intent.putExtra("카테고리", "치킨")
+            startActivity(intent)
+        }
+        chinaimage.setOnClickListener {
+            val intent = Intent(this, CategoryDetailsActivity::class.java)
+            intent.putExtra("카테고리", "중식")
+            startActivity(intent)
+        }
+        pizzaimage.setOnClickListener {
+            val intent = Intent(this, CategoryDetailsActivity::class.java)
+            intent.putExtra("카테고리", "피자")
+            startActivity(intent)
+        }
+        porkimage.setOnClickListener {
+            val intent = Intent(this, CategoryDetailsActivity::class.java)
+            intent.putExtra("카테고리", "족발/보쌈")
+            startActivity(intent)
+        }
+        bokkiimage.setOnClickListener {
+            val intent = Intent(this, CategoryDetailsActivity::class.java)
+            intent.putExtra("카테고리", "분식")
+            startActivity(intent)
+        }
+        burgerimage.setOnClickListener {
+            val intent = Intent(this, CategoryDetailsActivity::class.java)
+            intent.putExtra("카테고리", "패스트푸드")
+            startActivity(intent)
         }
     }
 }
+
+
