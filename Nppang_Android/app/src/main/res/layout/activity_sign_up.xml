@@ -31,7 +31,7 @@
                 android:id="@+id/et_sign_up_email"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:hint="아이디"
+                android:hint="이메일"
                 android:layout_marginBottom="20dp"
                 android:textColorHint="#d9d9d9"
                 android:backgroundTint="@color/black"
