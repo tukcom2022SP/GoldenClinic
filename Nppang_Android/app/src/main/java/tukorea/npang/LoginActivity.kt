@@ -14,6 +14,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_login_layout.*
 import tukorea.npang.databinding.ActivityLoginLayoutBinding
 
@@ -34,7 +35,6 @@ class LoginActivity : Activity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         //btn_googleSignIn.setOnClickListener (this) // 구글 로그인 버튼
         binding.btnGoogleSignIn.setOnClickListener { signIn() }
         //회원가입이동창
