@@ -25,5 +25,4 @@ class MainActivity : Activity() {
             this.finish()
         }
     }
-
 }
