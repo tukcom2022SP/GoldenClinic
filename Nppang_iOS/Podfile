@@ -8,6 +8,8 @@ target 'Nppang_iOS' do
   # Pods for Nppang_iOS
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   pod 'GoogleSignIn','5.0.2'
 
 end
