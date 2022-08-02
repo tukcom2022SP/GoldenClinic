@@ -250,9 +250,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="7T5-7X-FSE"/>
                     <connections>
+                        <outlet property="tfBankAccount" destination="bu8-7Z-eTr" id="xKC-7S-Nk0"/>
                         <outlet property="tfCheckPassword" destination="V5X-Fv-bcK" id="dfz-no-9o6"/>
                         <outlet property="tfEmail" destination="WLO-Yh-8NW" id="3A0-pG-9Z8"/>
+                        <outlet property="tfName" destination="4Ua-yY-IhD" id="cV5-1d-5Ac"/>
                         <outlet property="tfPassword" destination="tN8-Tf-zyR" id="HRS-MZ-AQo"/>
+                        <outlet property="tfPhoneNumber" destination="cHF-4H-h5M" id="tw0-yG-T1a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wu-ZZ-frs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
