@@ -34,9 +34,9 @@ class SignUpActivity : Activity() {
                 et_sign_up_passwd.text.toString().trim()
             )
             //
-            val userBankAccount = binding.etSignUpEmail.text
-            val userEmail = binding.etUserName.text
-            val userName = binding.etAccount.text
+            val userBankAccount = binding.etAccount.text
+            val userEmail = binding.etSignUpEmail.text
+            val userName = binding.etUserName.text
             val userPhoneNumber = binding.etPhoneNumber.text
             var UserInfoMation = hashMapOf(
                 "userBankAccount" to userBankAccount.toString().trim(),
