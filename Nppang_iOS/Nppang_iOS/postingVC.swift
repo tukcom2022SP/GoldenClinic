@@ -7,6 +7,9 @@
 
 import UIKit
 import DropDown
+import FirebaseFirestore
+
+let dbPosting = Firestore.firestore()
 
 class postingVC: UIViewController{
     @IBOutlet weak var tfTitle: UITextField!
@@ -76,6 +79,14 @@ class postingVC: UIViewController{
         dropdown.cancelAction = { [weak self] in
         }
         dropdown.show()
+    }
+    
+    @IBAction func btnPost(_ sender: UIButton) {
+        dbPosting.collection("LivePost").document(self.tfTitle.text!).setData(["postname": self.tfTitle.text!,
+                                                     "contents": self.tvContent.text!,
+                                                     "category": self.tfSelectCategory.text!,
+                                                     "storeName": self.tfSelectStore.text!])
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func btnCancel(_ sender: UIButton) {
