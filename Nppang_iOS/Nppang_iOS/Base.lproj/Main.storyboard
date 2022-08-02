@@ -714,10 +714,10 @@
             </objects>
             <point key="canvasLocation" x="3986.9158878504672" y="83.585313174946009"/>
         </scene>
-        <!--View Controller-->
+        <!--Find InfoVC-->
         <scene sceneID="jxr-Wc-pFC">
             <objects>
-                <viewController storyboardIdentifier="findInfo" id="hOQ-FX-juj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="findInfo" id="hOQ-FX-juj" customClass="findInfoVC" customModule="Nppang_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wa8-Ey-xtt">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -816,12 +816,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UO3-jP-rr0">
-                                <rect key="frame" x="89" y="600" width="250" height="31"/>
+                                <rect key="frame" x="89" y="597" width="250" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="themeColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="홈으로">
+                                <buttonConfiguration key="configuration" style="plain" title="로그인하기">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
                             </button>
@@ -860,12 +860,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slt-M8-fGA">
-                                <rect key="frame" x="89" y="600" width="250" height="31"/>
+                                <rect key="frame" x="89" y="597" width="250" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="themeColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="홈으로">
+                                <buttonConfiguration key="configuration" style="plain" title="로그인하기">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
                             </button>
