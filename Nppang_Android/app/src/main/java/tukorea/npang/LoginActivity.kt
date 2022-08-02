@@ -28,13 +28,11 @@ class LoginActivity : Activity(), View.OnClickListener {
     //Binding
     private lateinit var binding: ActivityLoginLayoutBinding
 
-    //private const val TAG = "GoogleActivity"
-    private val RC_SIGN_IN = 99
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         //btn_googleSignIn.setOnClickListener (this) // 구글 로그인 버튼
         binding.btnGoogleSignIn.setOnClickListener { signIn() }
         //회원가입이동창
@@ -156,5 +154,8 @@ class LoginActivity : Activity(), View.OnClickListener {
         }
     }
 
-
+    //private const val TAG = "GoogleActivity"
+    companion object {
+        const val RC_SIGN_IN = 99
+    }
 }
