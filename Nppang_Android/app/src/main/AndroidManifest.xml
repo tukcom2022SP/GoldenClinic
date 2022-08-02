@@ -35,6 +35,9 @@
         <activity
             android:name=".FindMyInfoActivity"
             android:exported="false" />
+        <activity
+            android:name=".CategoryDetailsActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

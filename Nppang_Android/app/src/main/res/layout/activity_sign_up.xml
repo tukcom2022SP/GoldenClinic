@@ -31,7 +31,7 @@
                 android:id="@+id/et_sign_up_email"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:hint="아이디"
+                android:hint="이메일"
                 android:layout_marginBottom="20dp"
                 android:textColorHint="#d9d9d9"
                 android:backgroundTint="@color/black"
@@ -66,6 +66,7 @@
             android:textColor="@color/black"/>
 
         <EditText
+            android:id="@+id/et_user_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="이름"
@@ -75,6 +76,7 @@
             android:textColor="@color/black"/>
 
         <EditText
+            android:id="@+id/et_phone_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="전화번호"
@@ -89,6 +91,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/et_account"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="계좌번호(은행-계좌번호-예금주 순으로 작성)"
