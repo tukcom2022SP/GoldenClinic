@@ -665,6 +665,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="btnSelectCategory:" destination="qGu-jp-2Hz" eventType="touchUpInside" id="H2n-Qz-VQV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -690,6 +693,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="btnSelectStore:" destination="qGu-jp-2Hz" eventType="touchUpInside" id="lBX-wp-uec"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -703,8 +709,6 @@
                         <outlet property="btnSelectStore" destination="Cyk-ec-Ld2" id="Mv7-Wo-1w5"/>
                         <outlet property="dropViewCategory" destination="9NV-BO-GEi" id="Uy2-0p-2fi"/>
                         <outlet property="dropViewStore" destination="KRj-4P-HGG" id="4mG-CZ-xkR"/>
-                        <outlet property="iconCategoty" destination="xWh-Cc-zUs" id="fqJ-bL-6Mk"/>
-                        <outlet property="iconStore" destination="FCC-Lc-HoK" id="kfL-wm-3mG"/>
                         <outlet property="tfSelectCategory" destination="rAG-Wm-2vf" id="h5I-4B-Afv"/>
                         <outlet property="tfSelectStore" destination="bdc-FD-MdH" id="x5E-6F-WYO"/>
                         <outlet property="tfTitle" destination="kCT-8W-HaV" id="AYb-Xa-1dz"/>
