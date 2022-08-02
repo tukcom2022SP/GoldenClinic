@@ -81,6 +81,14 @@ class postingVC: UIViewController{
         dropdown.show()
     }
     
+    @IBAction func btnPost(_ sender: UIButton) {
+        dbPosting.collection("LivePost").document(self.tfTitle.text!).setData(["postname": self.tfTitle.text!,
+                                                     "contents": self.tvContent.text!,
+                                                     "category": self.tfSelectCategory.text!,
+                                                     "storeName": self.tfSelectStore.text!])
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func btnCancel(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
