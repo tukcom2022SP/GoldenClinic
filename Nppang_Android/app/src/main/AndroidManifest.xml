@@ -39,6 +39,12 @@
             android:name=".CategoryDetailsActivity"
             android:exported="false" />
         <activity
+            android:name=".ParticipatingInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostingActivity"
+            android:exported="false" />
+        <activity
             android:name=".LivePostsActivity"
             android:exported="false"/>
 
