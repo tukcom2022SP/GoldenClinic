@@ -12,5 +12,6 @@ target 'Nppang_iOS' do
   pod 'Firebase/Storage'
   pod 'FirebaseFirestore'
   pod 'GoogleSignIn','5.0.2'
+  pod 'DropDown'
 
 end
