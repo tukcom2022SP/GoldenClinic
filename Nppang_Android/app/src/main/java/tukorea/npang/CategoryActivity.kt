@@ -13,35 +13,39 @@ class CategoryActivity : Activity() {
         binding = ActivityCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        chickenimage.setOnClickListener {
+        binding.imgChickenimage.setOnClickListener {
             val intent = Intent(this, CategoryDetailsActivity::class.java)
             intent.putExtra("카테고리", "치킨")
             startActivity(intent)
         }
-        chinaimage.setOnClickListener {
+        binding.imgChinaimage.setOnClickListener {
             val intent = Intent(this, CategoryDetailsActivity::class.java)
             intent.putExtra("카테고리", "중식")
             startActivity(intent)
         }
-        pizzaimage.setOnClickListener {
+        binding.imgPizzaimage.setOnClickListener {
             val intent = Intent(this, CategoryDetailsActivity::class.java)
             intent.putExtra("카테고리", "피자")
             startActivity(intent)
         }
-        porkimage.setOnClickListener {
+        binding.imgPorkimage.setOnClickListener {
             val intent = Intent(this, CategoryDetailsActivity::class.java)
             intent.putExtra("카테고리", "족발/보쌈")
             startActivity(intent)
         }
-        bokkiimage.setOnClickListener {
+        binding.imgBokkiimage.setOnClickListener {
             val intent = Intent(this, CategoryDetailsActivity::class.java)
             intent.putExtra("카테고리", "분식")
             startActivity(intent)
         }
-        burgerimage.setOnClickListener {
+        binding.imgBurgerimage.setOnClickListener {
             val intent = Intent(this, CategoryDetailsActivity::class.java)
             intent.putExtra("카테고리", "패스트푸드")
             startActivity(intent)
+        }
+        binding.btnSeeAll.setOnClickListener {
+            var intent3=Intent(this,LivePostsActivity::class.java)
+            startActivity(intent3)
         }
     }
 }
