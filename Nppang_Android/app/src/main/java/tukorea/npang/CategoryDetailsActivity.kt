@@ -1,5 +1,6 @@
 package tukorea.npang
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import tukorea.npang.databinding.ActivityCategoryDetailsBinding
@@ -15,6 +16,9 @@ class CategoryDetailsActivity : AppCompatActivity() {
         val firstintent = intent
         binding.tvCategorytitle.text = firstintent.getStringExtra("카테고리")
 
-
+        binding.btnWritePost.setOnClickListener{
+            val intent = Intent(this, PostingActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

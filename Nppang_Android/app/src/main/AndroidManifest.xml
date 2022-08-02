@@ -40,7 +40,8 @@
             android:exported="false" />
         <activity
             android:name=".LivePostsActivity"
-            android:exported="false" />
+            android:exported="false"/>
+
     </application>
 
 </manifest>

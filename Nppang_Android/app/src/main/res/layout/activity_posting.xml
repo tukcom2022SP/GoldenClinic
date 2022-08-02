@@ -100,9 +100,11 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
-        <ListView
+        <Spinner
+            android:id="@+id/spinner_shop_choice"
             android:layout_width="match_parent"
-            android:layout_height="40dp" />
+            android:layout_height="40dp"
+            android:background="@drawable/borderpeach" />
 
     </LinearLayout>
 
@@ -110,25 +112,28 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_weight="1" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <Button
-        android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom"
-        android:background="@color/deeppink"
-        android:gravity="center"
-        android:text="모집하기"
-        android:textColor="@color/white"
-        android:textSize="25dp" />
+
         <Button
             android:layout_width="match_parent"
-            android:layout_weight="1"
             android:layout_height="50dp"
             android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@color/deeppink"
+            android:gravity="center"
+            android:text="모집하기"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
             android:background="@color/deeppink"
             android:gravity="center"
             android:text="취소"
