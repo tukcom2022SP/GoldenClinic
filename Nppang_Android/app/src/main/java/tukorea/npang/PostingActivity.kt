@@ -3,6 +3,7 @@ package tukorea.npang
 import android.app.Activity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ArrayAdapter
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import tukorea.npang.databinding.ActivityPostingBinding
@@ -33,7 +34,18 @@ class PostingActivity : Activity() {
                 .addOnFailureListener { e ->
                     Log.w("Post", "Error adding document", e)
                 }
+
         }
+
+        //카테고리 관련 스피너
+        val cateList = resources.getStringArray(R.array.cateList)
+        val adapter1 = ArrayAdapter(this, android.R.layout.simple_spinner_item, cateList)
+        binding.spinnerCategoryChoice.adapter = adapter1
+
+        //가게명 관련 스피너
+        val shopList = resources.getStringArray(R.array.shopList)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, shopList)
+        binding.spinnerShopChoice.adapter = adapter
 
     }
 }

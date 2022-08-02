@@ -15,6 +15,10 @@ class ParticipatingInActivity : Activity() {
         binding = ActivityParticipatingInBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //메뉴 관련 스피너
+        val menuList = resources.getStringArray(R.array.menuList)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, menuList)
+        binding.spinnerMenuChoice.adapter = adapter
 
     }
 }

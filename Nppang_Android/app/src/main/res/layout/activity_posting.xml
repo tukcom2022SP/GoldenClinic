@@ -57,42 +57,11 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
-        <LinearLayout
+        <Spinner
+            android:id="@+id/spinner_category_choice"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="55dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderpeach" />
-
-            <Button
-                android:layout_width="55dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderpeach" />
-
-            <Button
-                android:layout_width="55dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderpeach" />
-
-            <Button
-                android:layout_width="55dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderpeach" />
-
-            <Button
-                android:layout_width="55dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderpeach" />
-
-            <Button
-                android:layout_width="55dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderpeach" />
-
-        </LinearLayout>
+            android:layout_height="40dp"
+            android:background="@drawable/borderpeach" />
 
         <TextView
             android:layout_width="150dp"
