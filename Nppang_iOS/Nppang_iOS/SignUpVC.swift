@@ -7,6 +7,9 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
+
+let db = Firestore.firestore()
 
 class SignUpVC: UIViewController {
     @IBOutlet weak var tfEmail: UITextField!
@@ -38,6 +41,8 @@ class SignUpVC: UIViewController {
             guard let user = authResut?.user else {
                 return
             }
+            // Update one field, creating the document if it does not exist.
+            db.collection("UserData").addDocument(data: [ "userEmail": self.tfEmail.text ])
             self.navigationController?.popViewController(animated: true)
         }
     }
