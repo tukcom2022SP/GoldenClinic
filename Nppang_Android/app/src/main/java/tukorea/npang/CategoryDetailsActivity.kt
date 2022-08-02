@@ -2,7 +2,6 @@ package tukorea.npang
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_category_details.*
 import tukorea.npang.databinding.ActivityCategoryDetailsBinding
 
 class CategoryDetailsActivity : AppCompatActivity() {
@@ -12,9 +11,9 @@ class CategoryDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCategoryDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        //카테고리 Name설정
         val firstintent = intent
-        categorytitle.text = firstintent.getStringExtra("카테고리")
+        binding.tvCategorytitle.text = firstintent.getStringExtra("카테고리")
 
 
     }

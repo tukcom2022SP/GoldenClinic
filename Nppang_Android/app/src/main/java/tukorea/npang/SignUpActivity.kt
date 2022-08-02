@@ -7,7 +7,6 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_sign_up.*
 import tukorea.npang.databinding.ActivitySignUpBinding
 
 
@@ -30,8 +29,8 @@ class SignUpActivity : Activity() {
         //회원가입시 파이어베이스 정보 등록,파이어스토어 연동
         binding.btnSignUp.setOnClickListener {
             createEmail(
-                et_sign_up_email.text.toString().trim(),
-                et_sign_up_passwd.text.toString().trim()
+                binding.etSignUpEmail.text.toString().trim(),
+                binding.etSignUpPasswd.text.toString().trim()
             )
             //
             val userBankAccount = binding.etAccount.text
@@ -53,7 +52,7 @@ class SignUpActivity : Activity() {
                 .addOnFailureListener { e ->
                     Log.w("userdata", "Error adding document", e)
                 }
-            Log.d("btn", "onCreate: ${et_sign_up_email.text}")
+            Log.d("btn", "onCreate: ${binding.etSignUpEmail.text}")
         }
     }
 

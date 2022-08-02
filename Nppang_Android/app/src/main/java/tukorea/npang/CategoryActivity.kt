@@ -3,7 +3,6 @@ package tukorea.npang
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_category.*
 import tukorea.npang.databinding.ActivityCategoryBinding
 
 class CategoryActivity : Activity() {
