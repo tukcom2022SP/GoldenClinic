@@ -7,6 +7,9 @@
 
 import UIKit
 import DropDown
+import FirebaseFirestore
+
+let dbPosting = Firestore.firestore()
 
 class postingVC: UIViewController{
     @IBOutlet weak var tfTitle: UITextField!
