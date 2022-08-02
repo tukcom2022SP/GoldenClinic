@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="shopList">
+        <item>BBQ 시화정왕2호점</item>
+        <item>BBQ 정왕본동점</item>
+        <item>BBQ 정왕스타점</item>
+    </string-array>
+</resources>

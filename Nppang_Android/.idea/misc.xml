@@ -3,8 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/CYBIN/Desktop/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_category.xml" value="0.12132725430597771" />
-        <entry key="..\:/Users/CYBIN/Desktop/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_category_details.xml" value="0.14233576642335766" />
         <entry key="..\:/Users/Type/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_category.xml" value="0.3020833333333333" />
         <entry key="..\:/Users/Type/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_category_details.xml" value="0.3020833333333333" />
         <entry key="..\:/Users/Type/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_find_my_id.xml" value="0.303125" />
@@ -13,7 +11,6 @@
         <entry key="..\:/Users/Type/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_live_posts.xml" value="0.3020833333333333" />
         <entry key="..\:/Users/Type/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_login_layout.xml" value="0.3020833333333333" />
         <entry key="..\:/Users/Type/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_main.xml" value="0.2749094202898551" />
-        <entry key="..\:/Users/Type/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_participating_in.xml" value="0.303125" />
         <entry key="..\:/Users/Type/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_posting.xml" value="0.3020833333333333" />
         <entry key="..\:/Users/Type/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_sign_up.xml" value="0.3020833333333333" />
         <entry key="..\:/Users/Type/GoldenClinic/Nppang_Android/app/src/main/res/layout/border.xml" value="0.2749094202898551" />
@@ -24,9 +21,19 @@
         <entry key="..\:/Users/Type/GoldenClinic/Nppang_Android/app/src/main/res/layout/login_layout.xml" value="0.2749094202898551" />
         <entry key="..\:/Users/Type/GoldenClinic/Nppang_Android/app/src/main/res/layout/posting.xml" value="0.2749094202898551" />
         <entry key="..\:/Users/Type/GoldenClinic/Nppang_Android/app/src/main/res/layout/sign_up.xml" value="0.17753623188405798" />
+        <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_category.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_category_details.xml" value="0.264" />
+        <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_find_my_id.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_find_my_info.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_live_posts.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_login_layout.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_participating_in.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_posting.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/activity_sign_up.xml" value="0.4" />
         <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/category.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/category_details.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/list_layout.xml" value="0.2390625" />
         <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/live_posts.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/login_layout.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/dlgus/GoldenClinic/Nppang_Android/app/src/main/res/layout/network_security_config.xml" value="0.1" />

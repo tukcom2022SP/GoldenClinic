@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
@@ -13,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NPang"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".ListLayout"
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -38,6 +39,16 @@
         <activity
             android:name=".CategoryDetailsActivity"
             android:exported="false" />
+        <activity
+            android:name=".ParticipatingInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LivePostsActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
