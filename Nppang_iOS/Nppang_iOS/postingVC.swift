@@ -82,10 +82,12 @@ class postingVC: UIViewController{
     }
     
     @IBAction func btnPost(_ sender: UIButton) {
-        dbPosting.collection("LivePost").document(self.tfTitle.text!).setData(["postname": self.tfTitle.text!,
-                                                     "contents": self.tvContent.text!,
-                                                     "category": self.tfSelectCategory.text!,
-                                                     "storeName": self.tfSelectStore.text!])
+        dbPosting.collection("LivePost").document("\(self.tfTitle.text!)\(Int.random(in: 0...Int.max))").setData([
+            "postname": self.tfTitle.text!,
+            "contents": self.tvContent.text!,
+            "category": self.tfSelectCategory.text!,
+            "storeName": self.tfSelectStore.text!
+        ])
         self.navigationController?.popViewController(animated: true)
     }
     
