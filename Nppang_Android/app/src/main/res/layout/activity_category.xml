@@ -38,6 +38,7 @@
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/btn_SeeAll"
                 android:layout_width="90dp"
                 android:layout_height="35dp"
                 android:background="@color/deeppink"
@@ -201,7 +202,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/chickenimage"
+                android:id="@+id/img_Chickenimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/circle_button"
@@ -224,7 +225,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/chinaimage"
+                android:id="@+id/img_Chinaimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/circle_button"
@@ -247,7 +248,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/pizzaimage"
+                android:id="@+id/img_Pizzaimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/circle_button"
@@ -280,7 +281,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/porkimage"
+                android:id="@+id/img_Porkimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/circle_button"
@@ -303,7 +304,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/bokkiimage"
+                android:id="@+id/img_Bokkiimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/circle_button"
@@ -326,7 +327,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/burgerimage"
+                android:id="@+id/img_Burgerimage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/circle_button"

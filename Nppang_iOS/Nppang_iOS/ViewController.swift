@@ -63,7 +63,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnFindInfo(_ sender: UIButton) {
+        pushViewController(vcName: "findInfo")
     }
+    
     func pushViewController(vcName: String){
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: vcName)
         self.navigationController?.pushViewController(pushVC!, animated: true)
