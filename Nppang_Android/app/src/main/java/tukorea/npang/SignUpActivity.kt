@@ -1,6 +1,7 @@
 package tukorea.npang
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -60,6 +61,8 @@ class SignUpActivity : Activity() {
         firebaseAuth.createUserWithEmailAndPassword(email, password)
             .addOnSuccessListener {
                 Toast.makeText(this, "good", Toast.LENGTH_SHORT).show()
+                val intent5 = Intent(this, LoginActivity::class.java)
+                startActivity(intent5)
             }.addOnFailureListener { e ->
                 Log.d("createEmail", "createEmail:$e ")
                 Toast.makeText(this, "fail", Toast.LENGTH_SHORT).show()
