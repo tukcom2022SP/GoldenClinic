@@ -37,7 +37,7 @@ class SignUpVC: UIViewController {
             logInVC.present(alert,animated: true,completion: nil)
             guard let user = authResut?.user else { return }
             // Update one field, creating the document if it does not exist.
-            dbSignUp.collection("UserData").document(self.tfName.text!).setData(["userEmail": self.tfEmail.text!,
+            dbSignUp.collection("UserData").document(self.tfEmail.text!).setData(["userEmail": self.tfEmail.text!,
                                                          "userName": self.tfName.text!,
                                                          "userPhoneNumber": self.tfPhoneNumber.text!,
                                                          "userBankAccount": self.tfBankAccount.text!])
