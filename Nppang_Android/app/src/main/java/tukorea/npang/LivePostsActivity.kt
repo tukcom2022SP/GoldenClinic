@@ -27,7 +27,7 @@ class LivePostsActivity : Activity() {
                 itemList.clear()
                 for (document in result) {  // 가져온 문서들은 result에 들어감
                     val item =
-                        ListLayout(document["contents"] as String, document["postname"] as String)
+                        ListLayout(document["contents"] as String, document["postname"] as String,document["category"]as String,document["storeName"]as String)
                     itemList.add(item)
                 }
                 adapter.notifyDataSetChanged()  // 리사이클러 뷰 갱신

@@ -1,6 +1,8 @@
 package tukorea.npang
 
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -65,10 +67,15 @@ class SignUpActivity : Activity() {
     private fun createEmail(email: String, password: String) {
         firebaseAuth.createUserWithEmailAndPassword(email, password)
             .addOnSuccessListener {
-                Toast.makeText(this, "good", Toast.LENGTH_SHORT).show()
-            }.addOnFailureListener { e ->
-                Log.d("createEmail", "createEmail:$e ")
-                Toast.makeText(this, "fail", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "회원가입성공 로그인창으로 이동합니다", Toast.LENGTH_SHORT).show()
+                val movelogin = Intent(this, LoginActivity::class.java)
+                startActivity(movelogin)
+            }.addOnFailureListener {
+                val alertDialog = AlertDialog.Builder(this)
+                alertDialog.setTitle("Email-Error")
+                    .setMessage("Email 중복입니다")
+                    .setPositiveButton("확인", null)
+                alertDialog.show()
             }
     }
 }
