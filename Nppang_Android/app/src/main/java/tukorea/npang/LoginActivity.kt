@@ -14,6 +14,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.firestore.FirebaseFirestore
 import tukorea.npang.databinding.ActivityLoginLayoutBinding
 
 
@@ -26,7 +27,7 @@ class LoginActivity : Activity(), View.OnClickListener {
 
     //Binding
     private lateinit var binding: ActivityLoginLayoutBinding
-
+    val db = FirebaseFirestore.getInstance()    // Firestore 인스턴스 선언
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,7 +48,6 @@ class LoginActivity : Activity(), View.OnClickListener {
         //로그인버튼 클릭후 카테고리 이동
         binding.btnLogin.setOnClickListener {
             loginEmail(binding.etEmail.text.toString().trim(), binding.etPassword.text.toString())
-
         }
         //Google 로그인 옵션 구성. requestIdToken 및 Email 요청
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -120,8 +120,8 @@ class LoginActivity : Activity(), View.OnClickListener {
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
-    // signIn End
 
+    // signIn End
     override fun onClick(p0: View?) {
     }
 

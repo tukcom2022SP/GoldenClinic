@@ -28,14 +28,19 @@ class CategoryDetailsActivity() : Activity() {
         binding.tvCategorytitle.text = firstintent.getStringExtra("카테고리")
 
         val categoryname = firstintent.getStringExtra("카테고리")
-        db.collection("LivePost").whereEqualTo("contents", categoryname)  // 컬렉션별로 정보 뽑기
+        db.collection("LivePost").whereEqualTo("category", categoryname)  // 컬렉션별로 정보 뽑기
             .get()      // 문서 가져오기
             .addOnSuccessListener { result ->
                 // 성공할 경우
                 itemList.clear()
                 for (document in result) {  // 가져온 문서들은 result에 들어감
                     val item =
-                        ListLayout(document["contents"] as String, document["postname"] as String)
+                        ListLayout(
+                            document["contents"] as String,
+                            document["postname"] as String,
+                            document["category"] as String,
+                            document["storeName"] as String
+                        )
                     itemList.add(item)
                 }
                 adapter.notifyDataSetChanged()  // 리사이클러 뷰 갱신
