@@ -4,6 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import tukorea.npang.databinding.ActivityPostingBinding
@@ -17,24 +18,29 @@ class PostingActivity : Activity() {
         binding = ActivityPostingBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.btnJoin.setOnClickListener {
-            val category = binding.spinnerCategoryChoice.selectedItem
-            val contents = binding.etContents.text
-            val postname = binding.etPostName.text
-            val storeName = binding.spinnerShopChoice.selectedItem //가게정보들어올때까지 임시로 세팅
-            var PostInfoMation = hashMapOf(
-                "category" to category.toString().trim(),
-                "contents" to contents.toString().trim(),
-                "postname" to postname.toString().trim(),
-                "storeName" to storeName.toString().trim()
-            )
-            db.collection("LivePost").add(PostInfoMation)
-                .addOnSuccessListener { documentReference ->
-                    Log.d("LEePost", "DocumentSnapshot added with ID: ${documentReference.id}")
-                }
-                .addOnFailureListener { e ->
-                    Log.w("Post", "Error adding document", e)
-                }
-
+            if (binding.etPostName == null || binding.etPostName.equals("") || binding.etPostName.length() == 0
+                || binding.etContents == null || binding.etContents.equals("") || binding.etContents.length() == 0
+            ) {
+                Toast.makeText(this, "내용을 입력해주세요.", Toast.LENGTH_SHORT).show()
+            } else {
+                val category = binding.spinnerCategoryChoice.selectedItem
+                val contents = binding.etContents.text
+                val postname = binding.etPostName.text
+                val storeName = binding.spinnerShopChoice.selectedItem //가게정보들어올때까지 임시로 세팅
+                var PostInfoMation = hashMapOf(
+                    "category" to category.toString().trim(),
+                    "contents" to contents.toString().trim(),
+                    "postname" to postname.toString().trim(),
+                    "storeName" to storeName.toString().trim()
+                )
+                db.collection("LivePost").add(PostInfoMation)
+                    .addOnSuccessListener { documentReference ->
+                        Log.d("LEePost", "DocumentSnapshot added with ID: ${documentReference.id}")
+                    }
+                    .addOnFailureListener { e ->
+                        Log.w("Post", "Error adding document", e)
+                    }
+            }
         }
 
         //카테고리 관련 스피너
