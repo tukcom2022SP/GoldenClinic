@@ -7,11 +7,17 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
+
+let dbSignUp = Firestore.firestore()
 
 class SignUpVC: UIViewController {
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var tfCheckPassword: UITextField!
+    @IBOutlet weak var tfName: UITextField!
+    @IBOutlet weak var tfPhoneNumber: UITextField!
+    @IBOutlet weak var tfBankAccount: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +25,6 @@ class SignUpVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.hidesBackButton = true
-    }
-    @IBAction func btnSelectBank(_ sender: UIButton) {
-        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        let popupVC = storyBoard.instantiateViewController(withIdentifier: "popUpBank")
-        popupVC.modalPresentationStyle = .overFullScreen
-        present(popupVC, animated: false, completion: nil)
     }
     
     @IBAction func btnSignUp(_ sender: UIButton) {
@@ -35,9 +35,12 @@ class SignUpVC: UIViewController {
             let check = UIAlertAction(title: "확인", style: .default, handler: nil)
             alert.addAction(check)
             logInVC.present(alert,animated: true,completion: nil)
-            guard let user = authResut?.user else {
-                return
-            }
+            guard let user = authResut?.user else { return }
+            // Update one field, creating the document if it does not exist.
+            dbSignUp.collection("UserData").document(self.tfEmail.text!).setData(["userEmail": self.tfEmail.text!,
+                                                         "userName": self.tfName.text!,
+                                                         "userPhoneNumber": self.tfPhoneNumber.text!,
+                                                         "userBankAccount": self.tfBankAccount.text!])
             self.navigationController?.popViewController(animated: true)
         }
     }

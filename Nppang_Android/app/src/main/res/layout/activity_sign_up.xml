@@ -38,6 +38,7 @@
                 android:textColor="@color/black"/>
 
             <Button
+                android:id="@+id/btn_overlap"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:text="중복 확인"

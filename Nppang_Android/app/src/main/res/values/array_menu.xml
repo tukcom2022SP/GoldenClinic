@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menuList">
+        <item>BBQ 황금올리브</item>
+        <item>BBQ 핫 황금올리브 크리스피</item>
+        <item>BBQ 황금올리브 닭다리</item>
+    </string-array>
+</resources>
