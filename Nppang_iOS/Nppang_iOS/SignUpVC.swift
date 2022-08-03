@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-let db = Firestore.firestore()
+let dbSignUp = Firestore.firestore()
 
 class SignUpVC: UIViewController {
     @IBOutlet weak var tfEmail: UITextField!
@@ -26,12 +26,6 @@ class SignUpVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.hidesBackButton = true
     }
-    @IBAction func btnSelectBank(_ sender: UIButton) {
-        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        let popupVC = storyBoard.instantiateViewController(withIdentifier: "popUpBank")
-        popupVC.modalPresentationStyle = .overFullScreen
-        present(popupVC, animated: false, completion: nil)
-    }
     
     @IBAction func btnSignUp(_ sender: UIButton) {
         Auth.auth().createUser(withEmail: tfEmail.text!, password: tfPassword.text!) {(authResut, error) in
@@ -43,7 +37,7 @@ class SignUpVC: UIViewController {
             logInVC.present(alert,animated: true,completion: nil)
             guard let user = authResut?.user else { return }
             // Update one field, creating the document if it does not exist.
-            db.collection("UserData").document(self.tfName.text!).setData(["userEmail": self.tfEmail.text!,
+            dbSignUp.collection("UserData").document(self.tfEmail.text!).setData(["userEmail": self.tfEmail.text!,
                                                          "userName": self.tfName.text!,
                                                          "userPhoneNumber": self.tfPhoneNumber.text!,
                                                          "userBankAccount": self.tfBankAccount.text!])
