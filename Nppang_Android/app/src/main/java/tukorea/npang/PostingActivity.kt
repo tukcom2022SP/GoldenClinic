@@ -17,15 +17,15 @@ class PostingActivity : Activity() {
         binding = ActivityPostingBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.btnJoin.setOnClickListener {
-            val category = binding.etContents.text
+            val category = binding.spinnerCategoryChoice.selectedItem
             val contents = binding.etContents.text
             val postname = binding.etPostName.text
-            val storeName = binding.etPostName.text //가게정보들어올때까지 임시로 세팅
+            val storeName = binding.spinnerShopChoice.selectedItem //가게정보들어올때까지 임시로 세팅
             var PostInfoMation = hashMapOf(
-                "category" to contents.toString().trim(),
+                "category" to category.toString().trim(),
                 "contents" to contents.toString().trim(),
                 "postname" to postname.toString().trim(),
-                "storeName" to contents.toString().trim()
+                "storeName" to storeName.toString().trim()
             )
             db.collection("LivePost").add(PostInfoMation)
                 .addOnSuccessListener { documentReference ->

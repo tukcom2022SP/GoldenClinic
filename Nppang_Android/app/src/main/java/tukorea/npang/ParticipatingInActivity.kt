@@ -7,7 +7,6 @@ import tukorea.npang.databinding.ActivityLoginLayoutBinding
 import tukorea.npang.databinding.ActivityParticipatingInBinding
 
 
-
 class ParticipatingInActivity : Activity() {
     private lateinit var binding: ActivityParticipatingInBinding
     override fun onCreate(savedInstanceState: Bundle?) {
