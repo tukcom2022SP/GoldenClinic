@@ -18,9 +18,7 @@ class PostingActivity : Activity() {
         binding = ActivityPostingBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.btnJoin.setOnClickListener {
-            if (binding.etPostName == null || binding.etPostName.equals("") || binding.etPostName.length() == 0
-                || binding.etContents == null || binding.etContents.equals("") || binding.etContents.length() == 0
-            ) {
+            if (binding.etPostName.length() == 0 || binding.etContents.length() == 0) {
                 Toast.makeText(this, "내용을 입력해주세요.", Toast.LENGTH_SHORT).show()
             } else {
                 val category = binding.spinnerCategoryChoice.selectedItem
