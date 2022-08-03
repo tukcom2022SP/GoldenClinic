@@ -58,6 +58,7 @@
             android:textColor="@color/black"/>
 
         <EditText
+            android:id="@+id/et_sign_up_passwd_confirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="비밀번호 확인"
