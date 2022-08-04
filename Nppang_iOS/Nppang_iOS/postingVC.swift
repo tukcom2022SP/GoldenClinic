@@ -20,7 +20,6 @@ class postingVC: UIViewController{
     @IBOutlet weak var dropViewStore: UIView!
     @IBOutlet weak var btnSelectStore: UIButton!
     @IBOutlet weak var tfSelectStore: UITextField!
-    
     let dropdown = DropDown()
     let categories = ["치킨", "피자", "중식", "족발 보쌈", "분식", "기타"]
     var category = ""

@@ -39,14 +39,11 @@ class realTimePostsVC: UIViewController{
                             
                             DispatchQueue.main.async {
                                 self.tableViewRealTime.reloadData()
-                                self.tableViewRealTime.scrollToRow(at: IndexPath(row: posts.count-1, section: 0), at: .top, animated: false)
+                                self.tableViewRealTime.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
                             }
                         }
                     }
                 }
-//                for document in querySnapshot!.documents {
-//                    document.data()
-//                }
 //                print(posts)
             }
         }
@@ -62,7 +59,24 @@ extension realTimePostsVC: UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellRealTime", for: indexPath) as! listCellRealTime
         
         cell.lblTitle.text = posts[indexPath.row].postname
-        cell.lblCategoryNStoreName.text = posts[indexPath.row].category + posts[indexPath.row].storeName
+        cell.lblCategory.text = posts[indexPath.row].category
+        cell.lblStoreName.text = posts[indexPath.row].storeName
+        cell.lblContent.text = posts[indexPath.row].contents
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100 //Choose your custom row height
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "participateIn") as? participateInVC
+        pushVC!.category = posts[indexPath.row].category
+        pushVC!.postName = posts[indexPath.row].postname
+        pushVC!.contents = posts[indexPath.row].contents
+        pushVC!.storeName = posts[indexPath.row].storeName
+        self.navigationController?.pushViewController(pushVC!, animated: true)
     }
 }

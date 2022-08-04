@@ -8,9 +8,10 @@
 import UIKit
 
 class listCellRealTime: UITableViewCell {
-    @IBOutlet weak var imgCategory: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblCategoryNStoreName: UILabel!
+    @IBOutlet weak var lblCategory: UILabel!
+    @IBOutlet weak var lblStoreName: UILabel!
+    @IBOutlet weak var lblContent: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +23,4 @@ class listCellRealTime: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
