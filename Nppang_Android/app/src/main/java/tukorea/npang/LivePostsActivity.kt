@@ -1,8 +1,10 @@
 package tukorea.npang
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import tukorea.npang.databinding.ActivityLivePostsBinding
@@ -17,9 +19,22 @@ class LivePostsActivity : Activity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLivePostsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //리싸이클뷰 connect
         binding.rvList.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.rvList.adapter = adapter
+
+        //게시물클릭시 해당게시물로이동
+        adapter.setItemClickListner(object :ListAdapter.OnItemClickListener{
+            override fun onClick(v: View, position: Int) {
+                val intent = Intent(this@LivePostsActivity, ParticipatingInActivity::class.java)
+                intent.putExtra("postname", "${itemList[position].postname}")
+                intent.putExtra("contents", "${itemList[position].contents}")
+                intent.putExtra("storename", "${itemList[position].storeName}")
+                startActivity(intent)
+            }
+        })
+        //Firebase connect
         db.collection("LivePost")   // 작업할 컬렉션
             .get()      // 문서 가져오기
             .addOnSuccessListener { result ->
@@ -27,7 +42,7 @@ class LivePostsActivity : Activity() {
                 itemList.clear()
                 for (document in result) {  // 가져온 문서들은 result에 들어감
                     val item =
-                        ListLayout(document["contents"] as String, document["postname"] as String)
+                        ListLayout(document["contents"] as String, document["postname"] as String,document["category"]as String,document["storeName"]as String)
                     itemList.add(item)
                 }
                 adapter.notifyDataSetChanged()  // 리사이클러 뷰 갱신
@@ -36,5 +51,6 @@ class LivePostsActivity : Activity() {
                 // 실패할 경우
                 Log.w("MainActivity", "Error getting documents: $exception")
             }
+
     }
 }

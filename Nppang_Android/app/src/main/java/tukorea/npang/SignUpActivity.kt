@@ -1,6 +1,8 @@
 package tukorea.npang
 
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -28,41 +30,52 @@ class SignUpActivity : Activity() {
 
         //회원가입시 파이어베이스 정보 등록,파이어스토어 연동
         binding.btnSignUp.setOnClickListener {
-            createEmail(
-                binding.etSignUpEmail.text.toString().trim(),
-                binding.etSignUpPasswd.text.toString().trim()
-            )
-            //
-            val userBankAccount = binding.etAccount.text
-            val userEmail = binding.etSignUpEmail.text
-            val userName = binding.etUserName.text
-            val userPhoneNumber = binding.etPhoneNumber.text
-            var UserInfoMation = hashMapOf(
-                "userBankAccount" to userBankAccount.toString().trim(),
-                "userEmail" to userEmail.toString().trim(),
-                "userName" to userName.toString().trim(),
-                "userPhoneNumber" to userPhoneNumber.toString().trim()
-            )
+            if (binding.etSignUpEmail.length() == 0 || binding.etSignUpPasswd.length() == 0
+                || binding.etSignUpPasswdConfirm.length() == 0 || binding.etUserName.length() == 0
+                || binding.etPhoneNumber.length() == 0 || binding.etAccount.length() == 0) {
+                Toast.makeText(this, "내용을 입력해주세요.", Toast.LENGTH_SHORT).show()
+            } else {
+                createEmail(
+                    binding.etSignUpEmail.text.toString().trim(),
+                    binding.etSignUpPasswd.text.toString().trim()
+                )
+                //
+                val userBankAccount = binding.etAccount.text
+                val userEmail = binding.etSignUpEmail.text
+                val userName = binding.etUserName.text
+                val userPhoneNumber = binding.etPhoneNumber.text
+                var UserInfoMation = hashMapOf(
+                    "userBankAccount" to userBankAccount.toString().trim(),
+                    "userEmail" to userEmail.toString().trim(),
+                    "userName" to userName.toString().trim(),
+                    "userPhoneNumber" to userPhoneNumber.toString().trim()
+                )
 
 
-            db.collection("UserData").add(UserInfoMation)
-                .addOnSuccessListener { documentReference ->
-                    Log.d("userdata", "DocumentSnapshot added with ID: ${documentReference.id}")
-                }
-                .addOnFailureListener { e ->
-                    Log.w("userdata", "Error adding document", e)
-                }
-            Log.d("btn", "onCreate: ${binding.etSignUpEmail.text}")
+                db.collection("UserData").add(UserInfoMation)
+                    .addOnSuccessListener { documentReference ->
+                        Log.d("userdata", "DocumentSnapshot added with ID: ${documentReference.id}")
+                    }
+                    .addOnFailureListener { e ->
+                        Log.w("userdata", "Error adding document", e)
+                    }
+                Log.d("btn", "onCreate: ${binding.etSignUpEmail.text}")
+            }
         }
     }
 
     private fun createEmail(email: String, password: String) {
         firebaseAuth.createUserWithEmailAndPassword(email, password)
             .addOnSuccessListener {
-                Toast.makeText(this, "good", Toast.LENGTH_SHORT).show()
-            }.addOnFailureListener { e ->
-                Log.d("createEmail", "createEmail:$e ")
-                Toast.makeText(this, "fail", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "회원가입성공 로그인창으로 이동합니다", Toast.LENGTH_SHORT).show()
+                val movelogin = Intent(this, LoginActivity::class.java)
+                startActivity(movelogin)
+            }.addOnFailureListener {
+                val alertDialog = AlertDialog.Builder(this)
+                alertDialog.setTitle("Email-Error")
+                    .setMessage("Email 중복입니다")
+                    .setPositiveButton("확인", null)
+                alertDialog.show()
             }
     }
 }
