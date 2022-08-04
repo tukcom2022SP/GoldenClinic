@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import tukorea.npang.databinding.ActivityCategoryDetailsBinding
@@ -49,6 +50,16 @@ class CategoryDetailsActivity() : Activity() {
                 // 실패할 경우
                 Log.w("MainActivity", "Error getting documents: $exception")
             }
+        //게시물클릭시 해당게시물로이동
+        adapter.setItemClickListner(object :ListAdapter.OnItemClickListener{
+            override fun onClick(v: View, position: Int) {
+                val intent = Intent(this@CategoryDetailsActivity, ParticipatingInActivity::class.java)
+                intent.putExtra("postname", "${itemList[position].postname}")
+                intent.putExtra("contents", "${itemList[position].contents}")
+                intent.putExtra("storename", "${itemList[position].storeName}")
+                startActivity(intent)
+            }
+        })
 
 
 
