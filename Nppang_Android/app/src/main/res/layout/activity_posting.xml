@@ -100,17 +100,6 @@
             android:text="모집하기"
             android:textColor="@color/white"
             android:textSize="25dp" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:background="@color/deeppink"
-            android:gravity="center"
-            android:text="취소"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
     </LinearLayout>
 
 </LinearLayout>
