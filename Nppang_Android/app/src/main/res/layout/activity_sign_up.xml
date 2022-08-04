@@ -29,7 +29,7 @@
 
             <EditText
                 android:id="@+id/et_sign_up_email"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="이메일"
                 android:layout_marginBottom="20dp"
@@ -37,26 +37,20 @@
                 android:backgroundTint="@color/black"
                 android:textColor="@color/black"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:text="중복 확인"
-                android:textColor="@color/white"
-                android:background="@color/deeppink"/>
-
         </LinearLayout>
 
         <EditText
             android:id="@+id/et_sign_up_passwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="비밀번호"
+            android:hint="비밀번호-8자리이상 입력하시오"
             android:layout_marginBottom="20dp"
             android:textColorHint="#d9d9d9"
             android:backgroundTint="@color/black"
             android:textColor="@color/black"/>
 
         <EditText
+            android:id="@+id/et_sign_up_passwd_confirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="비밀번호 확인"

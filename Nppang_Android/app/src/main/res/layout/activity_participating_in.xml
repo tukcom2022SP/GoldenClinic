@@ -25,6 +25,7 @@
         android:paddingBottom="5dp">
 
         <TextView
+            android:id="@+id/tv_pp_ost_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="20시 치킨 시키실 분 구합니다."
@@ -32,12 +33,14 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tv_pp_store_name"
             android:layout_width="280dp"
             android:layout_height="20dp"
             android:text="19:20    BBQ 정왕점"
             android:textSize="12dp" />
 
         <TextView
+            android:id="@+id/tv_pp_contents"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -72,6 +75,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btn_participate"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginLeft="29dp"
