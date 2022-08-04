@@ -44,9 +44,6 @@ class realTimePostsVC: UIViewController{
                         }
                     }
                 }
-//                for document in querySnapshot!.documents {
-//                    document.data()
-//                }
 //                print(posts)
             }
         }
@@ -62,7 +59,10 @@ extension realTimePostsVC: UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellRealTime", for: indexPath) as! listCellRealTime
         
         cell.lblTitle.text = posts[indexPath.row].postname
-        cell.lblCategoryNStoreName.text = posts[indexPath.row].category + posts[indexPath.row].storeName
+        cell.lblCategory.text = posts[indexPath.row].category
+        cell.lblStoreName.text = posts[indexPath.row].storeName
+        cell.lblContent.text = posts[indexPath.row].contents
+        
         return cell
     }
 }
