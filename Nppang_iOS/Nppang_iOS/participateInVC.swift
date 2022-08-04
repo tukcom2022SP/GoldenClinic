@@ -70,6 +70,10 @@ class participateInVC: UIViewController{
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func btnCancel(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func initUI() {
         dropViewMenu.backgroundColor = UIColor.black
 
