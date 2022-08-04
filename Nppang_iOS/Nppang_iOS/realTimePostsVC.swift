@@ -39,7 +39,7 @@ class realTimePostsVC: UIViewController{
                             
                             DispatchQueue.main.async {
                                 self.tableViewRealTime.reloadData()
-                                self.tableViewRealTime.scrollToRow(at: IndexPath(row: posts.count-1, section: 0), at: .top, animated: false)
+                                self.tableViewRealTime.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
                             }
                         }
                     }
@@ -47,6 +47,11 @@ class realTimePostsVC: UIViewController{
 //                print(posts)
             }
         }
+    }
+    
+    func pushViewController(vcName: String){
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: vcName)
+        self.navigationController?.pushViewController(pushVC!, animated: true)
     }
 }
 
@@ -64,5 +69,14 @@ extension realTimePostsVC: UITableViewDelegate,UITableViewDataSource{
         cell.lblContent.text = posts[indexPath.row].contents
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100 //Choose your custom row height
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        pushViewController(vcName: "participateIn")
     }
 }
