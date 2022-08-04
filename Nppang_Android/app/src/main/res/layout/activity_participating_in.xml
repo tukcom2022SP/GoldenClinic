@@ -75,6 +75,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btn_participate"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginLeft="29dp"
