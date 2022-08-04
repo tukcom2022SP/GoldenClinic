@@ -22,6 +22,13 @@ class participateInVC: UIViewController{
     var payTime: Int = 7
     var contents: String = ""
     var storeName: String = ""
+    let storesChicken = ["후라이드 치킨", "양념 치킨", "간장 치킨", "치즈 치킨", "민트초코 치킨"]
+    let storesPizza = ["콤비네이션 피자", "불고기 피자", "하와이안 피자", "솔의눈 피자"]
+    let storesChinese = ["짜장면", "짬뽕", "탕수육", "깐풍기", "돼지국밥"]
+    let storesPork = ["족발(앞다리)", "족발(뒷다리)", "삼겹살 보쌈", "목살 보쌈", "민트초코 족보 세트"]
+    let storesBbokki = ["떡볶이", "매운 떡볶이", "민트초코 떡볶이", "데자와 떡볶이", "감자튀김", "민트초코 소스"]
+    let storesEtc = ["김밥", "우영웅 김밥", "동그라미 김밥", "초코 돈까스 김밥", "라면", "코카콜라"]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +42,20 @@ class participateInVC: UIViewController{
     }
     
     @IBAction func btnSelectMenu(_ sender: UIButton) {
-        switch storeName{
-        case "현구피자 정왕점": dropdown.dataSource = ["d", "ddd"]
+        switch category{
+        case "치킨": dropdown.dataSource = storesChicken
+        case "피자": dropdown.dataSource = storesPizza
+        case "중식": dropdown.dataSource = storesChinese
+        case "족발 보쌈": dropdown.dataSource = storesPork
+        case "분식": dropdown.dataSource = storesBbokki
+        case "기타": dropdown.dataSource = storesEtc
         default: dropdown.dataSource = ["카테고리를 먼저 선택하세요."]
         }
         dropdown.anchorView = dropViewMenu
         dropdown.bottomOffset = CGPoint(x: 0, y: dropViewMenu.bounds.height)
         dropdown.selectionAction = { [weak self] (index, item) in
             self!.tfSelectMenu.text = item
+            self!.tvSelectedMenu.text += "\(item)\n"
         }
         dropdown.cancelAction = { [weak self] in
         }
