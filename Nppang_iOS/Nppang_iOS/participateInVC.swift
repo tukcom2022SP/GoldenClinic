@@ -41,6 +41,10 @@ class participateInVC: UIViewController{
         initUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.hidesBackButton = true
+    }
+    
     @IBAction func btnSelectMenu(_ sender: UIButton) {
         switch category{
         case "치킨": dropdown.dataSource = storesChicken
@@ -63,6 +67,7 @@ class participateInVC: UIViewController{
     }
     
     @IBAction func btnParticipateIn(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func initUI() {
