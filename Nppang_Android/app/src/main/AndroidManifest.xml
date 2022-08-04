@@ -13,6 +13,9 @@
         android:theme="@style/Theme.NPang"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ListAdapter"
+            android:exported="false" />
+        <activity
             android:name=".ListLayout"
             android:exported="false" />
         <activity
@@ -48,6 +51,7 @@
         <activity
             android:name=".LivePostsActivity"
             android:exported="false" />
+
 
     </application>
 
