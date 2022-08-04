@@ -48,11 +48,6 @@ class realTimePostsVC: UIViewController{
             }
         }
     }
-    
-    func pushViewController(vcName: String){
-        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: vcName)
-        self.navigationController?.pushViewController(pushVC!, animated: true)
-    }
 }
 
 extension realTimePostsVC: UITableViewDelegate,UITableViewDataSource{
@@ -77,6 +72,11 @@ extension realTimePostsVC: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        pushViewController(vcName: "participateIn")
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "participateIn") as? participateInVC
+        pushVC!.category = posts[indexPath.row].category
+        pushVC!.postName = posts[indexPath.row].postname
+        pushVC!.contents = posts[indexPath.row].contents
+        pushVC!.storeName = posts[indexPath.row].storeName
+        self.navigationController?.pushViewController(pushVC!, animated: true)
     }
 }
