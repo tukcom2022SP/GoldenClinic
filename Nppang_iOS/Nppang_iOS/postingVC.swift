@@ -24,7 +24,7 @@ class postingVC: UIViewController{
     let dropdown = DropDown()
     let categories = ["치킨", "피자", "중식", "족발 보쌈", "분식", "기타"]
     var category = ""
-    let storesChicken = ["BBQ 정왕1호점", "BHC 시화로데오점", "자담치킨 정왕점"]
+    let storesChicken = ["BBQ 정왕1호점", "하임치킨 시화로데오점", "자담치킨 정왕점"]
     let storesPizza = ["현구피자 정왕점", "수빈피자 시화로데오점", "윾빈이네 피자 정왕점"]
     let storesChinese = ["현구대반점", "더 베이징", "아래향"]
     let storesPork = ["현구족발 정왕1호점", "현구보쌈 시화로데오점", "오늘사족 본점"]

@@ -463,19 +463,31 @@
                                 <color key="backgroundColor" name="titleColor"/>
                                 <color key="tintColor" name="themeColor"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Za3-KU-lhi">
-                                <rect key="frame" x="0.0" y="94" width="428" height="738"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Za3-KU-lhi">
+                                <rect key="frame" x="0.0" y="94" width="428" height="798"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="S0r-U8-lHS" id="iGO-sm-NVs"/>
+                                    <outlet property="delegate" destination="S0r-U8-lHS" id="wHc-2l-FTf"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e2J-QS-J9E"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e2J-QS-J9E" firstAttribute="bottom" secondItem="Za3-KU-lhi" secondAttribute="bottom" id="GLl-79-LhK"/>
+                            <constraint firstItem="Za3-KU-lhi" firstAttribute="top" secondItem="e2J-QS-J9E" secondAttribute="top" constant="50" id="Kji-ja-V67"/>
+                            <constraint firstItem="e2J-QS-J9E" firstAttribute="trailing" secondItem="Za3-KU-lhi" secondAttribute="trailing" id="h3V-Tn-3Ye"/>
+                            <constraint firstItem="Za3-KU-lhi" firstAttribute="leading" secondItem="e2J-QS-J9E" secondAttribute="leading" id="xcL-Tw-HQu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableViewRealTime" destination="Za3-KU-lhi" id="diX-aX-E3T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jVz-Gf-Mgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3219" y="-572"/>
+            <point key="canvasLocation" x="3218.6915887850464" y="-572.1382289416847"/>
         </scene>
         <!--Category PostsVC-->
         <scene sceneID="mhL-Jv-WPS">
