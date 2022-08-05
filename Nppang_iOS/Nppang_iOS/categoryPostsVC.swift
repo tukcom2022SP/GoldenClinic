@@ -8,7 +8,6 @@
 import UIKit
 import Firebase
 
-let dbCategoryPosts = Firestore.firestore()
 
 class categoryPostsVC: UIViewController{
     var category: String = ""
@@ -31,7 +30,7 @@ class categoryPostsVC: UIViewController{
     }
     
     func loadPosts(_ C: String){
-        dbCategory.collection("LivePost").addSnapshotListener{ (querySnapshot, err) in
+        db.collection("LivePost").addSnapshotListener{ (querySnapshot, err) in
             if let err = err {
             } else {
                 if let snapshotDocuments = querySnapshot?.documents{
@@ -47,7 +46,9 @@ class categoryPostsVC: UIViewController{
                             
                             DispatchQueue.main.async {
                                 self.tvCategoryPosts.reloadData()
-                                self.tvCategoryPosts.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                                if self.postsCategoryPosts.count != 0 {
+                                    self.tvCategoryPosts.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                                }
                             }
                         }
                     }

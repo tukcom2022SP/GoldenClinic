@@ -9,8 +9,6 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-let dbSignUp = Firestore.firestore()
-
 class SignUpVC: UIViewController {
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
@@ -37,7 +35,7 @@ class SignUpVC: UIViewController {
             logInVC.present(alert,animated: true,completion: nil)
             guard let user = authResut?.user else { return }
             // Update one field, creating the document if it does not exist.
-            dbSignUp.collection("UserData").document(self.tfEmail.text!).setData(["userEmail": self.tfEmail.text!,
+            db.collection("UserData").document(self.tfEmail.text!).setData(["userEmail": self.tfEmail.text!,
                                                          "userName": self.tfName.text!,
                                                          "userPhoneNumber": self.tfPhoneNumber.text!,
                                                          "userBankAccount": self.tfBankAccount.text!])

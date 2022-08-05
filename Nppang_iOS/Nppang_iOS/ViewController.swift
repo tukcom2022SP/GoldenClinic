@@ -9,6 +9,8 @@ import UIKit
 import GoogleSignIn
 import Firebase
 
+let db = Firestore.firestore()
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var tfEmail: UITextField!
