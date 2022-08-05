@@ -8,12 +8,10 @@
 import UIKit
 import FirebaseFirestore
 
-let dbRealTimePosts = Firestore.firestore()
-var posts: [post] = []
-
 class realTimePostsVC: UIViewController{
     @IBOutlet weak var tableViewRealTime: UITableView!
-    
+    var posts: [post] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         loadPosts()
@@ -22,10 +20,7 @@ class realTimePostsVC: UIViewController{
     }
     
     func loadPosts(){
-        dbRealTimePosts.collection("LivePost").addSnapshotListener{ (querySnapshot, err) in
-            
-            posts = []
-            
+        db.collection("LivePost").addSnapshotListener{ (querySnapshot, err) in
             if let err = err {
             } else {
                 if let snapshotDocuments = querySnapshot?.documents{
@@ -35,11 +30,13 @@ class realTimePostsVC: UIViewController{
                            let contents = data["contents"] as? String,
                            let category = data["category"] as? String,
                            let storeName = data["storeName"] as? String {
-                            posts.append(post(postname: postname, contents: contents, category: category, storeName: storeName))
+                            self.posts.append(post(postname: postname, contents: contents, category: category, storeName: storeName))
                             
                             DispatchQueue.main.async {
                                 self.tableViewRealTime.reloadData()
-                                self.tableViewRealTime.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                                if self.posts.count != 0 {
+                                    self.tableViewRealTime.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                                }
                             }
                         }
                     }
