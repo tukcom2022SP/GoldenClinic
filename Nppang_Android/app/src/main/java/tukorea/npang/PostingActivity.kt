@@ -3,7 +3,6 @@ package tukorea.npang
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.google.firebase.firestore.ktx.firestore
@@ -20,7 +19,7 @@ class PostingActivity : Activity() {
         setContentView(binding.root)
         binding.btnJoin.setOnClickListener {
             //파이어스토어 컬렉션 connect
-            val postdata=db.collection("LivePost")
+            val postdata = db.collection("LivePost")
             if (binding.etPostName.length() == 0 || binding.etContents.length() == 0) {
                 Toast.makeText(this, "내용을 입력해주세요.", Toast.LENGTH_SHORT).show()
             } else {
@@ -35,11 +34,12 @@ class PostingActivity : Activity() {
                     "storeName" to storeName.toString().trim()
                 )
                 //컬렉션이름 게시물이름으로 설정
-                postdata.document(binding.etPostName.text.toString()).set(PostInfoMation).addOnSuccessListener {
-                    //모집하기 클릭시 실시간게시물 모두보기로 이동
-                    var categoryDetail=Intent(this,LivePostsActivity::class.java)
-                    startActivity(categoryDetail)
-                }.addOnFailureListener {
+                postdata.document(binding.etPostName.text.toString()).set(PostInfoMation)
+                    .addOnSuccessListener {
+                        //모집하기 클릭시 실시간게시물 모두보기로 이동
+                        var categoryDetail = Intent(this, LivePostsActivity::class.java)
+                        startActivity(categoryDetail)
+                    }.addOnFailureListener {
                     Toast.makeText(this, "게시글 올리기 실패 다시 시도하세요", Toast.LENGTH_SHORT).show()
                 }
             }
