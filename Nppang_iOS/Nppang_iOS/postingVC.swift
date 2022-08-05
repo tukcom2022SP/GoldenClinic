@@ -7,9 +7,7 @@
 
 import UIKit
 import DropDown
-import FirebaseFirestore
-
-let dbPosting = Firestore.firestore()
+import Firebase
 
 class postingVC: UIViewController{
     @IBOutlet weak var tfTitle: UITextField!
@@ -20,11 +18,10 @@ class postingVC: UIViewController{
     @IBOutlet weak var dropViewStore: UIView!
     @IBOutlet weak var btnSelectStore: UIButton!
     @IBOutlet weak var tfSelectStore: UITextField!
-    
     let dropdown = DropDown()
     let categories = ["치킨", "피자", "중식", "족발 보쌈", "분식", "기타"]
     var category = ""
-    let storesChicken = ["BBQ 정왕1호점", "BHC 시화로데오점", "자담치킨 정왕점"]
+    let storesChicken = ["BBQ 정왕1호점", "하임치킨 시화로데오점", "자담치킨 정왕점"]
     let storesPizza = ["현구피자 정왕점", "수빈피자 시화로데오점", "윾빈이네 피자 정왕점"]
     let storesChinese = ["현구대반점", "더 베이징", "아래향"]
     let storesPork = ["현구족발 정왕1호점", "현구보쌈 시화로데오점", "오늘사족 본점"]
@@ -82,13 +79,15 @@ class postingVC: UIViewController{
     }
     
     @IBAction func btnPost(_ sender: UIButton) {
-        dbPosting.collection("LivePost").document("\(self.tfTitle.text!)\(Int.random(in: 0...Int.max))").setData([
+        db.collection("LivePost").document(self.tfTitle.text!).setData([
             "postname": self.tfTitle.text!,
             "contents": self.tvContent.text!,
             "category": self.tfSelectCategory.text!,
-            "storeName": self.tfSelectStore.text!
+            "storeName": self.tfSelectStore.text!,
+            "group": ["\((Auth.auth().currentUser?.email)!)"]
         ])
-        self.navigationController?.popViewController(animated: true)
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
     }
     
     @IBAction func btnCancel(_ sender: UIButton) {

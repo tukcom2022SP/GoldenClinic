@@ -7,11 +7,16 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class categoryVC: UIViewController{
+    @IBOutlet weak var tableViewCategory: UITableView!
+    var postsPreview: [post] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadPosts()
+        self.tableViewCategory.register(UINib.init(nibName: "PreviewTableViewCell", bundle: nil), forCellReuseIdentifier: "cellPreview")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,7 +56,8 @@ class categoryVC: UIViewController{
     @IBAction func btnLogOut(_ sender: UIButton) {
         do {
             try Auth.auth().signOut()
-            self.navigationController?.popViewController(animated: true)
+            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "logIn")
+            self.navigationController?.pushViewController(pushVC!, animated: true)
             UserDefaults.standard.set(false, forKey: "autoLogIn")
         } catch { }
     }
@@ -61,6 +67,66 @@ class categoryVC: UIViewController{
     
     func pushViewController(vcName: String){
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: vcName)
+        self.navigationController?.pushViewController(pushVC!, animated: true)
+    }
+    
+    func loadPosts(){
+        db.collection("LivePost").addSnapshotListener{ (querySnapshot, err) in
+            
+            var cnt = 0
+            
+            if let err = err {
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents{
+                    snapshotDocuments.forEach{(doc) in
+                        let data = doc.data()
+                        if let postname = data["postname"] as? String,
+                           let contents = data["contents"] as? String,
+                           let category = data["category"] as? String,
+                           let storeName = data["storeName"] as? String {
+                            if cnt < 4 {
+                                self.postsPreview.append(post(postname: postname, contents: contents, category: category, storeName: storeName))
+                            }
+                            cnt += 1
+                            
+                            DispatchQueue.main.async {
+                                self.tableViewCategory.reloadData()
+                                if self.postsPreview.count != 0 {
+                                    self.tableViewCategory.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+extension categoryVC: UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return postsPreview.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellPreview", for: indexPath) as! PreviewTableViewCell
+        cell.lblTitle.text = postsPreview[indexPath.row].postname
+        cell.lblCategory.text = postsPreview[indexPath.row].category
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75 //Choose your custom row height
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "participateIn") as? participateInVC
+        pushVC!.category = postsPreview[indexPath.row].category
+        pushVC!.postName = postsPreview[indexPath.row].postname
+        pushVC!.contents = postsPreview[indexPath.row].contents
+        pushVC!.storeName = postsPreview[indexPath.row].storeName
         self.navigationController?.pushViewController(pushVC!, animated: true)
     }
 }

@@ -9,6 +9,8 @@ import UIKit
 import GoogleSignIn
 import Firebase
 
+let db = Firestore.firestore()
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var tfEmail: UITextField!
@@ -18,7 +20,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(UserDefaults.standard.bool(forKey: "autoLogIn"))
         if UserDefaults.standard.bool(forKey: "autoLogIn") {
             if let user = Auth.auth().currentUser {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
