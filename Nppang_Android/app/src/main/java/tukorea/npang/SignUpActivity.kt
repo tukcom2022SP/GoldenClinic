@@ -50,11 +50,12 @@ class SignUpActivity : Activity() {
                     "userName" to userName.toString().trim(),
                     "userPhoneNumber" to userPhoneNumber.toString().trim()
                 )
+                //user-email document 이름 설정
+                val userdata=db.collection("UserData")
 
-
-                db.collection("UserData").add(UserInfoMation)
+                userdata.document(binding.etSignUpEmail.text.toString()).set(UserInfoMation)
                     .addOnSuccessListener { documentReference ->
-                        Log.d("userdata", "DocumentSnapshot added with ID: ${documentReference.id}")
+
                     }
                     .addOnFailureListener { e ->
                         Log.w("userdata", "Error adding document", e)
