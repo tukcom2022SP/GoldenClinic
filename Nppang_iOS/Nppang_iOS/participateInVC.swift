@@ -7,6 +7,7 @@
 
 import UIKit
 import DropDown
+import Firebase
 
 class participateInVC: UIViewController{
     @IBOutlet weak var lblCategory: UILabel!
@@ -29,6 +30,7 @@ class participateInVC: UIViewController{
     let dictPork = ["현구족발 정왕1호점" : ["족발" : 25000 ,"불족발" : 27000, "냉채족발" : 31000], "현구보쌈 시화로데오점": ["김치보쌈":27000, "1인보쌈" : 18000, "마늘보쌈" : 29000], "오늘사족 본점" : ["족발한팩" : 12000, "보쌈함팩" : 12000, "마늘족한팩" : 13000 ]]
     let dictBbokki = ["돼지게티 정왕점" : ["실속세트":21000,"1인세트":13000,"실속치킨세트":18000], "동대문엽기떡볶이 시화이마트점" : ["엽기메뉴":14000,"로제메뉴":18000,"엽봉":5000], "삼첩분식 정왕점" : ["삼첩떡볶이":8900, "바질크림떡볶이":9900,"대구막창":11000]]
     let dictEtc = ["해피타코야끼&닭꼬치" : ["수제타코야끼22알":14000,"파닭꼬치":3500,"모둠꼬치":26000], "써브웨이 시흥정왕점":["이탈리안비엠티":8700,"에그마요":7500,"스테이크치즈":10000], "버거킹 시흥정왕점" : ["콰트로치즈와퍼":10900,"통새우와퍼":10900,"갈릭불고기와퍼":10500]]
+    var thisPost = db.collection("LivePost")
 
     
     override func viewDidLoad() {
@@ -101,7 +103,32 @@ class participateInVC: UIViewController{
     }
     
     @IBAction func btnParticipateIn(_ sender: UIButton) {
-        tvSelectedMenu.text += "\(total)\n"
+        let alert = UIAlertController(title: "참가 완료", message: "주문 금액 : \(total)원\n본인 부담 배달비 : 1000원\n(원래 배달비 : 3000원)\n결제 예정 시각 : \(payTime)시", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(
+            title: "확인", style: .default){ action in
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
+                self.navigationController?.pushViewController(pushVC!, animated: true)
+            }
+        )
+        thisPost.getDocuments { (snapshot, err) in
+            if let err = err {
+            } else {
+                guard let snapshot = snapshot else { return }
+                for document in snapshot.documents {
+                    if document.documentID == self.postName {
+                        // 배열 데이터를 가져온다.
+                        guard var data = document["group"] as? [String] else { return }
+                        // 배열 데이터를 수정한다.
+                        data.append("\((Auth.auth().currentUser?.email)!)")
+                        // 서버의 배열 데이터를 수정된 데이터로 수정한다.
+                        self.thisPost.document(self.postName).updateData(["group" : data])
+                    }
+                }
+            }
+        }
+        present(alert, animated: true, completion: nil)
+        
+//        tvSelectedMenu.text += "\(total)\n"
 //        self.navigationController?.popViewController(animated: true)
     }
     

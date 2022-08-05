@@ -56,7 +56,8 @@ class categoryVC: UIViewController{
     @IBAction func btnLogOut(_ sender: UIButton) {
         do {
             try Auth.auth().signOut()
-            self.navigationController?.popViewController(animated: true)
+            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "logIn")
+            self.navigationController?.pushViewController(pushVC!, animated: true)
             UserDefaults.standard.set(false, forKey: "autoLogIn")
         } catch { }
     }
