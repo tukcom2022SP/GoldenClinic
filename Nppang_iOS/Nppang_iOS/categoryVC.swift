@@ -9,12 +9,9 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-let dbCategory = Firestore.firestore()
-var postsPreview: [post] = []
-
 class categoryVC: UIViewController{
-    
     @IBOutlet weak var tableViewCategory: UITableView!
+    var postsPreview: [post] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,9 +70,8 @@ class categoryVC: UIViewController{
     }
     
     func loadPosts(){
-        dbCategory.collection("LivePost").addSnapshotListener{ (querySnapshot, err) in
+        db.collection("LivePost").addSnapshotListener{ (querySnapshot, err) in
             
-            posts = []
             var cnt = 0
             
             if let err = err {
@@ -88,18 +84,19 @@ class categoryVC: UIViewController{
                            let category = data["category"] as? String,
                            let storeName = data["storeName"] as? String {
                             if cnt < 4 {
-                                postsPreview.append(post(postname: postname, contents: contents, category: category, storeName: storeName))
+                                self.postsPreview.append(post(postname: postname, contents: contents, category: category, storeName: storeName))
                             }
                             cnt += 1
                             
                             DispatchQueue.main.async {
                                 self.tableViewCategory.reloadData()
-                                self.tableViewCategory.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                                if self.postsPreview.count != 0 {
+                                    self.tableViewCategory.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                                }
                             }
                         }
                     }
                 }
-//                print(posts)
             }
         }
     }

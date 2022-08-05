@@ -94,7 +94,6 @@
 				393A413E2890150D00F8796E /* Main.storyboard */,
 				39391C95289B715200E0EDAD /* listCellRealTime.xib */,
 				39391C9D289C118200E0EDAD /* PreviewTableViewCell.xib */,
-				39391C9A289BF1A000E0EDAD /* participateInVC.swift */,
 				393A41382890150D00F8796E /* AppDelegate.swift */,
 				393A413A2890150D00F8796E /* SceneDelegate.swift */,
 				393A413C2890150D00F8796E /* ViewController.swift */,
@@ -107,6 +106,7 @@
 				39391C9C289C118200E0EDAD /* PreviewTableViewCell.swift */,
 				39391C8E289766D800E0EDAD /* categoryPostsVC.swift */,
 				39391C922897B13E00E0EDAD /* findInfoVC.swift */,
+				39391C9A289BF1A000E0EDAD /* participateInVC.swift */,
 				393A41462890150E00F8796E /* Info.plist */,
 				393A415528912EA200F8796E /* GoogleService-Info.plist */,
 			);

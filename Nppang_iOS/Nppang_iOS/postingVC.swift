@@ -9,8 +9,6 @@ import UIKit
 import DropDown
 import FirebaseFirestore
 
-let dbPosting = Firestore.firestore()
-
 class postingVC: UIViewController{
     @IBOutlet weak var tfTitle: UITextField!
     @IBOutlet weak var tvContent: UITextView!
@@ -81,13 +79,14 @@ class postingVC: UIViewController{
     }
     
     @IBAction func btnPost(_ sender: UIButton) {
-        dbPosting.collection("LivePost").document("\(self.tfTitle.text!)\(Int.random(in: 0...Int.max))").setData([
+        db.collection("LivePost").document("\(self.tfTitle.text!)\(Int.random(in: 0...Int.max))").setData([
             "postname": self.tfTitle.text!,
             "contents": self.tvContent.text!,
             "category": self.tfSelectCategory.text!,
             "storeName": self.tfSelectStore.text!
         ])
-        self.navigationController?.popViewController(animated: true)
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
     }
     
     @IBAction func btnCancel(_ sender: UIButton) {
