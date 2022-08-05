@@ -3,6 +3,9 @@ package tukorea.npang
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.google.firebase.firestore.ktx.firestore
@@ -40,20 +43,66 @@ class PostingActivity : Activity() {
                         var categoryDetail = Intent(this, LivePostsActivity::class.java)
                         startActivity(categoryDetail)
                     }.addOnFailureListener {
-                    Toast.makeText(this, "게시글 올리기 실패 다시 시도하세요", Toast.LENGTH_SHORT).show()
-                }
+                        Toast.makeText(this, "게시글 올리기 실패 다시 시도하세요", Toast.LENGTH_SHORT).show()
+                    }
             }
         }
 
         //카테고리 관련 스피너
         val cateList = resources.getStringArray(R.array.cateList)
-        val adapter1 = ArrayAdapter(this, android.R.layout.simple_spinner_item, cateList)
-        binding.spinnerCategoryChoice.adapter = adapter1
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, cateList)
+        binding.spinnerCategoryChoice.adapter = adapter
 
-        //가게명 관련 스피너
-        val shopList = resources.getStringArray(R.array.shopList)
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, shopList)
-        binding.spinnerShopChoice.adapter = adapter
+        //가게 이름 - 치킨
+        val shopList1 = resources.getStringArray(R.array.shopList_chicken)
+        val adapter1 = ArrayAdapter(this, android.R.layout.simple_spinner_item, shopList1)
+        //가게 이름 - 중식
+        val shopList2 = resources.getStringArray(R.array.shopList_china)
+        val adapter2 = ArrayAdapter(this, android.R.layout.simple_spinner_item, shopList2)
+        //가게 이름 - 피자
+        val shopList3 = resources.getStringArray(R.array.shopList_pizza)
+        val adapter3 = ArrayAdapter(this, android.R.layout.simple_spinner_item, shopList3)
+        //가게 이름 - 족발보쌈
+        val shopList4 = resources.getStringArray(R.array.shopList_pork)
+        val adapter4 = ArrayAdapter(this, android.R.layout.simple_spinner_item, shopList4)
+        //가게 이름 - 분식
+        val shopList5 = resources.getStringArray(R.array.shopList_bokki)
+        val adapter5 = ArrayAdapter(this, android.R.layout.simple_spinner_item, shopList5)
+        //가게 이름 - 기타
+        val shopList6 = resources.getStringArray(R.array.shopList_exc)
+        val adapter6 = ArrayAdapter(this, android.R.layout.simple_spinner_item, shopList6)
+
+        //카테고리 관련 스피너 누르면 가게명 관련 스피너 동작
+        binding.spinnerCategoryChoice.onItemSelectedListener =
+            object : AdapterView.OnItemSelectedListener {
+                override fun onNothingSelected(p0: AdapterView<*>?) {
+                    //선택 안했을때
+                }
+
+                override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                    when (p2) {
+                        0 -> {
+                            binding.spinnerShopChoice.adapter = adapter1
+                        }
+                        1 -> {
+                            binding.spinnerShopChoice.adapter = adapter2
+                        }
+                        2 -> {
+                            binding.spinnerShopChoice.adapter = adapter3
+                        }
+                        3 -> {
+                            binding.spinnerShopChoice.adapter = adapter4
+                        }
+                        4 -> {
+                            binding.spinnerShopChoice.adapter = adapter5
+                        }
+                        5 -> {
+                            binding.spinnerShopChoice.adapter = adapter6
+                        }
+                    }
+                }
+            }
+
 
     }
 }
