@@ -7,11 +7,19 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
+
+let dbCategory = Firestore.firestore()
+var postsPreview: [post] = []
 
 class categoryVC: UIViewController{
     
+    @IBOutlet weak var tableViewCategory: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadPosts()
+        self.tableViewCategory.register(UINib.init(nibName: "PreviewTableViewCell", bundle: nil), forCellReuseIdentifier: "cellPreview")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,6 +69,66 @@ class categoryVC: UIViewController{
     
     func pushViewController(vcName: String){
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: vcName)
+        self.navigationController?.pushViewController(pushVC!, animated: true)
+    }
+    
+    func loadPosts(){
+        dbCategory.collection("LivePost").addSnapshotListener{ (querySnapshot, err) in
+            
+            posts = []
+            var cnt = 0
+            
+            if let err = err {
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents{
+                    snapshotDocuments.forEach{(doc) in
+                        let data = doc.data()
+                        if let postname = data["postname"] as? String,
+                           let contents = data["contents"] as? String,
+                           let category = data["category"] as? String,
+                           let storeName = data["storeName"] as? String {
+                            if cnt < 4 {
+                                postsPreview.append(post(postname: postname, contents: contents, category: category, storeName: storeName))
+                            }
+                            cnt += 1
+                            
+                            DispatchQueue.main.async {
+                                self.tableViewCategory.reloadData()
+                                self.tableViewCategory.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                            }
+                        }
+                    }
+                }
+//                print(posts)
+            }
+        }
+    }
+}
+
+extension categoryVC: UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return postsPreview.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellPreview", for: indexPath) as! PreviewTableViewCell
+        cell.lblTitle.text = postsPreview[indexPath.row].postname
+        cell.lblCategory.text = postsPreview[indexPath.row].category
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75 //Choose your custom row height
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "participateIn") as? participateInVC
+        pushVC!.category = postsPreview[indexPath.row].category
+        pushVC!.postName = postsPreview[indexPath.row].postname
+        pushVC!.contents = postsPreview[indexPath.row].contents
+        pushVC!.storeName = postsPreview[indexPath.row].storeName
         self.navigationController?.pushViewController(pushVC!, animated: true)
     }
 }
