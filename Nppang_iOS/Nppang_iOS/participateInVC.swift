@@ -22,6 +22,7 @@ class participateInVC: UIViewController{
     var payTime: Int = 7
     var contents: String = ""
     var storeName: String = ""
+    var total = 0
     let storesChicken = ["후라이드 치킨", "양념 치킨", "간장 치킨", "치즈 치킨", "민트초코 치킨"]
     let storesPizza = ["콤비네이션 피자", "불고기 피자", "하와이안 피자", "솔의눈 피자"]
     let storesChinese = ["짜장면", "짬뽕", "탕수육", "깐풍기", "돼지국밥"]

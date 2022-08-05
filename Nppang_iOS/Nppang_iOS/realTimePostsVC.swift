@@ -23,9 +23,6 @@ class realTimePostsVC: UIViewController{
     
     func loadPosts(){
         dbRealTimePosts.collection("LivePost").addSnapshotListener{ (querySnapshot, err) in
-            
-            posts = []
-            
             if let err = err {
             } else {
                 if let snapshotDocuments = querySnapshot?.documents{

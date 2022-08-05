@@ -75,7 +75,6 @@ class categoryVC: UIViewController{
     func loadPosts(){
         dbCategory.collection("LivePost").addSnapshotListener{ (querySnapshot, err) in
             
-            posts = []
             var cnt = 0
             
             if let err = err {
@@ -99,7 +98,6 @@ class categoryVC: UIViewController{
                         }
                     }
                 }
-//                print(posts)
             }
         }
     }
