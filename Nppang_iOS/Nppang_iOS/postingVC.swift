@@ -7,7 +7,7 @@
 
 import UIKit
 import DropDown
-import FirebaseFirestore
+import Firebase
 
 class postingVC: UIViewController{
     @IBOutlet weak var tfTitle: UITextField!
@@ -79,11 +79,12 @@ class postingVC: UIViewController{
     }
     
     @IBAction func btnPost(_ sender: UIButton) {
-        db.collection("LivePost").document("\(self.tfTitle.text!)\(Int.random(in: 0...Int.max))").setData([
+        db.collection("LivePost").document(self.tfTitle.text!).setData([
             "postname": self.tfTitle.text!,
             "contents": self.tvContent.text!,
             "category": self.tfSelectCategory.text!,
-            "storeName": self.tfSelectStore.text!
+            "storeName": self.tfSelectStore.text!,
+            "group": ["\((Auth.auth().currentUser?.email)!)"]
         ])
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
         self.navigationController?.pushViewController(pushVC!, animated: true)
