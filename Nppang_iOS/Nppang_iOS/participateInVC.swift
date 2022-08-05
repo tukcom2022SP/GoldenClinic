@@ -101,7 +101,16 @@ class participateInVC: UIViewController{
     }
     
     @IBAction func btnParticipateIn(_ sender: UIButton) {
-        tvSelectedMenu.text += "\(total)\n"
+        let alert = UIAlertController(title: "참가 완료", message: "주문 금액 : \(total)원\n본인 부담 배달비 : 1000원\n(원래 배달비 : 3000원)\n결제 예정 시각 : \(payTime)시", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(
+            title: "확인", style: .default){ action in
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
+                self.navigationController?.pushViewController(pushVC!, animated: true)
+            }
+        )
+        present(alert, animated: true, completion: nil)
+        
+//        tvSelectedMenu.text += "\(total)\n"
 //        self.navigationController?.popViewController(animated: true)
     }
     
