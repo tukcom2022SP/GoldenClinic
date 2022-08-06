@@ -83,9 +83,10 @@ class categoryVC: UIViewController{
                         if let postname = data["postname"] as? String,
                            let contents = data["contents"] as? String,
                            let category = data["category"] as? String,
-                           let storeName = data["storeName"] as? String {
+                           let storeName = data["storeName"] as? String,
+                        let group = data["group"] as? [String]{
                             if cnt < 4 {
-                                self.postsPreview.append(post(postname: postname, contents: contents, category: category, storeName: storeName))
+                                self.postsPreview.append(post(postname: postname, contents: contents, category: category, storeName: storeName, group: group))
                             }
                             cnt += 1
                             
@@ -127,6 +128,7 @@ extension categoryVC: UITableViewDelegate,UITableViewDataSource{
         pushVC!.postName = postsPreview[indexPath.row].postname
         pushVC!.contents = postsPreview[indexPath.row].contents
         pushVC!.storeName = postsPreview[indexPath.row].storeName
+        pushVC!.group = postsPreview[indexPath.row].group
         self.navigationController?.pushViewController(pushVC!, animated: true)
     }
 }

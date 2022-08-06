@@ -12,4 +12,5 @@ struct post {
     let contents: String
     let category: String
     let storeName: String
+    let group: [String]
 }
