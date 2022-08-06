@@ -12,6 +12,7 @@ class listCellRealTime: UITableViewCell {
     @IBOutlet weak var lblCategory: UILabel!
     @IBOutlet weak var lblStoreName: UILabel!
     @IBOutlet weak var lblContent: UILabel!
+    @IBOutlet weak var lblMembers: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

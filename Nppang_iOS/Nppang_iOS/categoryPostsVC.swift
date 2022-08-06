@@ -71,6 +71,7 @@ extension categoryPostsVC: UITableViewDelegate,UITableViewDataSource{
         cell.lblCategory.text = postsCategoryPosts[indexPath.row].category
         cell.lblStoreName.text = postsCategoryPosts[indexPath.row].storeName
         cell.lblContent.text = postsCategoryPosts[indexPath.row].contents
+        cell.lblMembers.text = "\(postsCategoryPosts[indexPath.row].group.count)"
         
         return cell
     }

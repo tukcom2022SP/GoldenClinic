@@ -60,6 +60,7 @@ extension realTimePostsVC: UITableViewDelegate,UITableViewDataSource{
         cell.lblCategory.text = posts[indexPath.row].category
         cell.lblStoreName.text = posts[indexPath.row].storeName
         cell.lblContent.text = posts[indexPath.row].contents
+        cell.lblMembers.text = "\(posts[indexPath.row].group.count)"
         
         return cell
     }
