@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        UIApplication.shared.statusBarStyle = .darkContent
         if UserDefaults.standard.bool(forKey: "autoLogIn") {
             if let user = Auth.auth().currentUser {
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
@@ -30,6 +31,12 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         GIDSignIn.sharedInstance().presentingViewController=self
+        navigationItem.hidesBackButton = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
     }
 
     @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
