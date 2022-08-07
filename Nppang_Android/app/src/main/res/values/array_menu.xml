@@ -1,8 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="menuList">
-        <item>BBQ 황금올리브</item>
-        <item>BBQ 핫 황금올리브 크리스피</item>
-        <item>BBQ 황금올리브 닭다리</item>
+    <string-array name="menuList_chicken_bbq">
+        <item>황금올리브</item>
+        <item>황금올리브 양념</item>
+        <item>자메이카 통다리구이</item>
+    </string-array>
+    <string-array name="menuList_chicken_haim">
+        <item>오븐바사삭</item>
+        <item>불금치킨</item>
+        <item>갈비천왕</item>
+        <item>볼케이노</item>
+    </string-array>
+    <string-array name="menuList_chicken_jadam">
+        <item>소보로치킨</item>
+        <item>불패치킨</item>
+        <item>맵슐랭치킨</item>
+    </string-array>
+    <string-array name="menuList_china_hyungu">
+        <item>유니콩 짜장면</item>
+        <item>참짬뽕</item>
+        <item>야채볶음밥</item>
+    </string-array>
+    <string-array name="menuList_china_beiging">
+        <item>짜장면</item>
+        <item>짬뽕</item>
+        <item>탕수육</item>
+    </string-array>
+    <string-array name="menuList_china_under">
+        <item>울면</item>
+        <item>콩국수</item>
+        <item>찹쌀탕수육</item>
+    </string-array>
+    <string-array name="menuList_pizza_hyungu">
+        <item>콤비네이션</item>
+        <item>불고기피자</item>
+        <item>치즈피자</item>
+    </string-array>
+    <string-array name="menuList_pizza_subin">
+        <item>순살가득피자닭</item>
+        <item>돈마호크</item>
+        <item>립스테이크</item>
+    </string-array>
+    <string-array name="menuList_pizza_eukbin">
+        <item>리얼시카고 오리지날</item>
+        <item>BBQ 리얼 시카고</item>
+        <item>몽빼르 피자</item>
+    </string-array>
+    <string-array name="menuList_pork_hyungu">
+        <item>족발</item>
+        <item>불족발</item>
+        <item>냉채족발</item>
+    </string-array>
+    <string-array name="menuList_bossam_hyungu">
+        <item>김치보쌈</item>
+        <item>1인보쌈</item>
+        <item>마늘보쌈</item>
+    </string-array>
+    <string-array name="menuList_pork_today">
+        <item>족발한팩</item>
+        <item>보쌈함팩</item>
+        <item>마늘족한팩</item>
+    </string-array>
+    <string-array name="menuList_bokki_pig">
+        <item>실속세트</item>
+        <item>1인세트</item>
+        <item>실속치킨세트</item>
+    </string-array>
+    <string-array name="menuList_bokki_yeopgi">
+        <item>엽기메뉴</item>
+        <item>로제메뉴</item>
+        <item>엽봉</item>
+    </string-array>
+    <string-array name="menuList_bokki_three">
+        <item>삼첩떡볶이</item>
+        <item>바질크림떡볶이</item>
+        <item>대구막창</item>
+    </string-array>
+    <string-array name="menuList_exc_taco">
+        <item>수제타코야끼22알</item>
+        <item>파닭꼬치</item>
+        <item>모둠꼬치</item>
+    </string-array>
+    <string-array name="menuList_exc_subway">
+        <item>이탈리안비엠티</item>
+        <item>에그마요</item>
+        <item>스테이크치즈</item>
+    </string-array>
+    <string-array name="menuList_exc_burgerking">
+        <item>콰트로치즈와퍼</item>
+        <item>통새우와퍼</item>
+        <item>갈릭불고기와퍼</item>
     </string-array>
 </resources>
