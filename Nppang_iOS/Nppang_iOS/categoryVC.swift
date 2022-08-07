@@ -15,14 +15,12 @@ class categoryVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableViewCategory.register(UINib.init(nibName: "PreviewTableViewCell", bundle: nil), forCellReuseIdentifier: "cellPreview")
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        loadPosts()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.hidesBackButton = true
+        loadPosts()
+        self.tableViewCategory.register(UINib.init(nibName: "PreviewTableViewCell", bundle: nil), forCellReuseIdentifier: "cellPreview")
     }
     
     @IBAction func btnChicken(_ sender: UIButton) {
