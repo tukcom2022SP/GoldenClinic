@@ -105,8 +105,6 @@ class participateInVC: UIViewController{
     }
     
     @IBAction func btnParticipateIn(_ sender: UIButton) {
-        var members: [String] = []
-        
         thisPost.getDocuments { (snapshot, err) in
             if let err = err {
             } else {
