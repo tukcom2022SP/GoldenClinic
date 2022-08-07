@@ -30,8 +30,9 @@ class realTimePostsVC: UIViewController{
                            let contents = data["contents"] as? String,
                            let category = data["category"] as? String,
                            let storeName = data["storeName"] as? String,
-                           let group = data["group"] as? [String]{
-                            self.posts.append(Post(postname: postname, contents: contents, category: category, storeName: storeName, group: group))
+                           let group = data["group"] as? [String],
+                           let payTime = data["payTime"] as? String{
+                            self.posts.append(Post(postname: postname, contents: contents, category: category, storeName: storeName, group: group, payTime: payTime))
                             
                             DispatchQueue.main.async {
                                 self.tableViewRealTime.reloadData()
@@ -77,6 +78,7 @@ extension realTimePostsVC: UITableViewDelegate,UITableViewDataSource{
         pushVC!.contents = posts[indexPath.row].contents
         pushVC!.storeName = posts[indexPath.row].storeName
         pushVC!.group = posts[indexPath.row].group
+        pushVC!.payTime = posts[indexPath.row].payTime
         self.navigationController?.pushViewController(pushVC!, animated: true)
     }
 }

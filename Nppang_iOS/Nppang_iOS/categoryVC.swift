@@ -84,9 +84,10 @@ class categoryVC: UIViewController{
                            let contents = data["contents"] as? String,
                            let category = data["category"] as? String,
                            let storeName = data["storeName"] as? String,
-                        let group = data["group"] as? [String]{
+                           let group = data["group"] as? [String],
+                           let payTime = data["payTime"] as? String{
                             if cnt < 4 {
-                                self.postsPreview.append(Post(postname: postname, contents: contents, category: category, storeName: storeName, group: group))
+                                self.postsPreview.append(Post(postname: postname, contents: contents, category: category, storeName: storeName, group: group, payTime: payTime))
                                 
                                 DispatchQueue.main.async {
                                     self.tableViewCategory.reloadData()
@@ -129,6 +130,7 @@ extension categoryVC: UITableViewDelegate,UITableViewDataSource{
         pushVC!.contents = postsPreview[indexPath.row].contents
         pushVC!.storeName = postsPreview[indexPath.row].storeName
         pushVC!.group = postsPreview[indexPath.row].group
+        pushVC!.payTime = postsPreview[indexPath.row].payTime
         self.navigationController?.pushViewController(pushVC!, animated: true)
     }
 }
