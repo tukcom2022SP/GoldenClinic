@@ -43,7 +43,9 @@ class categoryPostsVC: UIViewController{
                            let group = data["group"] as? [String],
                            let payTime = data["payTime"] as? String{
                             if postCategory == C {
-                                self.postsCategoryPosts.append(Post(postname: postname, contents: contents, category: postCategory, storeName: storeName, group: group, payTime: payTime))
+                                if group.count < 4 {
+                                    self.postsCategoryPosts.append(Post(postname: postname, contents: contents, category: postCategory, storeName: storeName, group: group, payTime: payTime))
+                                }
                             }
                             
                             DispatchQueue.main.async {

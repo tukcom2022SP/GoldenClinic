@@ -87,7 +87,9 @@ class categoryVC: UIViewController{
                            let group = data["group"] as? [String],
                            let payTime = data["payTime"] as? String{
                             if cnt < 4 {
-                                self.postsPreview.append(Post(postname: postname, contents: contents, category: category, storeName: storeName, group: group, payTime: payTime))
+                                if group.count < 4 {
+                                    self.postsPreview.append(Post(postname: postname, contents: contents, category: category, storeName: storeName, group: group, payTime: payTime))
+                                }
                                 
                                 DispatchQueue.main.async {
                                     self.tableViewCategory.reloadData()
