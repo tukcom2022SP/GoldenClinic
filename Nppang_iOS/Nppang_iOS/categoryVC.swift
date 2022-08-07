@@ -86,19 +86,19 @@ class categoryVC: UIViewController{
                            let storeName = data["storeName"] as? String,
                            let group = data["group"] as? [String],
                            let payTime = data["payTime"] as? String{
-                            if cnt < 4 {
-                                if group.count < 4 {
+                            if group.count < 4 {
+                                if cnt < 4 {
                                     self.postsPreview.append(Post(postname: postname, contents: contents, category: category, storeName: storeName, group: group, payTime: payTime))
-                                }
-                                
-                                DispatchQueue.main.async {
-                                    self.tableViewCategory.reloadData()
-                                    if self.postsPreview.count != 0 {
-                                        self.tableViewCategory.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                               
+                                    DispatchQueue.main.async {
+                                        self.tableViewCategory.reloadData()
+                                        if self.postsPreview.count != 0 {
+                                            self.tableViewCategory.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                                        }
                                     }
                                 }
-                            }
                             cnt += 1
+                            }
                         }
                     }
                 }
