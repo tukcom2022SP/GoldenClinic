@@ -10,7 +10,7 @@ import FirebaseFirestore
 
 class realTimePostsVC: UIViewController{
     @IBOutlet weak var tableViewRealTime: UITableView!
-    var posts: [post] = []
+    var posts: [Post] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class realTimePostsVC: UIViewController{
                            let category = data["category"] as? String,
                            let storeName = data["storeName"] as? String,
                            let group = data["group"] as? [String]{
-                            self.posts.append(post(postname: postname, contents: contents, category: category, storeName: storeName, group: group))
+                            self.posts.append(Post(postname: postname, contents: contents, category: category, storeName: storeName, group: group))
                             
                             DispatchQueue.main.async {
                                 self.tableViewRealTime.reloadData()
