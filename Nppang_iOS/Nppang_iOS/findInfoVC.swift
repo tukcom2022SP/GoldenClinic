@@ -35,7 +35,13 @@ class findInfoVC: UIViewController{
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
             if let error = error{
             }else{
-                self.navigationController?.popViewController(animated: true)
+                let alert = UIAlertController(title: "비밀번호 재설정", message: "회원님의 이메일로 비밀번호 재설정 코드가 발송되었습니다.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(
+                    title: "확인", style: .default){ action in
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                )
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
