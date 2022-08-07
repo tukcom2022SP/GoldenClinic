@@ -13,4 +13,5 @@ struct Post {
     let category: String
     let storeName: String
     let group: [String]
+    let payTime: String
 }

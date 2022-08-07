@@ -20,7 +20,7 @@ class participateInVC: UIViewController{
     let dropdown = DropDown()
     var category: String = ""
     var postName: String = ""
-    var payTime: Int = 7
+    var payTime: String = ""
     var contents: String = ""
     var storeName: String = ""
     var group: [String] = []
@@ -41,7 +41,7 @@ class participateInVC: UIViewController{
         tvContent.isEditable = false
         lblCategory.text = category
         lblTitle.text = postName
-        lblTimeNStoreName.text = "결제 예정 시간: \(payTime)시\t\(storeName)"
+        lblTimeNStoreName.text = "\(payTime) 결제 예정\t\(storeName)"
         tvContent.text = contents
         initUI()
     }

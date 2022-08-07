@@ -40,9 +40,10 @@ class categoryPostsVC: UIViewController{
                            let contents = data["contents"] as? String,
                            let postCategory = data["category"] as? String,
                            let storeName = data["storeName"] as? String,
-                           let group = data["group"] as? [String]{
+                           let group = data["group"] as? [String],
+                           let payTime = data["payTime"] as? String{
                             if postCategory == C {
-                                self.postsCategoryPosts.append(Post(postname: postname, contents: contents, category: postCategory, storeName: storeName, group: group))
+                                self.postsCategoryPosts.append(Post(postname: postname, contents: contents, category: postCategory, storeName: storeName, group: group, payTime: payTime))
                             }
                             
                             DispatchQueue.main.async {
@@ -88,6 +89,7 @@ extension categoryPostsVC: UITableViewDelegate,UITableViewDataSource{
         pushVC!.contents = postsCategoryPosts[indexPath.row].contents
         pushVC!.storeName = postsCategoryPosts[indexPath.row].storeName
         pushVC!.group = postsCategoryPosts[indexPath.row].group
+        pushVC!.payTime = postsCategoryPosts[indexPath.row].payTime
         self.navigationController?.pushViewController(pushVC!, animated: true)
     }
 }
