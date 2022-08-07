@@ -3,6 +3,7 @@ package tukorea.npang
 import android.app.Activity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Spinner
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.SetOptions
@@ -15,7 +16,6 @@ class ParticipatingInActivity : Activity() {
     //firebase Auth
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var binding: ActivityParticipatingInBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //db선언
@@ -29,11 +29,11 @@ class ParticipatingInActivity : Activity() {
         binding.tvPpOstName.text = Postsintent.getStringExtra("postname")
         binding.tvPpContents.text = Postsintent.getStringExtra("contents")
         binding.tvPpStoreName.text = Postsintent.getStringExtra("storename")
-
         //메뉴 관련 스피너
-        val menuList = resources.getStringArray(R.array.menuList)
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, menuList)
-        binding.spinnerMenuChoice.adapter = adapter
+        //val menuList = resources.getStringArray(R.array.menuList)
+       // val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, menuList)
+        //binding.spinnerMenuChoice.adapter = adapter
+
 
         //참가 완료 AlertDialog
         binding.btnParticipate.setOnClickListener {

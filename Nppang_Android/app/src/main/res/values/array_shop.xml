@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="shopList">
-        <item>BBQ 시화정왕2호점</item>
-        <item>BBQ 정왕본동점</item>
-        <item>BBQ 정왕스타점</item>
+    <string-array name="shopList_chicken">
+        <item>BBQ 정왕1호점</item>
+        <item>하임치킨 시화로데오점</item>
+        <item>자담치킨 정왕점</item>
+    </string-array>
+    <string-array name="shopList_china">
+        <item>현구대반점</item>
+        <item>더 베이징</item>
+        <item>아래향</item>
+    </string-array>
+    <string-array name="shopList_pizza">
+        <item>현구피자 정왕점</item>
+        <item>수빈피자 시화로데오점</item>
+        <item>윾빈이네 피자 정왕점</item>
+    </string-array>
+    <string-array name="shopList_pork">
+        <item>현구족발 정왕1호점</item>
+        <item>현구보쌈 시화로데오점</item>
+        <item>오늘사족 본점</item>
+    </string-array>
+    <string-array name="shopList_bokki">
+        <item>돼지게티 정왕점</item>
+        <item>동대문엽기떡볶이 시화이마트점</item>
+        <item>삼첩분식 정왕점</item>
+    </string-array>
+    <string-array name="shopList_exc">
+        <item>"해피타코야끼&amp;닭꼬치"</item>
+        <item>써브웨이 시흥정왕점</item>
+        <item>버거킹 시흥정왕점</item>
     </string-array>
 </resources>
