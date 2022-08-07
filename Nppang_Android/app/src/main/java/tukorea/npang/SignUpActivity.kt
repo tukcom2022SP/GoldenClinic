@@ -49,7 +49,7 @@ class SignUpActivity : Activity() {
                     "userEmail" to userEmail.toString().trim(),
                     "userName" to userName.toString().trim(),
                     "userPhoneNumber" to userPhoneNumber.toString().trim(),
-                    //"uid" to firebaseAuth.currentUser?.uid
+                    "uid" to firebaseAuth.currentUser?.uid
                 )
                 //user-email document 이름 설정
 
