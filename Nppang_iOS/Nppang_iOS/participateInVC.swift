@@ -123,8 +123,7 @@ class participateInVC: UIViewController{
         }
         group.append("\((Auth.auth().currentUser?.email)!)")
         delieveryFee = delieveryFee/group.count
-        print(Firestore.firestore().collection("LivePost").document(postName))
-        let alert = UIAlertController(title: "참가 하기", message: "주문 금액 : \(total)원\n본인 부담 배달비 : \(delieveryFee)원\n(원래 배달비 : 3000원)\n결제 예정 시각 : \(payTime)시", preferredStyle: .alert)
+        let alert = UIAlertController(title: "참가 하기", message: "주문 금액 : \(total)원\n본인 부담 배달비 : \(delieveryFee)원\n(원래 배달비 : 3000원)\n결제 예정 시각 : \(payTime)시\n결제 금액 : \(total+delieveryFee)원", preferredStyle: .alert)
         alert.addAction(UIAlertAction(
             title: "결제하기", style: .default){ action in
                 let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")

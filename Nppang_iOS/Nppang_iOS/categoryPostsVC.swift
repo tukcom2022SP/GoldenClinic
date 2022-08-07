@@ -11,7 +11,7 @@ import Firebase
 
 class categoryPostsVC: UIViewController{
     var category: String = ""
-    var postsCategoryPosts: [post] = []
+    var postsCategoryPosts: [Post] = []
     
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var tvCategoryPosts: UITableView!
@@ -42,7 +42,7 @@ class categoryPostsVC: UIViewController{
                            let storeName = data["storeName"] as? String,
                            let group = data["group"] as? [String]{
                             if postCategory == C {
-                                self.postsCategoryPosts.append(post(postname: postname, contents: contents, category: postCategory, storeName: storeName, group: group))
+                                self.postsCategoryPosts.append(Post(postname: postname, contents: contents, category: postCategory, storeName: storeName, group: group))
                             }
                             
                             DispatchQueue.main.async {

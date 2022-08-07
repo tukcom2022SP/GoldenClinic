@@ -191,6 +191,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="중복 확인">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnCheckId:" destination="deC-dI-5Kp" eventType="touchUpInside" id="gng-g4-45e"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tN8-Tf-zyR">
                                 <rect key="frame" x="64" y="295" width="300" height="34"/>
@@ -938,6 +941,19 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="btnResetPassword:" destination="hOQ-FX-juj" eventType="touchUpInside" id="ikh-AM-ofO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0F-AQ-RM5">
+                                <rect key="frame" x="89" y="511" width="250" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="themeColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="취소">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnCancel:" destination="hOQ-FX-juj" eventType="touchUpInside" id="M8q-dH-Uzt"/>
                                 </connections>
                             </button>
                         </subviews>

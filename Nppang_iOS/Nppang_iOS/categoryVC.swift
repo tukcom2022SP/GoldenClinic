@@ -11,16 +11,16 @@ import FirebaseFirestore
 
 class categoryVC: UIViewController{
     @IBOutlet weak var tableViewCategory: UITableView!
-    var postsPreview: [post] = []
+    var postsPreview: [Post] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadPosts()
-        self.tableViewCategory.register(UINib.init(nibName: "PreviewTableViewCell", bundle: nil), forCellReuseIdentifier: "cellPreview")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.hidesBackButton = true
+        loadPosts()
+        self.tableViewCategory.register(UINib.init(nibName: "PreviewTableViewCell", bundle: nil), forCellReuseIdentifier: "cellPreview")
     }
     
     @IBAction func btnChicken(_ sender: UIButton) {
@@ -86,7 +86,7 @@ class categoryVC: UIViewController{
                            let storeName = data["storeName"] as? String,
                         let group = data["group"] as? [String]{
                             if cnt < 4 {
-                                self.postsPreview.append(post(postname: postname, contents: contents, category: category, storeName: storeName, group: group))
+                                self.postsPreview.append(Post(postname: postname, contents: contents, category: category, storeName: storeName, group: group))
                                 
                                 DispatchQueue.main.async {
                                     self.tableViewCategory.reloadData()
