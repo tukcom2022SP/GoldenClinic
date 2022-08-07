@@ -41,9 +41,10 @@ class CategoryActivity : Activity() {
                 Log.w("MainActivity", "Error getting documents: $exception")
             }
         binding.imgChickenimage.setOnClickListener {
-            val intent = Intent(this, CategoryDetailsActivity::class.java)
-            intent.putExtra("카테고리", "치킨")
-            startActivity(intent)
+            Intent(this, CategoryDetailsActivity::class.java).apply{
+                putExtra("카테고리", "치킨")
+                startActivity(this)
+            }
         }
         binding.imgChinaimage.setOnClickListener {
             val intent = Intent(this, CategoryDetailsActivity::class.java)

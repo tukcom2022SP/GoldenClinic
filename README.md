@@ -8,7 +8,7 @@
    > 2. 파티 모집 게시물 작성 및 조회 : 실시간 파티 모집 게시물 또는 음식 카테고리별 파티 모집글 작성 및 조회
    > 3. 배달비 자동 계산 : 모집 인원수에 따라 배달비 할당
    
- ## 개발 환경
+ ## 언어와 개발 환경
   > kotlin w. Android Studio <br>
   > Swfit w. Xcode <br>
   > Google Firebase <br>

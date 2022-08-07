@@ -51,9 +51,8 @@ class SignUpActivity : Activity() {
                     "userPhoneNumber" to userPhoneNumber.toString().trim()
                 )
                 //user-email document 이름 설정
-                val userdata=db.collection("UserData")
 
-                userdata.document(binding.etSignUpEmail.text.toString()).set(UserInfoMation)
+                db.collection("UserData").add(UserInfoMation)
                     .addOnSuccessListener { documentReference ->
 
                     }
