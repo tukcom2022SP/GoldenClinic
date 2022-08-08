@@ -48,12 +48,12 @@ class SignUpActivity : Activity() {
                     "userBankAccount" to userBankAccount.toString().trim(),
                     "userEmail" to userEmail.toString().trim(),
                     "userName" to userName.toString().trim(),
-                    "userPhoneNumber" to userPhoneNumber.toString().trim()
+                    "userPhoneNumber" to userPhoneNumber.toString().trim(),
+                    "uid" to firebaseAuth.currentUser?.uid
                 )
                 //user-email document 이름 설정
-                val userdata=db.collection("UserData")
 
-                userdata.document(binding.etSignUpEmail.text.toString()).set(UserInfoMation)
+                db.collection("UserData").add(UserInfoMation)
                     .addOnSuccessListener { documentReference ->
 
                     }

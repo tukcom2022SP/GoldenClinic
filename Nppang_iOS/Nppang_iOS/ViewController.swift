@@ -30,6 +30,13 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         GIDSignIn.sharedInstance().presentingViewController=self
+        UIApplication.shared.statusBarStyle = .darkContent
+        navigationItem.hidesBackButton = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
     }
 
     @IBAction func googleLoginButtonTapped(_ sender: UIButton) {

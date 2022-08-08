@@ -16,6 +16,7 @@ class findInfoVC: UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = .darkContent
         navigationItem.hidesBackButton = true
     }
     
@@ -23,15 +24,25 @@ class findInfoVC: UIViewController{
         sendPasswordResetMessage()
     }
     
-    func sendPasswordResetMessage()
-       {
-           let email = self.tfEmail.text!
-           // email 보내기
-           Auth.auth().sendPasswordReset(withEmail: email) { (error) in
-               if let error = error{
-               }else{
-                   self.navigationController?.popViewController(animated: true)
-               }
-           }
-       }
+    @IBAction func btnCancel(_ sender: UIButton) {
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "logIn")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
+    }
+    
+    func sendPasswordResetMessage(){
+        let email = self.tfEmail.text!
+        // email 보내기
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            if let error = error{
+            }else{
+                let alert = UIAlertController(title: "비밀번호 재설정", message: "회원님의 이메일로 비밀번호 재설정 코드가 발송되었습니다.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(
+                    title: "확인", style: .default){ action in
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                )
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
 }
