@@ -18,6 +18,7 @@ class postingVC: UIViewController{
     @IBOutlet weak var dropViewStore: UIView!
     @IBOutlet weak var btnSelectStore: UIButton!
     @IBOutlet weak var tfSelectStore: UITextField!
+    @IBOutlet weak var pickerPayTime: UIDatePicker!
     let dropdown = DropDown()
     let categories = ["치킨", "피자", "중식", "족발 보쌈", "분식", "기타"]
     var category = ""
@@ -27,6 +28,7 @@ class postingVC: UIViewController{
     let storesPork = ["현구족발 정왕1호점", "현구보쌈 시화로데오점", "오늘사족 본점"]
     let storesBbokki = ["돼지게티 정왕점", "동대문엽기떡볶이 시화이마트점", "삼첩분식 정왕점"]
     let storesEtc = ["해피타코야끼&닭꼬치", "써브웨이 시흥정왕점", "버거킹 시흥정왕점"]
+    var payTime = ""
 
     
     override func viewDidLoad() {
@@ -78,13 +80,23 @@ class postingVC: UIViewController{
         dropdown.show()
     }
     
+    @IBAction func pickerPayTime(_ sender: UIDatePicker) {
+        let timePickerView = sender
+        let formatter = DateFormatter()
+        
+        formatter.locale = Locale(identifier: "ko")
+        formatter.dateFormat = "HH시 mm분"
+        payTime = formatter.string(from: timePickerView.date)
+    }
+    
     @IBAction func btnPost(_ sender: UIButton) {
         db.collection("LivePost").document(self.tfTitle.text!).setData([
             "postname": self.tfTitle.text!,
             "contents": self.tvContent.text!,
             "category": self.tfSelectCategory.text!,
             "storeName": self.tfSelectStore.text!,
-            "group": ["\((Auth.auth().currentUser?.email)!)"]
+            "group": ["\((Auth.auth().currentUser?.email)!)"],
+            "payTime": payTime
         ])
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
         self.navigationController?.pushViewController(pushVC!, animated: true)

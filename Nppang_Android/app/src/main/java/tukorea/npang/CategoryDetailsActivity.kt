@@ -66,6 +66,7 @@ class CategoryDetailsActivity() : Activity() {
 
         binding.btnWritePost.setOnClickListener {
             val intent = Intent(this, PostingActivity::class.java)
+            intent.putExtra("postname",binding.tvCategorytitle.text)
             startActivity(intent)
         }
 

@@ -3,11 +3,11 @@ package tukorea.npang
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import tukorea.npang.databinding.ActivityPostingBinding
@@ -16,11 +16,19 @@ import tukorea.npang.databinding.ActivityPostingBinding
 class PostingActivity : Activity() {
     val db = Firebase.firestore
     private lateinit var binding: ActivityPostingBinding
+    //firebase Auth
+    private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPostingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //게시글작성 타이틀 설정
+        val Postsintent = intent
+        binding.tvPostingName.text=Postsintent.getStringExtra("postname")
+
         binding.btnJoin.setOnClickListener {
+            firebaseAuth= FirebaseAuth.getInstance()
             //파이어스토어 컬렉션 connect
             val postdata = db.collection("LivePost")
             if (binding.etPostName.length() == 0 || binding.etContents.length() == 0) {
@@ -34,7 +42,8 @@ class PostingActivity : Activity() {
                     "category" to category.toString().trim(),
                     "contents" to contents.toString().trim(),
                     "postname" to postname.toString().trim(),
-                    "storeName" to storeName.toString().trim()
+                    "storeName" to storeName.toString().trim(),
+                    "group" to listOf(firebaseAuth.currentUser?.uid)
                 )
                 //컬렉션이름 게시물이름으로 설정
                 postdata.document(binding.etPostName.text.toString()).set(PostInfoMation)
@@ -102,7 +111,6 @@ class PostingActivity : Activity() {
                     }
                 }
             }
-
 
     }
 }
