@@ -98,7 +98,7 @@ class postingVC: UIViewController{
             "group": ["\((Auth.auth().currentUser?.email)!)"],
             "payTime": payTime
         ])
-        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController")
         self.navigationController?.pushViewController(pushVC!, animated: true)
     }
     
