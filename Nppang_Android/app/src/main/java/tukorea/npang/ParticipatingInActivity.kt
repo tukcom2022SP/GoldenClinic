@@ -126,27 +126,28 @@ class ParticipatingInActivity : Activity() {
         binding.btnParticipate.setOnClickListener {
 
             var user = (firebaseAuth.currentUser?.uid)
-            //파이어스토어 사용자데이터에 추가
+
             db.collection("LivePost").document(binding.tvPpOstName.text.toString())
                 .update("group", FieldValue.arrayUnion(user))
-            //현재 파이어스토어 그룹배열크기 가져오기
-            db.collection("LivePost").document(binding.tvPpOstName.text.toString()).get()
-                .addOnSuccessListener { document ->
-                    Log.d("test", "${document.data}")
-                    itemList = document["group"] as ArrayList<String>
-                    Size = itemList.size
+                .addOnSuccessListener {
+                    db.collection("LivePost").document(binding.tvPpOstName.text.toString())
+                        .get()
+                        .addOnSuccessListener { document ->
+                            Log.d("test", "${document.data}")
+                            itemList = document["group"] as ArrayList<String>
+                            Size = itemList.size
+                            val builder = AlertDialog.Builder(this@ParticipatingInActivity)
+                                .setTitle("참가완료")
+                                .setMessage("배달비를 확인해보세요 " + "\n" + "총음식가격" + total + "\n" + "현재 참여인원" + Size + "\n" + "원래배달비=[3000]" + "\n" + "본인부담 배달비" + 3000 / Size)
+                                .setPositiveButton("확인",
+                                    DialogInterface.OnClickListener { dialog, which ->
+                                    })
+                                .setNegativeButton("취소",
+                                    DialogInterface.OnClickListener { dialog, which ->
+                                    })
+                            builder.show()
+                        }
                 }
-            //팝업창 띄우기
-            val builder = AlertDialog.Builder(this)
-                .setTitle("참가완료")
-                .setMessage("배달비를 확인해보세요 " + "\n" + "총음식가격" + total + "\n" + "현재 참여인원" + Size + "\n" + "원래배달비=[3000]" + "\n" + "본인부담 배달비" + 3000 / Size)
-                .setPositiveButton("확인",
-                    DialogInterface.OnClickListener { dialog, which ->
-                    })
-                .setNegativeButton("취소",
-                    DialogInterface.OnClickListener { dialog, which ->
-                    })
-            builder.show()
         }
 
 
