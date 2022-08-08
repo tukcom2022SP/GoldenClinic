@@ -58,7 +58,7 @@ class CategoryActivity : Activity() {
         }
         binding.imgPorkimage.setOnClickListener {
             val intent = Intent(this, CategoryDetailsActivity::class.java)
-            intent.putExtra("카테고리", "족발/보쌈")
+            intent.putExtra("카테고리", "족발 보쌈")
             startActivity(intent)
         }
         binding.imgBokkiimage.setOnClickListener {
