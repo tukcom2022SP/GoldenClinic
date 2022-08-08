@@ -107,13 +107,9 @@ class ParticipatingInActivity : Activity() {
             db.collection("LivePost").document(binding.tvPpOstName.text.toString())
                 .update("group", FieldValue.arrayUnion(user))
             //참가 완료 AlertDialog
-            (db.collection("LivePost").whereEqualTo(FieldPath.documentId(),"group")).get().addOnSuccessListener { resuult->
-                grouplist.clear()
-                for(document in resuult){
-                    var item=document["group"]
-                    grouplist.add(item.toString())
+            db.collection("LivePost").document(binding.tvPpOstName.text.toString()).get().addOnSuccessListener { document->
+                if(document!=null){
                 }
-
             }
             var deliverprice=3000/grouplist.size
             val builder = AlertDialog.Builder(this)
