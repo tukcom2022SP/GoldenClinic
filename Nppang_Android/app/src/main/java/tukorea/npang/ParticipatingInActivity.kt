@@ -4,18 +4,16 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FieldPath
 import com.google.firebase.firestore.FieldValue
-import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import tukorea.npang.databinding.ActivityParticipatingInBinding
-import java.util.ArrayList
 
 
 class ParticipatingInActivity : Activity() {
@@ -23,10 +21,9 @@ class ParticipatingInActivity : Activity() {
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var binding: ActivityParticipatingInBinding
     private lateinit var menumap2: List<Pair<String, Int>>
-    private var data: MutableList<String> = mutableListOf()
+    private var dato: MutableList<String> = mutableListOf()
     private var data2: MutableList<Int> = mutableListOf()
-    var grouplist= arrayListOf<String>()
-
+    var itemList = arrayListOf<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //db선언
@@ -70,17 +67,16 @@ class ParticipatingInActivity : Activity() {
         binding.tvPpOstName.text = Postsintent.getStringExtra("postname")
         binding.tvPpContents.text = Postsintent.getStringExtra("contents")
         binding.tvPpStoreName.text = Postsintent.getStringExtra("storename")
-
         //key값 스피너 적용
         menumap2 = menumap.get(binding.tvPpStoreName.text) as List<Pair<String, Int>>
         for ((first, second) in menumap2) {
-            data.add(first)
+            dato.add(first)
             data2.add(second)
         }
 
 
         //메뉴 관련 스피너
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, data)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, dato)
         binding.spinnerMenuChoice.adapter = adapter
         var total=0
         var menulist = ""
@@ -88,7 +84,7 @@ class ParticipatingInActivity : Activity() {
         binding.spinnerMenuChoice.onItemSelectedListener= object :AdapterView.OnItemSelectedListener{
 
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                var menuname=data.get(p2)
+                var menuname=dato.get(p2)
                 var price=data2.get(p2)
                 menulist=menulist+"\n"+menuname
                 total=total+price
@@ -106,24 +102,22 @@ class ParticipatingInActivity : Activity() {
             var user = (firebaseAuth.currentUser?.uid)
             db.collection("LivePost").document(binding.tvPpOstName.text.toString())
                 .update("group", FieldValue.arrayUnion(user))
-            //참가 완료 AlertDialog
-            db.collection("LivePost").document(binding.tvPpOstName.text.toString()).get().addOnSuccessListener { document->
-                if(document!=null){
-                }
+            db.collection("LivePost").document(binding.tvPpOstName.text.toString()).get().addOnSuccessListener { document ->
+                Log.d("test", "${document.data}")
+                itemList= document["group"] as ArrayList<String>
             }
-            var deliverprice=3000/grouplist.size
             val builder = AlertDialog.Builder(this)
                 .setTitle("참가완료")
-                .setMessage("본인 부담 배달비 :  "+deliverprice)
+                .setMessage("배달비를 확인해보세요 "+itemList.size)
                 .setPositiveButton("확인",
                     DialogInterface.OnClickListener { dialog, which ->
-                        Toast.makeText(this, "확인", Toast.LENGTH_SHORT).show()
                     })
                 .setNegativeButton("취소",
                     DialogInterface.OnClickListener { dialog, which ->
-                        Toast.makeText(this, "취소", Toast.LENGTH_SHORT).show()
                     })
             builder.show()
         }
+
+
     }
 }

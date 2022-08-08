@@ -8,6 +8,7 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import tukorea.npang.databinding.ActivityCategoryDetailsBinding
+import java.util.ArrayList
 
 class CategoryDetailsActivity() : Activity() {
     //binding
