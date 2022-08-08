@@ -24,8 +24,8 @@ class PostingActivity : Activity() {
         setContentView(binding.root)
 
         //게시글작성 타이틀 설정
-        val Postsintent = intent
-        binding.tvPostingName.text=Postsintent.getStringExtra("postname")
+        /*val Postsintent = intent
+        binding.tvPostingName.text=Postsintent.getStringExtra("postname")*/
 
         binding.btnJoin.setOnClickListener {
             firebaseAuth= FirebaseAuth.getInstance()
