@@ -2,6 +2,8 @@ package tukorea.npang
 
 import android.app.Activity
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
@@ -72,16 +74,22 @@ class ParticipatingInActivity : Activity() {
 
         //참가 완료 AlertDialog
         binding.btnParticipate.setOnClickListener {
+
             var user = (firebaseAuth.currentUser?.uid)
             db.collection("LivePost").document(binding.tvPpOstName.text.toString())
                 .update("group", FieldValue.arrayUnion(user))
             //set(userdata, SetOptions.merge())
             /*val builder = AlertDialog.Builder(this)
                 .setTitle("참가완료")
-                .setMessage("주문금액 : ")
-                .setMessage("배달비 합계 : ")
-                .setMessage("본인 부담 배달비 :  ")
-                .setMessage("결제 예정시작 : ")
+                .setMessage(
+                    "주문금액 : "
+                            + "\n"
+                            + "배달비 합계 : "
+                            + "\n"
+                            + "본인 부담 배달비 :  "
+                            + "\n"
+                            + "결제 예정시작 : "
+                )
                 .setPositiveButton("확인",
                     DialogInterface.OnClickListener { dialog, which ->
                         Toast.makeText(this, "확인", Toast.LENGTH_SHORT).show()
