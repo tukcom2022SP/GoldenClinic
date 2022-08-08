@@ -82,8 +82,8 @@ class LoginActivity : Activity(), View.OnClickListener {
 
         //자동로그인
         binding.keepSignedIn.setOnCheckedChangeListener { buttonView, ischecked ->
-            val editor  : SharedPreferences.Editor = sharedPreference.edit()
-            editor.putBoolean("autologin",ischecked)
+            val editor: SharedPreferences.Editor = sharedPreference.edit()
+            editor.putBoolean("autologin", ischecked)
 
             editor.commit()
         }

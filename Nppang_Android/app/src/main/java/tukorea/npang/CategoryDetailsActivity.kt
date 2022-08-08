@@ -52,9 +52,10 @@ class CategoryDetailsActivity() : Activity() {
                 Log.w("MainActivity", "Error getting documents: $exception")
             }
         //게시물클릭시 해당게시물로이동
-        adapter.setItemClickListner(object :ListAdapter.OnItemClickListener{
+        adapter.setItemClickListner(object : ListAdapter.OnItemClickListener {
             override fun onClick(v: View, position: Int) {
-                val intent = Intent(this@CategoryDetailsActivity, ParticipatingInActivity::class.java)
+                val intent =
+                    Intent(this@CategoryDetailsActivity, ParticipatingInActivity::class.java)
                 intent.putExtra("postname", "${itemList[position].postname}")
                 intent.putExtra("contents", "${itemList[position].contents}")
                 intent.putExtra("storename", "${itemList[position].storeName}")
@@ -67,7 +68,7 @@ class CategoryDetailsActivity() : Activity() {
 
         binding.btnWritePost.setOnClickListener {
             val intent = Intent(this, PostingActivity::class.java)
-            intent.putExtra("postname",binding.tvCategorytitle.text)
+            intent.putExtra("postname", binding.tvCategorytitle.text)
             startActivity(intent)
         }
 

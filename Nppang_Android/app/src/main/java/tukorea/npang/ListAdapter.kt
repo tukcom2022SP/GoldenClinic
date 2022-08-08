@@ -9,21 +9,26 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ListAdapter(val itemList: ArrayList<ListLayout>) :
     RecyclerView.Adapter<tukorea.npang.ListAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): tukorea.npang.ListAdapter.ViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): tukorea.npang.ListAdapter.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_layout, parent, false)
         return ViewHolder(view)
     }
-    interface OnItemClickListener{
-        fun onClick(v:View,position: Int)
+
+    interface OnItemClickListener {
+        fun onClick(v: View, position: Int)
     }
+
     override fun getItemCount(): Int {
         return itemList.size
     }
 
     private lateinit var itemClickListener: OnItemClickListener
 
-    fun setItemClickListner(onItemClickListener: OnItemClickListener){
-        this.itemClickListener=onItemClickListener
+    fun setItemClickListner(onItemClickListener: OnItemClickListener) {
+        this.itemClickListener = onItemClickListener
     }
 
 
@@ -33,7 +38,7 @@ class ListAdapter(val itemList: ArrayList<ListLayout>) :
         holder.cont.text = itemList[position].contents
         holder.storename.text = itemList[position].storeName
         holder.itemView.setOnClickListener {
-            itemClickListener.onClick(it,position)
+            itemClickListener.onClick(it, position)
         }
     }
 
@@ -42,6 +47,6 @@ class ListAdapter(val itemList: ArrayList<ListLayout>) :
         val post: TextView = itemView.findViewById(R.id.tv_contents)
         val cont: TextView = itemView.findViewById(R.id.tv_post_name)
         val storename: TextView = itemView.findViewById(R.id.tv_store_name)
-        }
-
     }
+
+}
