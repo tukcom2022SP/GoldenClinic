@@ -7,9 +7,11 @@
 
 import Foundation
 
-struct post {
+struct Post {
     let postname: String
     let contents: String
     let category: String
     let storeName: String
+    let group: [String]
+    let payTime: String
 }

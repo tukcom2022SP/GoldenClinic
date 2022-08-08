@@ -20,10 +20,12 @@ class participateInVC: UIViewController{
     let dropdown = DropDown()
     var category: String = ""
     var postName: String = ""
-    var payTime: Int = 7
+    var payTime: String = ""
     var contents: String = ""
     var storeName: String = ""
+    var group: [String] = []
     var total = 0
+    var delieveryFee = 3000
     let dictChicken = ["BBQ 정왕1호점" : ["황금올리브" : 20000 , "황금올리브 양념" : 21500 , "자메이카 통다리구이" : 21500], "하임치킨 시화로데오점" : ["오븐바사삭" : 17000, "불금치킨" : 18000, "갈비천왕" : 18000, "볼케이노" : 18000], "자담치킨 정왕점": ["소보로치킨" : 19000, "불패치킨" : 21000, "맵슐랭치킨" : 21000]]
     let dictPizza = ["현구피자 정왕점" : ["콤비네이션" : 13900, "불고기피자":13900, "치즈피자":13900], "수빈피자 시화로데오점" :  ["순살가득피자닭" : 29900, "돈마호크" : 35900, "립스테이크" : 35900], "윾빈이네 피자 정왕점" : ["리얼시카고 오리지날" : 22900, "BBQ 리얼 시카고" : 25900, "몽빼르 피자":21900]]
     let dictChinese = ["현구대반점": ["유니콩 짜장면" : 6000, "참짬뽕" : 8000, "야채볶음밥" : 8000], "더 베이징" : ["짜장면" : 8000, "짬뽕" : 9000, "탕수육" : 25000], "아래향": ["울면" : 7000, "콩국수" : 9000, "찹쌀탕수육" : 26000]]
@@ -39,7 +41,7 @@ class participateInVC: UIViewController{
         tvContent.isEditable = false
         lblCategory.text = category
         lblTitle.text = postName
-        lblTimeNStoreName.text = "결제 예정 시간: \(payTime)시\t\(storeName)"
+        lblTimeNStoreName.text = "\(payTime) 결제 예정\t\(storeName)"
         tvContent.text = contents
         initUI()
     }
@@ -103,13 +105,6 @@ class participateInVC: UIViewController{
     }
     
     @IBAction func btnParticipateIn(_ sender: UIButton) {
-        let alert = UIAlertController(title: "참가 완료", message: "주문 금액 : \(total)원\n본인 부담 배달비 : 1000원\n(원래 배달비 : 3000원)\n결제 예정 시각 : \(payTime)시", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(
-            title: "확인", style: .default){ action in
-                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
-                self.navigationController?.pushViewController(pushVC!, animated: true)
-            }
-        )
         thisPost.getDocuments { (snapshot, err) in
             if let err = err {
             } else {
@@ -126,6 +121,15 @@ class participateInVC: UIViewController{
                 }
             }
         }
+        group.append("\((Auth.auth().currentUser?.email)!)")
+        delieveryFee = delieveryFee/group.count
+        let alert = UIAlertController(title: "참가 하기", message: "주문 금액 : \(total)원\n본인 부담 배달비 : \(delieveryFee)원\n(원래 배달비 : 3000원)\n결제 예정 시각 : \(payTime)시\n결제 금액 : \(total+delieveryFee)원", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(
+            title: "결제하기", style: .default){ action in
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
+                self.navigationController?.pushViewController(pushVC!, animated: true)
+            }
+        )
         present(alert, animated: true, completion: nil)
         
 //        tvSelectedMenu.text += "\(total)\n"

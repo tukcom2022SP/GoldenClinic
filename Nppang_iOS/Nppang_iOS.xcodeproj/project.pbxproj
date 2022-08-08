@@ -17,6 +17,7 @@
 		39391C9B289BF1A000E0EDAD /* participateInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39391C9A289BF1A000E0EDAD /* participateInVC.swift */; };
 		39391C9E289C118200E0EDAD /* PreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39391C9C289C118200E0EDAD /* PreviewTableViewCell.swift */; };
 		39391C9F289C118200E0EDAD /* PreviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39391C9D289C118200E0EDAD /* PreviewTableViewCell.xib */; };
+		39391D47289F59E800E0EDAD /* structUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39391D46289F59E800E0EDAD /* structUser.swift */; };
 		393A41392890150D00F8796E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A41382890150D00F8796E /* AppDelegate.swift */; };
 		393A413B2890150D00F8796E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A413A2890150D00F8796E /* SceneDelegate.swift */; };
 		393A413D2890150D00F8796E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A413C2890150D00F8796E /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		39391C9A289BF1A000E0EDAD /* participateInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = participateInVC.swift; sourceTree = "<group>"; };
 		39391C9C289C118200E0EDAD /* PreviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTableViewCell.swift; sourceTree = "<group>"; };
 		39391C9D289C118200E0EDAD /* PreviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewTableViewCell.xib; sourceTree = "<group>"; };
+		39391D46289F59E800E0EDAD /* structUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structUser.swift; sourceTree = "<group>"; };
 		393A41352890150D00F8796E /* Nppang_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nppang_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		393A41382890150D00F8796E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		393A413A2890150D00F8796E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,12 +103,13 @@
 				393A416128927A4700F8796E /* categoryVC.swift */,
 				39391C902897762500E0EDAD /* postingVC.swift */,
 				39391C8C2897650700E0EDAD /* realTimePostsVC.swift */,
-				39391C98289B79F500E0EDAD /* structPost.swift */,
 				39391C94289B715200E0EDAD /* listCellRealTime.swift */,
 				39391C9C289C118200E0EDAD /* PreviewTableViewCell.swift */,
 				39391C8E289766D800E0EDAD /* categoryPostsVC.swift */,
 				39391C922897B13E00E0EDAD /* findInfoVC.swift */,
 				39391C9A289BF1A000E0EDAD /* participateInVC.swift */,
+				39391D46289F59E800E0EDAD /* structUser.swift */,
+				39391C98289B79F500E0EDAD /* structPost.swift */,
 				393A41462890150E00F8796E /* Info.plist */,
 				393A415528912EA200F8796E /* GoogleService-Info.plist */,
 			);
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				393A416228927A4700F8796E /* categoryVC.swift in Sources */,
+				39391D47289F59E800E0EDAD /* structUser.swift in Sources */,
 				393A41602892727700F8796E /* SignUpVC.swift in Sources */,
 				39391C9B289BF1A000E0EDAD /* participateInVC.swift in Sources */,
 				393A413D2890150D00F8796E /* ViewController.swift in Sources */,
@@ -432,6 +436,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -462,6 +467,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
