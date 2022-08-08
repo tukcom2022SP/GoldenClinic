@@ -14,43 +14,47 @@
         app:layout_constraintTop_toTopOf="@+id/textView2">
 
         <TextView
-            android:id="@+id/tv_category"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="23dp"
-            android:text="TextView"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/tv_contents"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/tv_post_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="2dp"
             android:text="TextView"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_contents"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintHorizontal_bias="0.013"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_category"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/tv_contents"
+            android:id="@+id/tv_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="8dp"
             android:text="TextView"
-            app:layout_constraintBottom_toTopOf="@+id/tv_store_name"
-            app:layout_constraintEnd_toEndOf="@+id/tv_post_name"
-            app:layout_constraintTop_toBottomOf="@+id/tv_category" />
+            android:textColor="#d9d9d9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.013"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_post_name"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
+            android:id="@+id/tv_store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="TextView"
+            android:textColor="@color/main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.013"
+            app:layout_constraintStart_toEndOf="@+id/tv_category"
+            app:layout_constraintTop_toBottomOf="@+id/tv_post_name" />
+
+       <TextView
             android:id="@+id/tv_store_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,7 +63,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tv_contents"
             app:layout_constraintTop_toBottomOf="@+id/tv_contents" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
