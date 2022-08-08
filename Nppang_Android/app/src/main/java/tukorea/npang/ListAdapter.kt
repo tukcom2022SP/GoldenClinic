@@ -42,7 +42,6 @@ class ListAdapter(val itemList: ArrayList<ListLayout>) :
         val post: TextView = itemView.findViewById(R.id.tv_contents)
         val cont: TextView = itemView.findViewById(R.id.tv_post_name)
         val storename: TextView = itemView.findViewById(R.id.tv_store_name)
-
         }
 
     }
