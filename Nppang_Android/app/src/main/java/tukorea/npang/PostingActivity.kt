@@ -52,8 +52,8 @@ class PostingActivity : Activity() {
                         var categoryDetail = Intent(this, LivePostsActivity::class.java)
                         startActivity(categoryDetail)
                     }.addOnFailureListener {
-                    Toast.makeText(this, "게시글 올리기 실패 다시 시도하세요", Toast.LENGTH_SHORT).show()
-                }
+                        Toast.makeText(this, "게시글 올리기 실패 다시 시도하세요", Toast.LENGTH_SHORT).show()
+                    }
             }
         }
 

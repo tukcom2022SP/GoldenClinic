@@ -102,6 +102,7 @@ class ParticipatingInActivity : Activity() {
 
 
         binding.btnParticipate.setOnClickListener {
+
             var user = (firebaseAuth.currentUser?.uid)
             db.collection("LivePost").document(binding.tvPpOstName.text.toString())
                 .update("group", FieldValue.arrayUnion(user))
