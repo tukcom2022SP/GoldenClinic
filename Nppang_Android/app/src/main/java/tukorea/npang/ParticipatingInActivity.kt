@@ -1,15 +1,21 @@
 package tukorea.npang
 
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FieldPath
 import com.google.firebase.firestore.FieldValue
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import tukorea.npang.databinding.ActivityParticipatingInBinding
+import java.util.ArrayList
 
 
 class ParticipatingInActivity : Activity() {
@@ -19,6 +25,7 @@ class ParticipatingInActivity : Activity() {
     private lateinit var menumap2: List<Pair<String, Int>>
     private var data: MutableList<String> = mutableListOf()
     private var data2: MutableList<Int> = mutableListOf()
+    var grouplist= arrayListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -92,18 +99,25 @@ class ParticipatingInActivity : Activity() {
 
             }
         }
-        //참가 완료 AlertDialog
+
+
         binding.btnParticipate.setOnClickListener {
             var user = (firebaseAuth.currentUser?.uid)
             db.collection("LivePost").document(binding.tvPpOstName.text.toString())
                 .update("group", FieldValue.arrayUnion(user))
-            //set(userdata, SetOptions.merge())
-            /*val builder = AlertDialog.Builder(this)
+            //참가 완료 AlertDialog
+            (db.collection("LivePost").whereEqualTo(FieldPath.documentId(),"group")).get().addOnSuccessListener { resuult->
+                grouplist.clear()
+                for(document in resuult){
+                    var item=document["group"]
+                    grouplist.add(item.toString())
+                }
+
+            }
+            var deliverprice=3000/grouplist.size
+            val builder = AlertDialog.Builder(this)
                 .setTitle("참가완료")
-                .setMessage("주문금액 : ")
-                .setMessage("배달비 합계 : ")
-                .setMessage("본인 부담 배달비 :  ")
-                .setMessage("결제 예정시작 : ")
+                .setMessage("본인 부담 배달비 :  "+deliverprice)
                 .setPositiveButton("확인",
                     DialogInterface.OnClickListener { dialog, which ->
                         Toast.makeText(this, "확인", Toast.LENGTH_SHORT).show()
@@ -112,7 +126,7 @@ class ParticipatingInActivity : Activity() {
                     DialogInterface.OnClickListener { dialog, which ->
                         Toast.makeText(this, "취소", Toast.LENGTH_SHORT).show()
                     })
-            builder.show()*/
+            builder.show()
         }
     }
 }
