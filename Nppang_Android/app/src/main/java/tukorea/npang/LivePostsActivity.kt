@@ -8,6 +8,7 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import tukorea.npang.databinding.ActivityLivePostsBinding
+import java.util.ArrayList
 
 class LivePostsActivity : Activity() {
     //binding
@@ -34,6 +35,7 @@ class LivePostsActivity : Activity() {
                 startActivity(intent)
             }
         })
+
         //Firebase connect
         db.collection("LivePost")   // 작업할 컬렉션
             .get()      // 문서 가져오기
