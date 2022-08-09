@@ -40,7 +40,8 @@ class CategoryDetailsActivity() : Activity() {
                             document["contents"] as String,
                             document["postname"] as String,
                             document["category"] as String,
-                            document["storeName"] as String
+                            document["storeName"] as String,
+                            document["group"]as ArrayList<String>
                         )
                     itemList.add(item)
                 }
