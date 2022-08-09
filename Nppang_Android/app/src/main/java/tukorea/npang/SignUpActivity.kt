@@ -32,8 +32,7 @@ class SignUpActivity : Activity() {
         binding.btnSignUp.setOnClickListener {
             if (binding.etSignUpEmail.length() == 0 || binding.etSignUpPasswd.length() == 0
                 || binding.etSignUpPasswdConfirm.length() == 0 || binding.etUserName.length() == 0
-                || binding.etPhoneNumber.length() == 0 || binding.etAccount.length() == 0
-            ) {
+                || binding.etPhoneNumber.length() == 0 || binding.etAccount.length() == 0) {
                 Toast.makeText(this, "내용을 입력해주세요.", Toast.LENGTH_SHORT).show()
             } else {
                 createEmail(

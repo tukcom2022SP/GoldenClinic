@@ -18,6 +18,9 @@
 		39391C9E289C118200E0EDAD /* PreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39391C9C289C118200E0EDAD /* PreviewTableViewCell.swift */; };
 		39391C9F289C118200E0EDAD /* PreviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39391C9D289C118200E0EDAD /* PreviewTableViewCell.xib */; };
 		39391D47289F59E800E0EDAD /* structUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39391D46289F59E800E0EDAD /* structUser.swift */; };
+		39391DE928A0A20400E0EDAD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39391DE828A0A20400E0EDAD /* TabBarController.swift */; };
+		39391DEB28A0D17000E0EDAD /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39391DEA28A0D17000E0EDAD /* MyPageVC.swift */; };
+		39391DEF28A20A8B00E0EDAD /* MyPagePosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39391DEE28A20A8B00E0EDAD /* MyPagePosts.swift */; };
 		393A41392890150D00F8796E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A41382890150D00F8796E /* AppDelegate.swift */; };
 		393A413B2890150D00F8796E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A413A2890150D00F8796E /* SceneDelegate.swift */; };
 		393A413D2890150D00F8796E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393A413C2890150D00F8796E /* ViewController.swift */; };
@@ -43,6 +46,9 @@
 		39391C9C289C118200E0EDAD /* PreviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTableViewCell.swift; sourceTree = "<group>"; };
 		39391C9D289C118200E0EDAD /* PreviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewTableViewCell.xib; sourceTree = "<group>"; };
 		39391D46289F59E800E0EDAD /* structUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structUser.swift; sourceTree = "<group>"; };
+		39391DE828A0A20400E0EDAD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		39391DEA28A0D17000E0EDAD /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
+		39391DEE28A20A8B00E0EDAD /* MyPagePosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPagePosts.swift; sourceTree = "<group>"; };
 		393A41352890150D00F8796E /* Nppang_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nppang_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		393A41382890150D00F8796E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		393A413A2890150D00F8796E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,11 +100,14 @@
 				393A41412890150E00F8796E /* Assets.xcassets */,
 				393A41432890150E00F8796E /* LaunchScreen.storyboard */,
 				393A413E2890150D00F8796E /* Main.storyboard */,
+				39391DEE28A20A8B00E0EDAD /* MyPagePosts.swift */,
 				39391C95289B715200E0EDAD /* listCellRealTime.xib */,
 				39391C9D289C118200E0EDAD /* PreviewTableViewCell.xib */,
 				393A41382890150D00F8796E /* AppDelegate.swift */,
 				393A413A2890150D00F8796E /* SceneDelegate.swift */,
 				393A413C2890150D00F8796E /* ViewController.swift */,
+				39391DEA28A0D17000E0EDAD /* MyPageVC.swift */,
+				39391DE828A0A20400E0EDAD /* TabBarController.swift */,
 				393A415F2892727700F8796E /* SignUpVC.swift */,
 				393A416128927A4700F8796E /* categoryVC.swift */,
 				39391C902897762500E0EDAD /* postingVC.swift */,
@@ -272,7 +281,10 @@
 				393A416228927A4700F8796E /* categoryVC.swift in Sources */,
 				39391D47289F59E800E0EDAD /* structUser.swift in Sources */,
 				393A41602892727700F8796E /* SignUpVC.swift in Sources */,
+				39391DE928A0A20400E0EDAD /* TabBarController.swift in Sources */,
+				39391DEF28A20A8B00E0EDAD /* MyPagePosts.swift in Sources */,
 				39391C9B289BF1A000E0EDAD /* participateInVC.swift in Sources */,
+				39391DEB28A0D17000E0EDAD /* MyPageVC.swift in Sources */,
 				393A413D2890150D00F8796E /* ViewController.swift in Sources */,
 				393A41392890150D00F8796E /* AppDelegate.swift in Sources */,
 				39391C99289B79F500E0EDAD /* structPost.swift in Sources */,

@@ -32,7 +32,9 @@ class realTimePostsVC: UIViewController{
                            let storeName = data["storeName"] as? String,
                            let group = data["group"] as? [String],
                            let payTime = data["payTime"] as? String{
-                            self.posts.append(Post(postname: postname, contents: contents, category: category, storeName: storeName, group: group, payTime: payTime))
+                            if group.count < 4 {
+                                self.posts.append(Post(postname: postname, contents: contents, category: category, storeName: storeName, group: group, payTime: payTime))
+                            }
                             
                             DispatchQueue.main.async {
                                 self.tableViewRealTime.reloadData()
