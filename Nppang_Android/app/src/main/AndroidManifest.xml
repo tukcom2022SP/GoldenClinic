@@ -13,6 +13,9 @@
         android:theme="@style/Theme.NPang"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ListAdapterCategory"
+            android:exported="false" />
+        <activity
             android:name=".ListAdapter"
             android:exported="false" />
         <activity
