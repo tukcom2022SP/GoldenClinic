@@ -81,6 +81,10 @@ class CategoryActivity : Activity() {
             startActivity(intent)
         }
     }
+    //뒤로가기 막기
+    override fun onBackPressed() {
+        //super.onBackPressed()
+    }
 }
 
 

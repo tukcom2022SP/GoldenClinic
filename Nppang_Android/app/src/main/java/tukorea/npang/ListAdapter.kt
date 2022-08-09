@@ -42,8 +42,8 @@ class ListAdapter(val itemList: ArrayList<ListLayout>) :
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val category: TextView = itemView.findViewById(R.id.tv_category)
-        val post: TextView = itemView.findViewById(R.id.tv_contents)
-        val cont: TextView = itemView.findViewById(R.id.tv_post_name)
+        val post: TextView = itemView.findViewById(R.id.tv_post_name)
+        val cont: TextView = itemView.findViewById(R.id.tv_contents)
         val storename: TextView = itemView.findViewById(R.id.tv_store_name)
         val group:TextView=itemView.findViewById(R.id.tv_count)
         }
