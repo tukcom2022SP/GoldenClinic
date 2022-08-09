@@ -28,7 +28,7 @@ class ListAdapter(val itemList: ArrayList<ListLayout>) :
 
 
     override fun onBindViewHolder(holder: tukorea.npang.ListAdapter.ViewHolder, position: Int) {
-        if(itemList[position].group.size<5) {
+        if(itemList[position].group.size<4) {
             holder.category.text = itemList[position].category
             holder.post.text = itemList[position].postname
             holder.cont.text = itemList[position].contents
