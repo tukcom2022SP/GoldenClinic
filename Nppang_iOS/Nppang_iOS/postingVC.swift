@@ -18,7 +18,7 @@ class postingVC: UIViewController{
     @IBOutlet weak var dropViewStore: UIView!
     @IBOutlet weak var btnSelectStore: UIButton!
     @IBOutlet weak var tfSelectStore: UITextField!
-    @IBOutlet weak var pickerPayTime: UIDatePicker!
+    @IBOutlet weak var payTimePicker: UIDatePicker!
     let dropdown = DropDown()
     let categories = ["치킨", "피자", "중식", "족발 보쌈", "분식", "기타"]
     var category = ""
@@ -98,7 +98,7 @@ class postingVC: UIViewController{
             "group": ["\((Auth.auth().currentUser?.email)!)"],
             "payTime": payTime
         ])
-        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController")
         self.navigationController?.pushViewController(pushVC!, animated: true)
     }
     

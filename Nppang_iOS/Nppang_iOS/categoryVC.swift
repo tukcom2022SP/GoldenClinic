@@ -53,14 +53,7 @@ class categoryVC: UIViewController{
         pushVC!.category = "기타"
         self.navigationController?.pushViewController(pushVC!, animated: true)
     }
-    @IBAction func btnLogOut(_ sender: UIButton) {
-        do {
-            try Auth.auth().signOut()
-            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "logIn")
-            self.navigationController?.pushViewController(pushVC!, animated: true)
-            UserDefaults.standard.set(false, forKey: "autoLogIn")
-        } catch { }
-    }
+    
     @IBAction func btnSeeAll(_ sender: UIButton) {
         pushViewController(vcName: "realTimePosts")
     }
@@ -86,17 +79,19 @@ class categoryVC: UIViewController{
                            let storeName = data["storeName"] as? String,
                            let group = data["group"] as? [String],
                            let payTime = data["payTime"] as? String{
-                            if cnt < 4 {
-                                self.postsPreview.append(Post(postname: postname, contents: contents, category: category, storeName: storeName, group: group, payTime: payTime))
-                                
-                                DispatchQueue.main.async {
-                                    self.tableViewCategory.reloadData()
-                                    if self.postsPreview.count != 0 {
-                                        self.tableViewCategory.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                            if group.count < 4 {
+                                if cnt < 4 {
+                                    self.postsPreview.append(Post(postname: postname, contents: contents, category: category, storeName: storeName, group: group, payTime: payTime))
+                               
+                                    DispatchQueue.main.async {
+                                        self.tableViewCategory.reloadData()
+                                        if self.postsPreview.count != 0 {
+                                            self.tableViewCategory.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                                        }
                                     }
                                 }
-                            }
                             cnt += 1
+                            }
                         }
                     }
                 }

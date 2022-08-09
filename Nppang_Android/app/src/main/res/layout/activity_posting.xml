@@ -11,7 +11,7 @@
         android:layout_height="50dp"
         android:background="@color/main"
         android:gravity="center"
-        android:text="카테고리-치킨"
+        android:text="게시물 작성"
         android:textColor="@color/white"
         android:textSize="25dp" />
 
@@ -62,7 +62,7 @@
             android:id="@+id/spinner_category_choice"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@drawable/borderpeach" />
+            android:background="@drawable/borderpeach"/>
 
         <TextView
             android:layout_width="150dp"
