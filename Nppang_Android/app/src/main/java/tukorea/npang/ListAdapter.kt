@@ -28,12 +28,15 @@ class ListAdapter(val itemList: ArrayList<ListLayout>) :
 
 
     override fun onBindViewHolder(holder: tukorea.npang.ListAdapter.ViewHolder, position: Int) {
-        holder.category.text = itemList[position].category
-        holder.post.text = itemList[position].postname
-        holder.cont.text = itemList[position].contents
-        holder.storename.text = itemList[position].storeName
-        holder.itemView.setOnClickListener {
-            itemClickListener.onClick(it,position)
+        if(itemList[position].group.size<5) {
+            holder.category.text = itemList[position].category
+            holder.post.text = itemList[position].postname
+            holder.cont.text = itemList[position].contents
+            holder.storename.text = itemList[position].storeName
+            holder.group.text = itemList[position].group.size.toString()
+            holder.itemView.setOnClickListener {
+                itemClickListener.onClick(it, position)
+            }
         }
     }
 
@@ -42,6 +45,7 @@ class ListAdapter(val itemList: ArrayList<ListLayout>) :
         val post: TextView = itemView.findViewById(R.id.tv_contents)
         val cont: TextView = itemView.findViewById(R.id.tv_post_name)
         val storename: TextView = itemView.findViewById(R.id.tv_store_name)
+        val group:TextView=itemView.findViewById(R.id.tv_count)
         }
 
     }

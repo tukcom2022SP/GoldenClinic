@@ -14,7 +14,9 @@ class LivePostsActivity : Activity() {
     private lateinit var binding: ActivityLivePostsBinding
     val db = FirebaseFirestore.getInstance()    // Firestore 인스턴스 선언
     val itemList = arrayListOf<ListLayout>()    // 리스트 아이템 배열
+    var itemList2 = arrayListOf<String>()//그룹수 받아오기
     val adapter = ListAdapter(itemList)         // 리사이클러 뷰 어댑터
+    var Size: Int = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLivePostsBinding.inflate(layoutInflater)
@@ -43,7 +45,7 @@ class LivePostsActivity : Activity() {
                 itemList.clear()
                 for (document in result) {  // 가져온 문서들은 result에 들어감
                     val item =
-                        ListLayout(document["contents"] as String, document["postname"] as String,document["category"]as String,document["storeName"]as String )
+                        ListLayout(document["contents"] as String, document["postname"] as String,document["category"]as String,document["storeName"]as String ,document["group"]as ArrayList<String>)
                     itemList.add(item)
                 }
                 adapter.notifyDataSetChanged()  // 리사이클러 뷰 갱신
@@ -52,6 +54,8 @@ class LivePostsActivity : Activity() {
                 // 실패할 경우
                 Log.w("MainActivity", "Error getting documents: $exception")
             }
+
+
 
     }
 }
