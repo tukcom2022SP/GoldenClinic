@@ -96,7 +96,7 @@ class participateInVC: UIViewController{
         dropdown.bottomOffset = CGPoint(x: 0, y: dropViewMenu.bounds.height)
         dropdown.selectionAction = { [weak self] (index, item) in
             self!.tfSelectMenu.text = item
-            self!.tvSelectedMenu.text += "\(item)\n"
+            self!.tvSelectedMenu.text += "\(item) - \(prices[index])원\n"
             self!.total += prices[index]
         }
         dropdown.cancelAction = { [weak self] in
