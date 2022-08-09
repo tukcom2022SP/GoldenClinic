@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import tukorea.npang.databinding.ActivityCategoryBinding
@@ -74,6 +75,10 @@ class CategoryActivity : Activity() {
         binding.btnSeeAll.setOnClickListener {
             var intent3 = Intent(this, LivePostsActivity::class.java)
             startActivity(intent3)
+        }
+        binding.btnMypage.setOnClickListener {
+            var intent = Intent(this, MyPageActivity::class.java)
+            startActivity(intent)
         }
     }
 }
