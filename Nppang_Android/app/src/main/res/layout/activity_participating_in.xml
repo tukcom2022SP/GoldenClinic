@@ -72,36 +72,48 @@
             android:id="@+id/spinner_menu_choice"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_marginBottom="100dp"
             android:background="@drawable/borderpeach" />
 
     </LinearLayout>
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_weight="1"
+        android:background="@drawable/borderpeach">
 
-        <TextView
-            android:id="@+id/tv_menu_list"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp">
+
+            <TextView
+                android:id="@+id/tv_menu_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/btn_participate"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="29dp"
-        android:layout_marginBottom="69dp"
-        android:layout_gravity="bottom"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="29dp"
+        android:layout_marginBottom="10dp"
         android:background="@color/deeppink"
         android:text="참가하기"
         android:textColor="@color/white"
         android:textSize="20dp" />
-
 
 </LinearLayout>
