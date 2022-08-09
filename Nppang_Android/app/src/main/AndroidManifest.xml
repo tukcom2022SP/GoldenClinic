@@ -54,7 +54,9 @@
         <activity
             android:name=".LivePostsActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".MyPageActivity"
+            android:exported="false" />
 
     </application>
 
