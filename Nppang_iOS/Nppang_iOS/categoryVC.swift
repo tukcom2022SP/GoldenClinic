@@ -53,14 +53,7 @@ class categoryVC: UIViewController{
         pushVC!.category = "기타"
         self.navigationController?.pushViewController(pushVC!, animated: true)
     }
-    @IBAction func btnLogOut(_ sender: UIButton) {
-        do {
-            try Auth.auth().signOut()
-            let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "logIn")
-            self.navigationController?.pushViewController(pushVC!, animated: true)
-            UserDefaults.standard.set(false, forKey: "autoLogIn")
-        } catch { }
-    }
+    
     @IBAction func btnSeeAll(_ sender: UIButton) {
         pushViewController(vcName: "realTimePosts")
     }
