@@ -4,18 +4,15 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FieldPath
 import com.google.firebase.firestore.FieldValue
-import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import tukorea.npang.databinding.ActivityParticipatingInBinding
-import java.util.ArrayList
 
 
 class ParticipatingInActivity : Activity() {
@@ -23,10 +20,10 @@ class ParticipatingInActivity : Activity() {
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var binding: ActivityParticipatingInBinding
     private lateinit var menumap2: List<Pair<String, Int>>
-    private var data: MutableList<String> = mutableListOf()
+    private var dato: MutableList<String> = mutableListOf()
     private var data2: MutableList<Int> = mutableListOf()
-    var grouplist = arrayListOf<String>()
-
+    private var itemList = arrayListOf<String>()
+    var Size: Int = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //db선언
@@ -65,7 +62,7 @@ class ParticipatingInActivity : Activity() {
             "현구대반점" to listOf("메뉴명" to 0, "유니콩 짜장면" to 6000, "참짬뽕" to 8000, "야채볶음밥" to 8000),
             "더베이징" to listOf("메뉴명" to 0, "짜장면" to 8000, "짬뽕" to 9000, "탕수육" to 25000),
             "아래향" to listOf("메뉴명" to 0, "울면" to 7000, "콩국수" to 9000, "찹쌀탕수육" to 26000),
-            "현구족발 정왕 1호점" to listOf("메뉴명" to 0, "족발" to 25000, "불족발" to 27000, "냉체족발" to 31000),
+            "현구족발 정왕1호점" to listOf("메뉴명" to 0, "족발" to 25000, "불족발" to 27000, "냉체족발" to 31000),
             "현구보쌈 시화로데오점" to listOf("메뉴명" to 0, "김치보쌈" to 27000, "1인보쌈" to 18000, "마늘보쌈" to 29000),
             "오늘사족 본점" to listOf("메뉴명" to 0, "족발한팩" to 12000, "보쌈한팩" to 12000, "마늘쪽한팩" to 13000),
             "돼지게티 정왕점" to listOf("메뉴명" to 0, "실속세트" to 21000, "1인세트" to 13000, "실속치킨세트" to 18000),
@@ -95,26 +92,25 @@ class ParticipatingInActivity : Activity() {
         binding.tvPpOstName.text = Postsintent.getStringExtra("postname")
         binding.tvPpContents.text = Postsintent.getStringExtra("contents")
         binding.tvPpStoreName.text = Postsintent.getStringExtra("storename")
-
         //key값 스피너 적용
         menumap2 = menumap.get(binding.tvPpStoreName.text) as List<Pair<String, Int>>
         for ((first, second) in menumap2) {
-            data.add(first)
+            dato.add(first)
             data2.add(second)
         }
 
 
         //메뉴 관련 스피너
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, data)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, dato)
         binding.spinnerMenuChoice.adapter = adapter
         var total = 0
         var menulist = ""
         //선택됐을때 메뉴가격계산
         binding.spinnerMenuChoice.onItemSelectedListener =
             object : AdapterView.OnItemSelectedListener {
-
+                //메뉴선택에따른 합계
                 override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                    var menuname = data.get(p2)
+                    var menuname = dato.get(p2)
                     var price = data2.get(p2)
                     menulist = menulist + "\n" + menuname
                     total = total + price
@@ -126,7 +122,7 @@ class ParticipatingInActivity : Activity() {
                 }
             }
 
-
+        //참가하기버튼 클릭
         binding.btnParticipate.setOnClickListener {
 
             var user = (firebaseAuth.currentUser?.uid)
@@ -153,5 +149,7 @@ class ParticipatingInActivity : Activity() {
                         }
                 }
         }
+
+
     }
 }
