@@ -16,7 +16,6 @@ import tukorea.npang.databinding.ActivityPostingBinding
 class PostingActivity : Activity() {
     val db = Firebase.firestore
     private lateinit var binding: ActivityPostingBinding
-
     //firebase Auth
     private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +28,7 @@ class PostingActivity : Activity() {
         binding.tvPostingName.text=Postsintent.getStringExtra("postname")*/
 
         binding.btnJoin.setOnClickListener {
-            firebaseAuth = FirebaseAuth.getInstance()
+            firebaseAuth= FirebaseAuth.getInstance()
             //파이어스토어 컬렉션 connect
             val postdata = db.collection("LivePost")
             if (binding.etPostName.length() == 0 || binding.etContents.length() == 0) {

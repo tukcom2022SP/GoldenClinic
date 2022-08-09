@@ -26,11 +26,11 @@ class FindMyInfoActivity : Activity() {
         }
     }
 
-    fun findPassword() {
-        FirebaseAuth.getInstance()
-            .sendPasswordResetEmail(binding.etFindEmail.text.toString().trim())
-            .addOnSuccessListener {
-                Toast.makeText(this, "비밀번호 재설정 이메일을 전송했습니다.", Toast.LENGTH_SHORT).show()
-            }
+        fun findPassword() {
+            FirebaseAuth.getInstance()
+                .sendPasswordResetEmail(binding.etFindEmail.text.toString().trim())
+                .addOnSuccessListener {
+                    Toast.makeText(this, "비밀번호 재설정 이메일을 전송했습니다.", Toast.LENGTH_SHORT).show()
+                }
+        }
     }
-}
