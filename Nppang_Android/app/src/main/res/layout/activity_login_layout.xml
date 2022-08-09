@@ -15,8 +15,8 @@
         android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="로그인"
-        android:textColor="@color/black"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
         android:textSize="25dp" />
 
     <LinearLayout
@@ -63,8 +63,8 @@
             android:layout_width="110dp"
             android:layout_height="20dp"
             android:layout_gravity="right"
-            android:text="자동 로그인"
             android:layout_marginTop="5dp"
+            android:text="자동 로그인"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="15dp" />
 
