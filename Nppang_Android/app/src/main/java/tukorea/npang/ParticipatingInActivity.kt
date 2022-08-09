@@ -130,31 +130,28 @@ class ParticipatingInActivity : Activity() {
         binding.btnParticipate.setOnClickListener {
 
             var user = (firebaseAuth.currentUser?.uid)
+
             db.collection("LivePost").document(binding.tvPpOstName.text.toString())
                 .update("group", FieldValue.arrayUnion(user))
-            //참가 완료 AlertDialog
-            (db.collection("LivePost").whereEqualTo(FieldPath.documentId(), "group")).get()
-                .addOnSuccessListener { resuult ->
-                    grouplist.clear()
-                    for (document in resuult) {
-                        var item = document["group"]
-                        grouplist.add(item.toString())
-                    }
-
+                .addOnSuccessListener {
+                    db.collection("LivePost").document(binding.tvPpOstName.text.toString())
+                        .get()
+                        .addOnSuccessListener { document ->
+                            Log.d("test", "${document.data}")
+                            itemList = document["group"] as ArrayList<String>
+                            Size = itemList.size
+                            val builder = AlertDialog.Builder(this@ParticipatingInActivity)
+                                .setTitle("참가완료")
+                                .setMessage("배달비를 확인해보세요 " + "\n" + "총음식가격" + total + "\n" + "현재 참여인원" + Size + "\n" + "원래배달비=[3000]" + "\n" + "본인부담 배달비" + 3000 / Size)
+                                .setPositiveButton("확인",
+                                    DialogInterface.OnClickListener { dialog, which ->
+                                    })
+                                .setNegativeButton("취소",
+                                    DialogInterface.OnClickListener { dialog, which ->
+                                    })
+                            builder.show()
+                        }
                 }
-            var deliverprice = 3000 / grouplist.size
-            val builder = AlertDialog.Builder(this)
-                .setTitle("참가완료")
-                .setMessage("본인 부담 배달비 :  " + deliverprice)
-                .setPositiveButton("확인",
-                    DialogInterface.OnClickListener { dialog, which ->
-                        Toast.makeText(this, "확인", Toast.LENGTH_SHORT).show()
-                    })
-                .setNegativeButton("취소",
-                    DialogInterface.OnClickListener { dialog, which ->
-                        Toast.makeText(this, "취소", Toast.LENGTH_SHORT).show()
-                    })
-            builder.show()
         }
     }
 }

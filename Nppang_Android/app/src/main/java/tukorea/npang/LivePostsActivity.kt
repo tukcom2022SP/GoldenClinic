@@ -8,7 +8,6 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import tukorea.npang.databinding.ActivityLivePostsBinding
-import java.util.ArrayList
 
 class LivePostsActivity : Activity() {
     //binding
