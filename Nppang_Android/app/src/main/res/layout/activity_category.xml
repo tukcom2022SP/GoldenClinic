@@ -52,6 +52,7 @@
             android:layout_height="180dp"
             android:orientation="vertical"
             android:padding="10dp">
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_list"
                 android:layout_width="match_parent"
