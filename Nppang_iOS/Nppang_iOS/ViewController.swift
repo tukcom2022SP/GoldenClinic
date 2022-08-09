@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         if UserDefaults.standard.bool(forKey: "autoLogIn") {
             if let user = Auth.auth().currentUser {
-                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController")
                 self.navigationController?.pushViewController(pushVC!, animated: true)
             }
         }
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     @IBAction func btnLogIn(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: tfEmail.text!, password: tfPassword.text!) {(user, error) in
             if user != nil{
-                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "category")
+                let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController")
                 self.navigationController?.pushViewController(pushVC!, animated: true)
             }
             else{
