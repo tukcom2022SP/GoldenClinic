@@ -36,4 +36,11 @@ class MyPageVC: UIViewController{
         pushVC!.jemok = "참가한 게시물 보기"
         self.navigationController?.pushViewController(pushVC!, animated: true)
     }
+    
+    @IBAction func btnEasterEgg(_ sender: UIButton) {
+        let alert = UIAlertController(title:"엔빵 by Team GoldenClinic", message: "권태우: 그래도 행복했다..\n유하임: (오늘 출근 안함)\n이현구: 에잇 씻팔\n최유빈: 집에 보내줘", preferredStyle: UIAlertController.Style.alert)
+        let check = UIAlertAction(title: "고맙습니다", style: .destructive, handler: nil)
+        alert.addAction(check)
+        self.present(alert,animated: true,completion: nil)
+    }
 }
