@@ -13,6 +13,9 @@
         android:theme="@style/Theme.NPang"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".MyPostActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListAdapterCategory"
             android:exported="false" />
         <activity
@@ -57,7 +60,6 @@
         <activity
             android:name=".MyPageActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>
