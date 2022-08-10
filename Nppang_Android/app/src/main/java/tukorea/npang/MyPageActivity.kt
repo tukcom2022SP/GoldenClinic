@@ -11,7 +11,7 @@ import tukorea.npang.databinding.ActivityMypageBinding
 
 class MyPageActivity : Activity() {
     val db = FirebaseFirestore.getInstance()
-    var firebaseAuth=FirebaseAuth.getInstance()
+    var firebaseAuth = FirebaseAuth.getInstance()
     private lateinit var binding: ActivityMypageBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,11 +28,11 @@ class MyPageActivity : Activity() {
         }
         binding.btnLogout.setOnClickListener {
             signOut()
-            var intent3=Intent(this,LoginActivity::class.java)
+            var intent3 = Intent(this, LoginActivity::class.java)
             startActivity(intent3)
         }
         //현재유저 이메일 알려주기
-        binding.tvUserEmail.text=firebaseAuth.currentUser?.email
+        binding.tvUserEmail.text = firebaseAuth.currentUser?.email
 
 
     }

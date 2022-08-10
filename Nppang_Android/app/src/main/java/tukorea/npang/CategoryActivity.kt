@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import tukorea.npang.databinding.ActivityCategoryBinding
@@ -42,7 +41,7 @@ class CategoryActivity : Activity() {
                 Log.w("MainActivity", "Error getting documents: $exception")
             }
         binding.imgChickenimage.setOnClickListener {
-            Intent(this, CategoryDetailsActivity::class.java).apply{
+            Intent(this, CategoryDetailsActivity::class.java).apply {
                 putExtra("카테고리", "치킨")
                 startActivity(this)
             }
@@ -81,6 +80,7 @@ class CategoryActivity : Activity() {
             startActivity(intent)
         }
     }
+
     //뒤로가기 막기
     override fun onBackPressed() {
         //super.onBackPressed()
