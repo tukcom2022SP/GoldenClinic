@@ -15,6 +15,7 @@
         android:textSize="25dp" />
 
     <TextView
+        android:id="@+id/tv_user_email"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:text="id@daum.net"
@@ -37,6 +38,7 @@
             android:text="작성한 게시물 보기"/>
 
         <Button
+            android:id="@+id/btn_participate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.NPang"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".MyParticipateActivity"
+            android:exported="false" />
+        <activity
             android:name=".MyPostActivity"
             android:exported="false" />
         <activity
