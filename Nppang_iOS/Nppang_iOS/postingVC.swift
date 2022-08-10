@@ -40,6 +40,10 @@ class postingVC: UIViewController{
         navigationItem.hidesBackButton = true
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func btnSelectCategory(_ sender: UIButton) {
         // dataSource로 ItemList를 연결
         dropdown.dataSource = categories
