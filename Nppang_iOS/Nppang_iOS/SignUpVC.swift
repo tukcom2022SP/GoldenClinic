@@ -24,6 +24,10 @@ class SignUpVC: UIViewController {
         loadUsers()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func btnCheckId(_ sender: UIButton) {
         checkingId()
         if idIsChecked == false {

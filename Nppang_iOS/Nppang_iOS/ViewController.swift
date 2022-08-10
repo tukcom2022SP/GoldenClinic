@@ -38,6 +38,10 @@ class ViewController: UIViewController {
         super.viewWillDisappear(animated)
         UIApplication.shared.statusBarStyle = .lightContent
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
     @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
         GIDSignIn.sharedInstance().signIn()
