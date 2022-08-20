@@ -64,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     private func showMainViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let mainViewController = storyboard.instantiateViewController(withIdentifier: "category")
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "tabBarController")
         mainViewController.navigationItem.hidesBackButton = true
         mainViewController.modalPresentationStyle = .fullScreen
         UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
