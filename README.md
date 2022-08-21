@@ -18,14 +18,12 @@
 > <img src="https://img.shields.io/badge/kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white"/></a>
 > <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=Swift&logoColor=white"/></a> <br>
 
-## 관리 도구
-> <a href="https://trello.com/2022goldenclinic"><img src="https://img.shields.io/badge/Trello-0052CC?style=flat-square&logo=Trello&logoColor=white"/></a>
-
 ## 구성원 및 연락처
 > 권태우 kwontaewoo0901@gmail.com  
 > 유하임 mytypeyu@gmail.com  
 > 이현구 kugu98@naver.com  
 > 최유빈 cybin050300@naver.com  
 
-## 발표 자료
-> <a href="https://www.canva.com/design/DAFIs1jWABA/2N8gaxTfqrOaEK7XWxlm9g/view?utm_content=DAFIs1jWABA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><img src="https://img.shields.io/badge/Canva-00C4CC?style=flat-square&logo=Canva&logoColor=white">
+## 링크
+> <a href="https://trello.com/2022goldenclinic"><img src="https://img.shields.io/badge/Trello(협업 관리)-0052CC?style=flat-square&logo=Trello&logoColor=white"/></a>
+> <a href="https://www.canva.com/design/DAFIs1jWABA/2N8gaxTfqrOaEK7XWxlm9g/view?utm_content=DAFIs1jWABA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><img src="https://img.shields.io/badge/Canva(발표자료)-00C4CC?style=flat-square&logo=Canva&logoColor=white">
