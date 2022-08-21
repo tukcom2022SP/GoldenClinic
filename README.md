@@ -9,14 +9,14 @@
 > 3. 배달비 자동 계산 : 모집 인원수에 따라 배달비 할당
 
 ## 개발 도구
-> <img src="https://img.shields.io/badge/AndroidStudio-3DDC84?style=flat-square&logo=AndroidStudio&logoColor=white"/></a>
-> <img src="https://img.shields.io/badge/Xcode-147EFB?style=flat-square&logo=Xcode&logoColor=white"/></a> <br>
-> <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=Firebase&logoColor=black"/></a>
-> <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white"/></a> <br>
+<img src="https://img.shields.io/badge/AndroidStudio-3DDC84?style=flat-square&logo=AndroidStudio&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Xcode-147EFB?style=flat-square&logo=Xcode&logoColor=white"/></a> <br>
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=Firebase&logoColor=black"/></a>
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white"/></a> <br>
 
 ## 개발 언어
-> <img src="https://img.shields.io/badge/kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white"/></a>
-> <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=Swift&logoColor=white"/></a> <br>
+<img src="https://img.shields.io/badge/kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=Swift&logoColor=white"/></a> <br>
 
 ## 구성원 및 연락처
 > 권태우 kwontaewoo0901@gmail.com  
@@ -25,5 +25,5 @@
 > 최유빈 cybin050300@naver.com  
 
 ## 링크
-> <a href="https://trello.com/2022goldenclinic"><img src="https://img.shields.io/badge/Trello-0052CC?style=flat-square&logo=Trello&logoColor=white"/></a>
-> <a href="https://www.canva.com/design/DAFIs1jWABA/2N8gaxTfqrOaEK7XWxlm9g/view?utm_content=DAFIs1jWABA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><img src="https://img.shields.io/badge/Canva-00C4CC?style=flat-square&logo=Canva&logoColor=white">
+<a href="https://trello.com/2022goldenclinic"><img src="https://img.shields.io/badge/Trello-0052CC?style=flat-square&logo=Trello&logoColor=white"/></a>
+<a href="https://www.canva.com/design/DAFIs1jWABA/2N8gaxTfqrOaEK7XWxlm9g/view?utm_content=DAFIs1jWABA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><img src="https://img.shields.io/badge/Canva-00C4CC?style=flat-square&logo=Canva&logoColor=white">
