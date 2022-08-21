@@ -25,5 +25,5 @@
 > 최유빈 cybin050300@naver.com  
 
 ## 링크
-> <a href="https://trello.com/2022goldenclinic"><img src="https://img.shields.io/badge/Trello(협업 관리)-0052CC?style=flat-square&logo=Trello&logoColor=white"/></a>
-> <a href="https://www.canva.com/design/DAFIs1jWABA/2N8gaxTfqrOaEK7XWxlm9g/view?utm_content=DAFIs1jWABA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><img src="https://img.shields.io/badge/Canva(발표 자료)-00C4CC?style=flat-square&logo=Canva&logoColor=white">
+> <a href="https://trello.com/2022goldenclinic"><img src="https://img.shields.io/badge/Trello-0052CC?style=flat-square&logo=Trello&logoColor=white"/></a>
+> <a href="https://www.canva.com/design/DAFIs1jWABA/2N8gaxTfqrOaEK7XWxlm9g/view?utm_content=DAFIs1jWABA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><img src="https://img.shields.io/badge/Canva-00C4CC?style=flat-square&logo=Canva&logoColor=white">
