@@ -9,14 +9,14 @@
 > 3. 배달비 자동 계산 : 모집 인원수에 따라 배달비 할당
 
 ## 개발 도구
-> Android Studio <br>
-> Xcode <br>
-> Google Firebase <br>
-> Figma <br>
+> <img src="https://img.shields.io/badge/AndroidStudio-3DDC84?style=flat-square&logo=AndroidStudio&logoColor=white"/></a> <br>
+> <img src="https://img.shields.io/badge/Xcode-147EFB?style=flat-square&logo=Xcode&logoColor=white"/></a> <br>
+> <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=Firebase&logoColor=black"/></a> <br>
+> <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white"/></a> <br>
 
 ## 개발 언어
-> kotlin <br>
-> Swfit <br>
+> <img src="https://img.shields.io/badge/kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white"/></a> <br>
+> <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=Swift&logoColor=white"/></a> <br>
 
 ## 구성원 및 연락처
 > 권태우 kwontaewoo0901@gmail.com  
