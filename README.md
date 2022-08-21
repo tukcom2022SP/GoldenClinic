@@ -28,4 +28,4 @@
 > 최유빈 cybin050300@naver.com  
 
 ## 발표 자료
-<a href="https://www.canva.com/design/DAFIs1jWABA/2N8gaxTfqrOaEK7XWxlm9g/view?utm_content=DAFIs1jWABA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><img src="https://img.shields.io/badge/Canva-00C4CC?style=flat-square&logo=Canva&logoColor=white">
+> <a href="https://www.canva.com/design/DAFIs1jWABA/2N8gaxTfqrOaEK7XWxlm9g/view?utm_content=DAFIs1jWABA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><img src="https://img.shields.io/badge/Canva-00C4CC?style=flat-square&logo=Canva&logoColor=white">
