@@ -19,10 +19,10 @@
 <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=Swift&logoColor=white"/></a> <br>
 
 ## 구성원 및 연락처
-> [권태우](https://github.com/boifromangye) kwontaewoo0901@gmail.com  
-> 유하임 mytypeyu@gmail.com  
-> 이현구 kugu98@naver.com  
-> 최유빈 cybin050300@naver.com  
+> [권태우](https://github.com/boifromangye) : kwontaewoo0901@gmail.com  
+> [유하임](https://github.com/typeYu) : mytypeyu@gmail.com  
+> [이현구](https://github.com/kugu98) : kugu98@naver.com  
+> [최유빈](https://github.com/cybin050300) : cybin050300@naver.com  
 
 ## 링크
 <a href="https://trello.com/2022goldenclinic"><img src="https://img.shields.io/badge/Trello-0052CC?style=flat-square&logo=Trello&logoColor=white"/></a>
